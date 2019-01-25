@@ -1,16 +1,47 @@
 PODS:
   - FaveButton (3.0.0)
+  - MaterialComponents/Buttons (74.0.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Ink (74.0.0):
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (74.0.0)
+  - MaterialComponents/private/Math (74.0.0)
+  - MaterialComponents/private/Shapes (74.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/ShadowElevations (74.0.0)
+  - MaterialComponents/ShadowLayer (74.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Typography (74.0.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
 
 DEPENDENCIES:
   - FaveButton
+  - MaterialComponents/Buttons
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FaveButton
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
 
 SPEC CHECKSUMS:
   FaveButton: 1fa9cd7b037d7164e229765401931271adbe3a23
+  MaterialComponents: c382f7a1881832ff88a05bb1536c47714cf1295f
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
 
-PODFILE CHECKSUM: 5df596039b67db7e96aa4af218b1ecb12330f813
+PODFILE CHECKSUM: 3e306828c8e1a2dee381fe7a14acaceefc775aac
 
 COCOAPODS: 1.5.3

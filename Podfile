@@ -7,6 +7,6 @@ target 'HumberMedia' do
 
   # Pods for HumberMedia
   pod 'FaveButton'
-  
+  pod 'MaterialComponents/Buttons'
 
 end

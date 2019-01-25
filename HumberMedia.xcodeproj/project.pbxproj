@@ -12,6 +12,7 @@
 		7104599B21FB91BC00677A19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7104599921FB91BC00677A19 /* Main.storyboard */; };
 		7104599D21FB91BD00677A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7104599C21FB91BD00677A19 /* Assets.xcassets */; };
 		710459A021FB91BD00677A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7104599E21FB91BD00677A19 /* LaunchScreen.storyboard */; };
+		710459A821FB99F100677A19 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710459A721FB99F100677A19 /* RadioViewController.swift */; };
 		821BF52B2C93AC7E710724D5 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E871B0BAB4B48749AD1521 /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		7104599C21FB91BD00677A19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7104599F21FB91BD00677A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		710459A121FB91BD00677A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		710459A721FB99F100677A19 /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		C0E871B0BAB4B48749AD1521 /* Pods_HumberMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HumberMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +69,7 @@
 				7104599C21FB91BD00677A19 /* Assets.xcassets */,
 				7104599E21FB91BD00677A19 /* LaunchScreen.storyboard */,
 				710459A121FB91BD00677A19 /* Info.plist */,
+				710459A721FB99F100677A19 /* RadioViewController.swift */,
 			);
 			path = HumberMedia;
 			sourceTree = "<group>";
@@ -189,12 +192,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -210,6 +219,7 @@
 			files = (
 				7104599821FB91BC00677A19 /* ViewController.swift in Sources */,
 				7104599621FB91BC00677A19 /* AppDelegate.swift in Sources */,
+				710459A821FB99F100677A19 /* RadioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
