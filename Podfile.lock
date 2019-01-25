@@ -1,16 +1,3 @@
-PODS:
-  - SwipeNavigationController (2.0.2)
-
-DEPENDENCIES:
-  - SwipeNavigationController (~> 2.0.0)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - SwipeNavigationController
-
-SPEC CHECKSUMS:
-  SwipeNavigationController: 592681599a3105a44484e5b7af9055cee7a0d7b9
-
-PODFILE CHECKSUM: 119128baf0b05b09fb3ba888073bc82c6a49a04b
+PODFILE CHECKSUM: 081d7e355c68c35aa4dcfdeac73a3ba8f1740e6d
 
 COCOAPODS: 1.5.3

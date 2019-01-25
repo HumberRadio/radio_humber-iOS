@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Humber_MediaVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Humber_MediaVersionString[];
+FOUNDATION_EXPORT double Pods_HumberMediaVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_HumberMediaVersionString[];
 

@@ -12,9 +12,11 @@
 		7104599B21FB91BC00677A19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7104599921FB91BC00677A19 /* Main.storyboard */; };
 		7104599D21FB91BD00677A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7104599C21FB91BD00677A19 /* Assets.xcassets */; };
 		710459A021FB91BD00677A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7104599E21FB91BD00677A19 /* LaunchScreen.storyboard */; };
+		821BF52B2C93AC7E710724D5 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E871B0BAB4B48749AD1521 /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D84C998B5C198C11089582E /* Pods-HumberMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.release.xcconfig"; sourceTree = "<group>"; };
 		7104599221FB91BC00677A19 /* HumberMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HumberMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7104599521FB91BC00677A19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7104599721FB91BC00677A19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		7104599C21FB91BD00677A19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7104599F21FB91BD00677A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		710459A121FB91BD00677A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0E871B0BAB4B48749AD1521 /* Pods_HumberMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HumberMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				821BF52B2C93AC7E710724D5 /* Pods_HumberMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				7104599421FB91BC00677A19 /* HumberMedia */,
 				7104599321FB91BC00677A19 /* Products */,
+				EB171AB6CBF989BD48CFD89C /* Pods */,
+				EAB31D9533FA1A8CA9CCD39C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = HumberMedia;
 			sourceTree = "<group>";
 		};
+		EAB31D9533FA1A8CA9CCD39C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0E871B0BAB4B48749AD1521 /* Pods_HumberMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB171AB6CBF989BD48CFD89C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */,
+				4D84C998B5C198C11089582E /* Pods-HumberMedia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 710459A421FB91BD00677A19 /* Build configuration list for PBXNativeTarget "HumberMedia" */;
 			buildPhases = (
+				D49277F9F6E714D466CD6F12 /* [CP] Check Pods Manifest.lock */,
 				7104598E21FB91BC00677A19 /* Sources */,
 				7104598F21FB91BC00677A19 /* Frameworks */,
 				7104599021FB91BC00677A19 /* Resources */,
@@ -129,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D49277F9F6E714D466CD6F12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HumberMedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7104598E21FB91BC00677A19 /* Sources */ = {
@@ -280,6 +330,7 @@
 		};
 		710459A521FB91BD00677A19 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +348,7 @@
 		};
 		710459A621FB91BD00677A19 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D84C998B5C198C11089582E /* Pods-HumberMedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
