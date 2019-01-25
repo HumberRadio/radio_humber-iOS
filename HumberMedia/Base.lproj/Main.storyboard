@@ -18,40 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEV-nX-fZt" customClass="FaveButton" customModule="FaveButton">
-                                <rect key="frame" x="115" y="214" width="36" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="baseline_stop_black_18dp"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
-                                        <color key="value" red="0.98896175620000004" green="0.0032286928039999998" blue="0.001910701743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
-                                        <color key="value" red="0.73992878200000001" green="0.54127138850000001" blue="0.54114699359999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="dotFirstColor">
-                                        <color key="value" red="0.01440089848" green="0.52974587679999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="dotSecondColor">
-                                        <color key="value" red="0.66799896960000005" green="0.91010618210000005" blue="0.65285986659999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="circleFromColor">
-                                        <color key="value" red="0.22805312280000001" green="0.2822736502" blue="0.335342586" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="circleToColor">
-                                        <color key="value" red="0.1935743392" green="0.45053732400000002" blue="0.67419713739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpB-re-Edp">
-                                <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpB-re-Edp" userLabel="bottomView">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Radio_Humber_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-fq-bAQ">
+                                        <rect key="frame" x="15" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ev7-fq-bAQ" secondAttribute="height" multiplier="1:1" id="16p-5q-RhW"/>
+                                            <constraint firstAttribute="width" constant="50" id="VJX-XR-wQX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvj-0E-kKh">
+                                        <rect key="frame" x="314" y="25" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="xJq-Ud-sw4"/>
+                                    <constraint firstItem="ev7-fq-bAQ" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="15" id="1Sw-N8-0P1"/>
+                                    <constraint firstAttribute="bottom" secondItem="ev7-fq-bAQ" secondAttribute="bottom" constant="15" id="3o6-5Q-f77"/>
+                                    <constraint firstItem="Cvj-0E-kKh" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="25" id="bNC-mU-JAU"/>
+                                    <constraint firstItem="ev7-fq-bAQ" firstAttribute="leading" secondItem="YpB-re-Edp" secondAttribute="leading" constant="15" id="fJu-vR-mDA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cvj-0E-kKh" secondAttribute="trailing" constant="15" id="rlX-Vz-KlB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cvj-0E-kKh" secondAttribute="bottom" constant="25" id="swZ-an-dhk"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.22865226864814758" green="0.34504550695419312" blue="0.37773388624191284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YpB-re-Edp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RTP-YA-Hn3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YpB-re-Edp" secondAttribute="bottom" id="RXX-ZF-tAV"/>
@@ -65,6 +58,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="baseline_stop_black_18dp" width="36" height="36"/>
+        <image name="Radio_Humber_Logo" width="220" height="220"/>
     </resources>
 </document>
