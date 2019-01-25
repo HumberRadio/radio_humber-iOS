@@ -7,21 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C3C6338D9F5B4F30FD40FDC479AE376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
-		CAB094B08B76785468CD7F8F8A3DCA02 /* Pods-HumberMedia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF14C3B4AC7D512C297F6DBB363B6E1 /* Pods-HumberMedia-dummy.m */; };
-		CD99FC4C10302B2DAD4A7B4D26723C9C /* Pods-HumberMedia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49C9A1F66B37B2B72A98F6EBC4DBDC00 /* Pods-HumberMedia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18F1BC1896615310DC777268317BF4F1 /* FaveButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BDFFAF81FD18A469902D2B65ACDA18E /* FaveButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		242A78876A6B8F0C8C8CB8DDCB9FADF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		2FBE7493430113EEA0F2EBAC11883A7E /* Pods-HumberMedia-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49C9A1F66B37B2B72A98F6EBC4DBDC00 /* Pods-HumberMedia-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73B61CE9759229ACE3B2E5BE1C82F1D8 /* Pods-HumberMedia-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF14C3B4AC7D512C297F6DBB363B6E1 /* Pods-HumberMedia-dummy.m */; };
+		7E4A01E74EBF95740BFA9900AA5635F2 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A31F9A464FA613E94FBC37B531F1E7 /* Ring.swift */; };
+		AD91F79EF0A01EC98BE74F5AAD133F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		B0622ED513918EB5666F7ED866914CE8 /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFFF8BC7CC2AC59212A0535BB7EF41F /* Easing.swift */; };
+		B978CED0627FD4CD82A288BEAC7F87CC /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64463ADDF864CE3E890557BA7AB67259 /* Init.swift */; };
+		BF089C2C5F54D34BDA62839A6D067FF1 /* Constraints+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5760BDD21E5989AE103040FFD34F70 /* Constraints+.swift */; };
+		BFCA478606DD14973269D0B6CA7B92BC /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4851629BAFCD9B5CBD4FFB91E4D1436 /* Geometry.swift */; };
+		C42A079FFE57370549B61F5329DDC4A8 /* FaveButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B5341CFD8D56B8D53B98D5CFADDF4B /* FaveButton-dummy.m */; };
+		CD8164CBF1C3D357D4454E8DC6F1F9C0 /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414582D1BA4B1991D0ADA2F6E4EC9C83 /* Spark.swift */; };
+		CEC675A9FB57DC13D4CBED489CC7F21A /* FaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4173365B5411114915E67CB430ED5E4D /* FaveIcon.swift */; };
+		F09EA3F03C235599C471E7B389011AD2 /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D866BD0CEF6867930E63A6DB3152161 /* FaveButton.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6D419A5E6D1A5BF69EE22D78D0D88354 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE0784AEBF32D9710C40583E2039817E;
+			remoteInfo = FaveButton;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0D866BD0CEF6867930E63A6DB3152161 /* FaveButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaveButton.swift; path = Source/FaveButton.swift; sourceTree = "<group>"; };
+		1B51D3BBABB4BCAD4D2E792F959FB8EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C5760BDD21E5989AE103040FFD34F70 /* Constraints+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Constraints+.swift"; path = "Source/Helpers/Constraints+.swift"; sourceTree = "<group>"; };
+		221983B45745332F72BD98883063179D /* FaveButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FaveButton.xcconfig; sourceTree = "<group>"; };
 		36B19F4DDBC36E4EA92591B611FE5B59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		414582D1BA4B1991D0ADA2F6E4EC9C83 /* Spark.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spark.swift; path = Source/Spark.swift; sourceTree = "<group>"; };
+		4173365B5411114915E67CB430ED5E4D /* FaveIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FaveIcon.swift; path = Source/FaveIcon.swift; sourceTree = "<group>"; };
 		45F97D7A2D73DA2CF7AEE3588AC5DF50 /* Pods-HumberMedia-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HumberMedia-acknowledgements.markdown"; sourceTree = "<group>"; };
+		47A31F9A464FA613E94FBC37B531F1E7 /* Ring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ring.swift; path = Source/Ring.swift; sourceTree = "<group>"; };
 		49C9A1F66B37B2B72A98F6EBC4DBDC00 /* Pods-HumberMedia-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HumberMedia-umbrella.h"; sourceTree = "<group>"; };
 		4AD2080DC866302DC473DAF070A1106A /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 		5916ABDFB3FE8A8AFC94246264F01DDE /* Pods-HumberMedia-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HumberMedia-resources.sh"; sourceTree = "<group>"; };
+		62B5341CFD8D56B8D53B98D5CFADDF4B /* FaveButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FaveButton-dummy.m"; sourceTree = "<group>"; };
+		64463ADDF864CE3E890557BA7AB67259 /* Init.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Init.swift; path = Source/Helpers/Init.swift; sourceTree = "<group>"; };
+		65AE538B238164DE7CDF38EF255C5EC9 /* Pods_HumberMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HumberMedia.framework; path = "Pods-HumberMedia.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D9804F686F437BF852DC7657C8FC69 /* FaveButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FaveButton.framework; path = FaveButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEB1A75FCCC809CF3AEE2D9A72636A7 /* Pods-HumberMedia.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HumberMedia.modulemap"; sourceTree = "<group>"; };
-		8C042AA1C811D5B0ABC0FDA276217FE6 /* Pods_HumberMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HumberMedia.framework; path = "Pods-HumberMedia.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EFFF8BC7CC2AC59212A0535BB7EF41F /* Easing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Easing.swift; path = Source/Helpers/Easing.swift; sourceTree = "<group>"; };
+		7BDFFAF81FD18A469902D2B65ACDA18E /* FaveButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FaveButton-umbrella.h"; sourceTree = "<group>"; };
+		8A7C61DC3C136FCB2250D3DC4C1E4A1F /* FaveButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FaveButton-prefix.pch"; sourceTree = "<group>"; };
 		8EF4B918CD15C42EC0B549A97F539518 /* Pods-HumberMedia-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HumberMedia-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FD506B1F78F69F4CAD30A7DA3377936 /* FaveButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FaveButton.modulemap; sourceTree = "<group>"; };
+		A4851629BAFCD9B5CBD4FFB91E4D1436 /* Geometry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Geometry.swift; path = Source/Helpers/Geometry.swift; sourceTree = "<group>"; };
 		A7D1B4595B6D1E92EFD6A93ED4FAA36F /* Pods-HumberMedia-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HumberMedia-frameworks.sh"; sourceTree = "<group>"; };
 		B9DDEAE20991F92021D7FD7A27B9FA2F /* Pods-HumberMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HumberMedia.release.xcconfig"; sourceTree = "<group>"; };
 		BEF14C3B4AC7D512C297F6DBB363B6E1 /* Pods-HumberMedia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HumberMedia-dummy.m"; sourceTree = "<group>"; };
@@ -29,11 +65,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		676A03DBA799E64822373D75E9439583 /* Frameworks */ = {
+		98BE056A8BA76A19AC612AB35BD6AFD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C3C6338D9F5B4F30FD40FDC479AE376 /* Foundation.framework in Frameworks */,
+				AD91F79EF0A01EC98BE74F5AAD133F6F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D75A6585804C0D02C96D40C18FBB0189 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242A78876A6B8F0C8C8CB8DDCB9FADF2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +92,20 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		412E41DE07F7252E769AA5B95B68D65E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FD506B1F78F69F4CAD30A7DA3377936 /* FaveButton.modulemap */,
+				221983B45745332F72BD98883063179D /* FaveButton.xcconfig */,
+				62B5341CFD8D56B8D53B98D5CFADDF4B /* FaveButton-dummy.m */,
+				8A7C61DC3C136FCB2250D3DC4C1E4A1F /* FaveButton-prefix.pch */,
+				7BDFFAF81FD18A469902D2B65ACDA18E /* FaveButton-umbrella.h */,
+				1B51D3BBABB4BCAD4D2E792F959FB8EB /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FaveButton";
+			sourceTree = "<group>";
+		};
 		44D5347904CF754D6785B84253F2574A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -56,14 +114,49 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		4CA391887326162B506E94CAAC2CFF08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A260D3D477DACCF88D9B9B1E8E9D59F8 /* FaveButton */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				E38F1414625E48A6DE0D4DFAB041DDB8 /* Products */,
+				4CA391887326162B506E94CAAC2CFF08 /* Pods */,
+				A2D2AD3C77D53A56BE5DE66CFBE6ABA6 /* Products */,
 				3504749F846681EE29FFFE6218CBB345 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A260D3D477DACCF88D9B9B1E8E9D59F8 /* FaveButton */ = {
+			isa = PBXGroup;
+			children = (
+				1C5760BDD21E5989AE103040FFD34F70 /* Constraints+.swift */,
+				6EFFF8BC7CC2AC59212A0535BB7EF41F /* Easing.swift */,
+				0D866BD0CEF6867930E63A6DB3152161 /* FaveButton.swift */,
+				4173365B5411114915E67CB430ED5E4D /* FaveIcon.swift */,
+				A4851629BAFCD9B5CBD4FFB91E4D1436 /* Geometry.swift */,
+				64463ADDF864CE3E890557BA7AB67259 /* Init.swift */,
+				47A31F9A464FA613E94FBC37B531F1E7 /* Ring.swift */,
+				414582D1BA4B1991D0ADA2F6E4EC9C83 /* Spark.swift */,
+				412E41DE07F7252E769AA5B95B68D65E /* Support Files */,
+			);
+			name = FaveButton;
+			path = FaveButton;
+			sourceTree = "<group>";
+		};
+		A2D2AD3C77D53A56BE5DE66CFBE6ABA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66D9804F686F437BF852DC7657C8FC69 /* FaveButton.framework */,
+				65AE538B238164DE7CDF38EF255C5EC9 /* Pods_HumberMedia.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -92,44 +185,63 @@
 			path = "Target Support Files/Pods-HumberMedia";
 			sourceTree = "<group>";
 		};
-		E38F1414625E48A6DE0D4DFAB041DDB8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8C042AA1C811D5B0ABC0FDA276217FE6 /* Pods_HumberMedia.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C9879B63AABFF27EF6EC1D00E255AC39 /* Headers */ = {
+		544B5604A5FAEC69AB356ABD1E6A0500 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD99FC4C10302B2DAD4A7B4D26723C9C /* Pods-HumberMedia-umbrella.h in Headers */,
+				2FBE7493430113EEA0F2EBAC11883A7E /* Pods-HumberMedia-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F5C5AC8597CCF446648510A881670C1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F1BC1896615310DC777268317BF4F1 /* FaveButton-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		249E46BF1FDDC51274CEDF6AACC471B9 /* Pods-HumberMedia */ = {
+		F23462D7D28DFF6B38ABE1D317F9EDC7 /* Pods-HumberMedia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1053AB67CFD07A02A7E96DE7193C4234 /* Build configuration list for PBXNativeTarget "Pods-HumberMedia" */;
+			buildConfigurationList = A5077C190A5422B3950F3E2AE0B38FB4 /* Build configuration list for PBXNativeTarget "Pods-HumberMedia" */;
 			buildPhases = (
-				C9879B63AABFF27EF6EC1D00E255AC39 /* Headers */,
-				198BB32B975533ECB497DA2EFC70CDB8 /* Sources */,
-				676A03DBA799E64822373D75E9439583 /* Frameworks */,
-				B64690E0F978C62E8127DCB5BAF20FDE /* Resources */,
+				544B5604A5FAEC69AB356ABD1E6A0500 /* Headers */,
+				5BE34323E5CF7C232271F6E4EC819621 /* Sources */,
+				D75A6585804C0D02C96D40C18FBB0189 /* Frameworks */,
+				3ECB4430284FE52E91E0181566A36C5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				232AE3BA75F351A3A76DC3AEAA2E0604 /* PBXTargetDependency */,
+			);
+			name = "Pods-HumberMedia";
+			productName = "Pods-HumberMedia";
+			productReference = 65AE538B238164DE7CDF38EF255C5EC9 /* Pods_HumberMedia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FE0784AEBF32D9710C40583E2039817E /* FaveButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B2A42CFDF38027C714083AB2E518F56 /* Build configuration list for PBXNativeTarget "FaveButton" */;
+			buildPhases = (
+				7F5C5AC8597CCF446648510A881670C1 /* Headers */,
+				2531D7AEBAD32F82193C4D7C30CFBF86 /* Sources */,
+				98BE056A8BA76A19AC612AB35BD6AFD6 /* Frameworks */,
+				F446A674637DA87C4DABECBE1DA2C744 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-HumberMedia";
-			productName = "Pods-HumberMedia";
-			productReference = 8C042AA1C811D5B0ABC0FDA276217FE6 /* Pods_HumberMedia.framework */;
+			name = FaveButton;
+			productName = FaveButton;
+			productReference = 66D9804F686F437BF852DC7657C8FC69 /* FaveButton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -149,17 +261,25 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = E38F1414625E48A6DE0D4DFAB041DDB8 /* Products */;
+			productRefGroup = A2D2AD3C77D53A56BE5DE66CFBE6ABA6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				249E46BF1FDDC51274CEDF6AACC471B9 /* Pods-HumberMedia */,
+				FE0784AEBF32D9710C40583E2039817E /* FaveButton */,
+				F23462D7D28DFF6B38ABE1D317F9EDC7 /* Pods-HumberMedia */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B64690E0F978C62E8127DCB5BAF20FDE /* Resources */ = {
+		3ECB4430284FE52E91E0181566A36C5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F446A674637DA87C4DABECBE1DA2C744 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -169,15 +289,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		198BB32B975533ECB497DA2EFC70CDB8 /* Sources */ = {
+		2531D7AEBAD32F82193C4D7C30CFBF86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB094B08B76785468CD7F8F8A3DCA02 /* Pods-HumberMedia-dummy.m in Sources */,
+				BF089C2C5F54D34BDA62839A6D067FF1 /* Constraints+.swift in Sources */,
+				B0622ED513918EB5666F7ED866914CE8 /* Easing.swift in Sources */,
+				C42A079FFE57370549B61F5329DDC4A8 /* FaveButton-dummy.m in Sources */,
+				F09EA3F03C235599C471E7B389011AD2 /* FaveButton.swift in Sources */,
+				CEC675A9FB57DC13D4CBED489CC7F21A /* FaveIcon.swift in Sources */,
+				BFCA478606DD14973269D0B6CA7B92BC /* Geometry.swift in Sources */,
+				B978CED0627FD4CD82A288BEAC7F87CC /* Init.swift in Sources */,
+				7E4A01E74EBF95740BFA9900AA5635F2 /* Ring.swift in Sources */,
+				CD8164CBF1C3D357D4454E8DC6F1F9C0 /* Spark.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BE34323E5CF7C232271F6E4EC819621 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B61CE9759229ACE3B2E5BE1C82F1D8 /* Pods-HumberMedia-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		232AE3BA75F351A3A76DC3AEAA2E0604 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FaveButton;
+			target = FE0784AEBF32D9710C40583E2039817E /* FaveButton */;
+			targetProxy = 6D419A5E6D1A5BF69EE22D78D0D88354 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0AA3B91655AF95B1F49159CD8085CD89 /* Debug */ = {
@@ -246,7 +391,7 @@
 			};
 			name = Debug;
 		};
-		1D8D6E7DD4F963D70F01D1AB9A89BE2F /* Release */ = {
+		2C8D947BEA53AFDD0C0CD2612B0ACAF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B9DDEAE20991F92021D7FD7A27B9FA2F /* Pods-HumberMedia.release.xcconfig */;
 			buildSettings = {
@@ -347,7 +492,43 @@
 			};
 			name = Release;
 		};
-		ED14B7D35AC6A796FBFBD75160492413 /* Debug */ = {
+		BC5351CC4AD7BCC44224B78A974E30C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221983B45745332F72BD98883063179D /* FaveButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FaveButton/FaveButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FaveButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FaveButton/FaveButton.modulemap";
+				PRODUCT_MODULE_NAME = FaveButton;
+				PRODUCT_NAME = FaveButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4CE6F3927630BEF3F95233D2A884E3C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AD2080DC866302DC473DAF070A1106A /* Pods-HumberMedia.debug.xcconfig */;
 			buildSettings = {
@@ -385,23 +566,67 @@
 			};
 			name = Debug;
 		};
+		FE8B1190EBBE8DABD54548333477BAE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221983B45745332F72BD98883063179D /* FaveButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FaveButton/FaveButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FaveButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/FaveButton/FaveButton.modulemap";
+				PRODUCT_MODULE_NAME = FaveButton;
+				PRODUCT_NAME = FaveButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1053AB67CFD07A02A7E96DE7193C4234 /* Build configuration list for PBXNativeTarget "Pods-HumberMedia" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ED14B7D35AC6A796FBFBD75160492413 /* Debug */,
-				1D8D6E7DD4F963D70F01D1AB9A89BE2F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AA3B91655AF95B1F49159CD8085CD89 /* Debug */,
 				8000995DA02063BF3777393CD52061DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B2A42CFDF38027C714083AB2E518F56 /* Build configuration list for PBXNativeTarget "FaveButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE8B1190EBBE8DABD54548333477BAE7 /* Debug */,
+				BC5351CC4AD7BCC44224B78A974E30C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5077C190A5422B3950F3E2AE0B38FB4 /* Build configuration list for PBXNativeTarget "Pods-HumberMedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CE6F3927630BEF3F95233D2A884E3C /* Debug */,
+				2C8D947BEA53AFDD0C0CD2612B0ACAF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

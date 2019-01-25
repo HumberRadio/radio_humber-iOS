@@ -6,5 +6,7 @@ target 'HumberMedia' do
   use_frameworks!
 
   # Pods for HumberMedia
+  pod 'FaveButton'
+  
 
 end
