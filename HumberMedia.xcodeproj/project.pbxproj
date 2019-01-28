@@ -13,6 +13,7 @@
 		7104599D21FB91BD00677A19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7104599C21FB91BD00677A19 /* Assets.xcassets */; };
 		710459A021FB91BD00677A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7104599E21FB91BD00677A19 /* LaunchScreen.storyboard */; };
 		710459A821FB99F100677A19 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710459A721FB99F100677A19 /* RadioViewController.swift */; };
+		710459AB21FED0C900677A19 /* ShadowUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710459AA21FED0C900677A19 /* ShadowUIView.swift */; };
 		821BF52B2C93AC7E710724D5 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E871B0BAB4B48749AD1521 /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		7104599F21FB91BD00677A19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		710459A121FB91BD00677A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		710459A721FB99F100677A19 /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
+		710459AA21FED0C900677A19 /* ShadowUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowUIView.swift; sourceTree = "<group>"; };
 		C0E871B0BAB4B48749AD1521 /* Pods_HumberMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HumberMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 		7104599421FB91BC00677A19 /* HumberMedia */ = {
 			isa = PBXGroup;
 			children = (
+				710459A921FED0A800677A19 /* helpers */,
 				7104599521FB91BC00677A19 /* AppDelegate.swift */,
 				7104599721FB91BC00677A19 /* ViewController.swift */,
 				7104599921FB91BC00677A19 /* Main.storyboard */,
@@ -72,6 +75,14 @@
 				710459A721FB99F100677A19 /* RadioViewController.swift */,
 			);
 			path = HumberMedia;
+			sourceTree = "<group>";
+		};
+		710459A921FED0A800677A19 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				710459AA21FED0C900677A19 /* ShadowUIView.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 		EAB31D9533FA1A8CA9CCD39C /* Frameworks */ = {
@@ -217,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				710459AB21FED0C900677A19 /* ShadowUIView.swift in Sources */,
 				7104599821FB91BC00677A19 /* ViewController.swift in Sources */,
 				7104599621FB91BC00677A19 /* AppDelegate.swift in Sources */,
 				710459A821FB99F100677A19 /* RadioViewController.swift in Sources */,

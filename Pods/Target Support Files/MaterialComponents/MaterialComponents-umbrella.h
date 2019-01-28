@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "CAMediaTimingFunction+MDCAnimationTiming.h"
+#import "MaterialAnimationTiming.h"
+#import "UIView+MDCTimingFunction.h"
 #import "MaterialBottomNavigation.h"
 #import "MDCBottomNavigationBar.h"
 #import "MaterialButtons.h"
@@ -28,6 +31,18 @@
 #import "MDCShadowElevations.h"
 #import "MaterialShadowLayer.h"
 #import "MDCShadowLayer.h"
+#import "MaterialTabs.h"
+#import "MDCTabBar.h"
+#import "MDCTabBarAlignment.h"
+#import "MDCTabBarIndicatorAttributes.h"
+#import "MDCTabBarIndicatorContext.h"
+#import "MDCTabBarIndicatorTemplate.h"
+#import "MDCTabBarItemAppearance.h"
+#import "MDCTabBarTextTransform.h"
+#import "MDCTabBarUnderlineIndicatorTemplate.h"
+#import "MDCTabBarViewController.h"
+#import "MaterialTabs+ColorThemer.h"
+#import "MDCTabBarColorThemer.h"
 #import "MaterialTypography.h"
 #import "MDCFontTextStyle.h"
 #import "MDCTypography.h"
@@ -46,6 +61,11 @@
 #import "MDCShapedShadowLayer.h"
 #import "MDCShapedView.h"
 #import "MDCShapeGenerating.h"
+#import "MaterialColorScheme.h"
+#import "MDCLegacyColorScheme.h"
+#import "MDCLegacyTonalColorScheme.h"
+#import "MDCLegacyTonalPalette.h"
+#import "MDCSemanticColorScheme.h"
 
 FOUNDATION_EXPORT double MaterialComponentsVersionNumber;
 FOUNDATION_EXPORT const unsigned char MaterialComponentsVersionString[];

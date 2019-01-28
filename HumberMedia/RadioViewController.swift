@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class RadioViewController: UIViewController {
-
+    @IBOutlet weak var bottomView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+//        bottomView.setDefaultElevation()
     }
-    
 
     /*
     // MARK: - Navigation
@@ -28,3 +29,4 @@ class RadioViewController: UIViewController {
     */
 
 }
+

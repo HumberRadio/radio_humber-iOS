@@ -7,6 +7,10 @@ target 'HumberMedia' do
 
   # Pods for HumberMedia
   pod 'FaveButton'
+  pod 'MaterialComponents/ShadowElevations'
+  pod 'MaterialComponents/Tabs+ColorThemer'
+  
+  
   pod 'MaterialComponents/Buttons'
   pod 'MaterialComponents/HeaderStackView'
   pod 'MaterialComponents/BottomNavigation'
