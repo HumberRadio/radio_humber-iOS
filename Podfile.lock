@@ -1,5 +1,12 @@
 PODS:
   - FaveButton (3.0.0)
+  - MaterialComponents/BottomNavigation (74.0.0):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Buttons (74.0.0):
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -9,6 +16,7 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
+  - MaterialComponents/HeaderStackView (74.0.0)
   - MaterialComponents/Ink (74.0.0):
     - MaterialComponents/private/Math
   - MaterialComponents/private/Application (74.0.0)
@@ -27,7 +35,9 @@ PODS:
 
 DEPENDENCIES:
   - FaveButton
+  - MaterialComponents/BottomNavigation
   - MaterialComponents/Buttons
+  - MaterialComponents/HeaderStackView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -42,6 +52,6 @@ SPEC CHECKSUMS:
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
 
-PODFILE CHECKSUM: 3e306828c8e1a2dee381fe7a14acaceefc775aac
+PODFILE CHECKSUM: 8f03037a213987a7ba151b3c4bf19ad414c9ddb1
 
 COCOAPODS: 1.5.3
