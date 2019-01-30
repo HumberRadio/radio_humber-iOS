@@ -16,6 +16,17 @@ class RadioViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 //        bottomView.setDefaultElevation()
+        let tabBar = MDCTabBar(frame: view.bounds)
+        tabBar.items = [
+            UITabBarItem(title: "Radio", image: UIImage(named: "radio_black"), tag: 0),
+            UITabBarItem(title: "Tv", image: UIImage(named: "radio_black"), tag: 1),
+            UITabBarItem(title: "Journalism", image: UIImage(named: "radio_black"), tag: 2),
+            UITabBarItem(title: "Information", image: UIImage(named: "radio_black"), tag: 3),
+        ]
+        tabBar.itemAppearance = .titledImages
+        tabBar.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+        tabBar.sizeToFit()
+        view.addSubview(tabBar)
     }
 
     /*
