@@ -11,9 +11,11 @@ target 'HumberMedia' do
   pod 'MaterialComponents/Tabs+ColorThemer'
   
   
+  
   pod 'MaterialComponents/Buttons'
   pod 'MaterialComponents/HeaderStackView'
   pod 'MaterialComponents/BottomNavigation'
+  
   
 
 end
