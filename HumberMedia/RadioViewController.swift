@@ -45,16 +45,17 @@ class RadioViewController: UIViewController, WKNavigationDelegate{
 //        bottomView.layer.cornerRadius = CGFloat(valueRadius);
         bottomView.layer.masksToBounds = false;
         bottomView.layer.shadowColor = hexStringToUIColor(hex: "#80555555").cgColor
-        bottomView.layer.shadowOpacity = 1
+//        bottomView.layer.shadowOpacity = 1
         
-        bottomView.layer.shadowOffset = CGSize(width: 0, height: -3.0)
+        bottomView.layer.shadowOffset = CGSize(width: 0, height: -2.0)
         bottomView.layer.shadowOpacity = 0.6
-        bottomView.layer.shadowRadius = 0.0
+        bottomView.layer.shadowRadius = 0.1
         
         
         //setting inset fab
         buttonVolume.setElevation(ShadowElevation(rawValue: 6), for: .normal);
         buttonVolume.setElevation(ShadowElevation(rawValue: 12), for: .highlighted);
+//        buttonVolume.isset
 //        buttonVolume.
 //        let buttonVerticalInset =
 //            min(0, -(kMinimumAccessibleButtonSize.height - button.bounds.height) / 2);
