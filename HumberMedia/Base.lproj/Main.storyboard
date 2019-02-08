@@ -18,42 +18,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J9h-PE-9d8">
-                                <rect key="frame" x="0.0" y="233" width="375" height="200"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-Bf-wSg">
-                                <rect key="frame" x="0.0" y="20" width="375" height="0.0"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J9h-PE-9d8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="569"/>
                                 <subviews>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQw-xe-xz9">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPp-tM-NZ3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-Bf-wSg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="469"/>
+                                        <subviews>
+                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQw-xe-xz9">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="234.5"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPp-tM-NZ3">
+                                                <rect key="frame" x="0.0" y="234.5" width="375" height="234.5"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UpI-ae-qhu">
+                                        <rect key="frame" x="0.0" y="469" width="375" height="100"/>
+                                        <color key="backgroundColor" red="0.22865226860000001" green="0.34504550699999997" blue="0.37773388619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="bJI-rp-SZI"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpB-re-Edp" userLabel="bottomView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_thumb_image" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-fq-bAQ">
-                                        <rect key="frame" x="20" y="15" width="617" height="617"/>
+                                        <rect key="frame" x="20" y="15" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ev7-fq-bAQ" secondAttribute="height" multiplier="1:1" id="16p-5q-RhW"/>
                                             <constraint firstAttribute="width" constant="50" id="VJX-XR-wQX"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvj-0E-kKh" userLabel="playButton" customClass="FaveButton" customModule="FaveButton">
-                                        <rect key="frame" x="1529.5" y="25" width="597" height="597"/>
+                                        <rect key="frame" x="325" y="25" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Cvj-0E-kKh" secondAttribute="height" multiplier="1:1" id="3vY-Kb-efb"/>
                                         </constraints>
@@ -74,7 +83,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2c-q0-TIc" userLabel="favButton" customClass="FaveButton" customModule="FaveButton">
-                                        <rect key="frame" x="803" y="25" width="716.5" height="597"/>
+                                        <rect key="frame" x="279" y="25" width="36" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="R2c-q0-TIc" secondAttribute="height" multiplier="1.2:1" id="pln-MM-vDh"/>
                                         </constraints>
@@ -101,43 +110,58 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio Humber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEz-lV-rq0">
-                                        <rect key="frame" x="645" y="15" width="150" height="21"/>
+                                        <rect key="frame" x="78" y="15" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Gyd-01-0ss"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="KDU-uy-xUA"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZY-ar-7xe">
-                                        <rect key="frame" x="645" y="43" width="143" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYj-5M-YAC">
+                                        <rect key="frame" x="78" y="41" width="191" height="24"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y86-AZ-Emz">
+                                                <rect key="frame" x="0.0" y="0.0" width="4426.5" height="20.5"/>
+                                                <color key="backgroundColor" red="0.8980392157" green="0.81568627449999997" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Y86-AZ-Emz" firstAttribute="leading" secondItem="HYj-5M-YAC" secondAttribute="leading" id="5SM-Um-STl"/>
+                                            <constraint firstItem="Y86-AZ-Emz" firstAttribute="top" secondItem="HYj-5M-YAC" secondAttribute="top" id="OBn-ZC-aFC"/>
+                                            <constraint firstAttribute="bottom" secondItem="Y86-AZ-Emz" secondAttribute="bottom" id="Utj-z4-03i"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y86-AZ-Emz" secondAttribute="trailing" id="xUx-Ic-9zl"/>
+                                        </constraints>
+                                    </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.2498929794520548" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ev7-fq-bAQ" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="15" id="1Sw-N8-0P1"/>
                                     <constraint firstAttribute="bottom" secondItem="ev7-fq-bAQ" secondAttribute="bottom" constant="15" id="3o6-5Q-f77"/>
                                     <constraint firstItem="Cvj-0E-kKh" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="25" id="EFc-B0-prf"/>
                                     <constraint firstItem="bEz-lV-rq0" firstAttribute="leading" secondItem="ev7-fq-bAQ" secondAttribute="trailing" constant="8" id="ETO-za-64e"/>
-                                    <constraint firstItem="kZY-ar-7xe" firstAttribute="top" secondItem="bEz-lV-rq0" secondAttribute="bottom" constant="7" id="OTY-nR-BCq"/>
+                                    <constraint firstItem="HYj-5M-YAC" firstAttribute="leading" secondItem="bEz-lV-rq0" secondAttribute="leading" id="GDQ-UE-Afi"/>
+                                    <constraint firstItem="HYj-5M-YAC" firstAttribute="bottom" secondItem="ev7-fq-bAQ" secondAttribute="bottom" id="Lk3-a1-bbo"/>
                                     <constraint firstItem="R2c-q0-TIc" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="25" id="Odc-5Q-Kc0"/>
                                     <constraint firstItem="R2c-q0-TIc" firstAttribute="trailing" secondItem="Cvj-0E-kKh" secondAttribute="leading" constant="-10" id="RcS-M4-OxO"/>
-                                    <constraint firstItem="kZY-ar-7xe" firstAttribute="leading" secondItem="bEz-lV-rq0" secondAttribute="leading" id="VIF-Dc-5Nc"/>
-                                    <constraint firstItem="R2c-q0-TIc" firstAttribute="leading" secondItem="kZY-ar-7xe" secondAttribute="trailing" constant="15" id="XL4-kd-z45"/>
+                                    <constraint firstItem="HYj-5M-YAC" firstAttribute="trailing" secondItem="R2c-q0-TIc" secondAttribute="leading" constant="-10" id="XaC-Up-suF"/>
                                     <constraint firstItem="R2c-q0-TIc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bEz-lV-rq0" secondAttribute="trailing" constant="8" symbolic="YES" id="cih-fK-NGL"/>
                                     <constraint firstItem="ev7-fq-bAQ" firstAttribute="leading" secondItem="YpB-re-Edp" secondAttribute="leading" constant="20" id="fJu-vR-mDA"/>
+                                    <constraint firstAttribute="height" constant="80" id="gX7-vz-uZ9"/>
                                     <constraint firstAttribute="bottom" secondItem="R2c-q0-TIc" secondAttribute="bottom" constant="25" id="isW-az-IOC"/>
                                     <constraint firstAttribute="bottom" secondItem="Cvj-0E-kKh" secondAttribute="bottom" constant="25" id="onO-sp-RjC"/>
+                                    <constraint firstItem="HYj-5M-YAC" firstAttribute="top" secondItem="bEz-lV-rq0" secondAttribute="bottom" constant="5" id="pM4-dh-G3q"/>
                                     <constraint firstAttribute="trailing" secondItem="Cvj-0E-kKh" secondAttribute="trailing" constant="20" id="rlX-Vz-KlB"/>
                                     <constraint firstItem="bEz-lV-rq0" firstAttribute="top" secondItem="ev7-fq-bAQ" secondAttribute="top" id="uZ9-OK-Yrf"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WP-ql-H0E" customClass="MDCFloatingButton">
-                                <rect key="frame" x="202.5" y="-17.5" width="75" height="75"/>
+                                <rect key="frame" x="202.5" y="549.5" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="iuZ-k5-cHd"/>
                                     <constraint firstAttribute="width" constant="75" id="izn-xB-qYW"/>
@@ -147,17 +171,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.22865226864814758" green="0.34504550695419312" blue="0.37773388624191284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cP7-Bf-wSg" firstAttribute="bottom" secondItem="YpB-re-Edp" secondAttribute="top" id="D5Z-Yo-Nm3"/>
-                            <constraint firstItem="J9h-PE-9d8" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" id="Fbh-Bd-3U4"/>
+                            <constraint firstItem="J9h-PE-9d8" firstAttribute="bottom" secondItem="YpB-re-Edp" secondAttribute="top" constant="2" id="5A3-LK-k72"/>
                             <constraint firstItem="3WP-ql-H0E" firstAttribute="leading" secondItem="YpB-re-Edp" secondAttribute="centerX" constant="15" id="Jch-lx-DJh"/>
                             <constraint firstItem="J9h-PE-9d8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KYs-qp-v8j"/>
                             <constraint firstItem="J9h-PE-9d8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ne6-xD-hVG"/>
                             <constraint firstItem="YpB-re-Edp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RTP-YA-Hn3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YpB-re-Edp" secondAttribute="bottom" id="RXX-ZF-tAV"/>
-                            <constraint firstItem="cP7-Bf-wSg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WUv-ch-iz0"/>
-                            <constraint firstItem="cP7-Bf-wSg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bOV-P7-5ey"/>
                             <constraint firstItem="3WP-ql-H0E" firstAttribute="centerY" secondItem="YpB-re-Edp" secondAttribute="top" id="gED-lF-MSe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cP7-Bf-wSg" secondAttribute="trailing" id="paw-MG-z2R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J9h-PE-9d8" secondAttribute="trailing" id="tQy-Ik-IH8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YpB-re-Edp" secondAttribute="trailing" id="uab-4z-cMl"/>
                         </constraints>
