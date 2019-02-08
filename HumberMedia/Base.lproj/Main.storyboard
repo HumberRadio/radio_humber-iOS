@@ -18,71 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpB-re-Edp" userLabel="bottomView" customClass="ShadowUIView" customModule="HumberMedia" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Radio_Humber_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-fq-bAQ">
-                                        <rect key="frame" x="20" y="15" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="ev7-fq-bAQ" secondAttribute="height" multiplier="1:1" id="16p-5q-RhW"/>
-                                            <constraint firstAttribute="width" constant="50" id="VJX-XR-wQX"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvj-0E-kKh" userLabel="playButton" customClass="FaveButton" customModule="FaveButton">
-                                        <rect key="frame" x="315" y="20" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Cvj-0E-kKh" secondAttribute="height" multiplier="1:1" id="3vY-Kb-efb"/>
-                                        </constraints>
-                                        <state key="normal" image="play_button_round"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="dotFirstColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="dotSecondColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleFromColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleToColor">
-                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2c-q0-TIc" userLabel="favButton" customClass="FaveButton" customModule="FaveButton">
-                                        <rect key="frame" x="257" y="20" width="48" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="R2c-q0-TIc" secondAttribute="height" multiplier="1.2:1" id="pln-MM-vDh"/>
-                                        </constraints>
-                                        <state key="normal" image="fav_button"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio Humber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEz-lV-rq0">
-                                        <rect key="frame" x="78" y="15" width="150" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="Gyd-01-0ss"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="KDU-uy-xUA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="ev7-fq-bAQ" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="15" id="1Sw-N8-0P1"/>
-                                    <constraint firstAttribute="bottom" secondItem="ev7-fq-bAQ" secondAttribute="bottom" constant="15" id="3o6-5Q-f77"/>
-                                    <constraint firstItem="Cvj-0E-kKh" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="20" id="EFc-B0-prf"/>
-                                    <constraint firstItem="bEz-lV-rq0" firstAttribute="leading" secondItem="ev7-fq-bAQ" secondAttribute="trailing" constant="8" id="ETO-za-64e"/>
-                                    <constraint firstItem="R2c-q0-TIc" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="20" id="Odc-5Q-Kc0"/>
-                                    <constraint firstItem="R2c-q0-TIc" firstAttribute="trailing" secondItem="Cvj-0E-kKh" secondAttribute="leading" constant="-10" id="RcS-M4-OxO"/>
-                                    <constraint firstItem="R2c-q0-TIc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bEz-lV-rq0" secondAttribute="trailing" constant="8" symbolic="YES" id="cih-fK-NGL"/>
-                                    <constraint firstItem="ev7-fq-bAQ" firstAttribute="leading" secondItem="YpB-re-Edp" secondAttribute="leading" constant="20" id="fJu-vR-mDA"/>
-                                    <constraint firstAttribute="bottom" secondItem="R2c-q0-TIc" secondAttribute="bottom" constant="20" id="isW-az-IOC"/>
-                                    <constraint firstAttribute="bottom" secondItem="Cvj-0E-kKh" secondAttribute="bottom" constant="20" id="onO-sp-RjC"/>
-                                    <constraint firstAttribute="trailing" secondItem="Cvj-0E-kKh" secondAttribute="trailing" constant="20" id="rlX-Vz-KlB"/>
-                                    <constraint firstItem="bEz-lV-rq0" firstAttribute="top" secondItem="ev7-fq-bAQ" secondAttribute="top" id="uZ9-OK-Yrf"/>
-                                </constraints>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-Bf-wSg">
                                 <rect key="frame" x="0.0" y="20" width="375" height="567"/>
                                 <subviews>
@@ -104,14 +39,98 @@
                                     </wkWebView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YpB-re-Edp" userLabel="bottomView">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Radio_Humber_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-fq-bAQ">
+                                        <rect key="frame" x="20" y="15" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ev7-fq-bAQ" secondAttribute="height" multiplier="1:1" id="16p-5q-RhW"/>
+                                            <constraint firstAttribute="width" constant="50" id="VJX-XR-wQX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvj-0E-kKh" userLabel="playButton" customClass="FaveButton" customModule="FaveButton">
+                                        <rect key="frame" x="325" y="25" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Cvj-0E-kKh" secondAttribute="height" multiplier="1:1" id="3vY-Kb-efb"/>
+                                        </constraints>
+                                        <state key="normal" image="play_button_round"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dotFirstColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dotSecondColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleFromColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleToColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2c-q0-TIc" userLabel="favButton" customClass="FaveButton" customModule="FaveButton">
+                                        <rect key="frame" x="279" y="25" width="36" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="R2c-q0-TIc" secondAttribute="height" multiplier="1.2:1" id="pln-MM-vDh"/>
+                                        </constraints>
+                                        <state key="normal" image="fav_button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio Humber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEz-lV-rq0">
+                                        <rect key="frame" x="78" y="15" width="150" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Gyd-01-0ss"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="KDU-uy-xUA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZY-ar-7xe">
+                                        <rect key="frame" x="78" y="43" width="186" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ev7-fq-bAQ" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="15" id="1Sw-N8-0P1"/>
+                                    <constraint firstAttribute="bottom" secondItem="ev7-fq-bAQ" secondAttribute="bottom" constant="15" id="3o6-5Q-f77"/>
+                                    <constraint firstItem="Cvj-0E-kKh" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="25" id="EFc-B0-prf"/>
+                                    <constraint firstItem="bEz-lV-rq0" firstAttribute="leading" secondItem="ev7-fq-bAQ" secondAttribute="trailing" constant="8" id="ETO-za-64e"/>
+                                    <constraint firstItem="kZY-ar-7xe" firstAttribute="top" secondItem="bEz-lV-rq0" secondAttribute="bottom" constant="7" id="OTY-nR-BCq"/>
+                                    <constraint firstItem="R2c-q0-TIc" firstAttribute="top" secondItem="YpB-re-Edp" secondAttribute="top" constant="25" id="Odc-5Q-Kc0"/>
+                                    <constraint firstItem="R2c-q0-TIc" firstAttribute="trailing" secondItem="Cvj-0E-kKh" secondAttribute="leading" constant="-10" id="RcS-M4-OxO"/>
+                                    <constraint firstItem="kZY-ar-7xe" firstAttribute="leading" secondItem="bEz-lV-rq0" secondAttribute="leading" id="VIF-Dc-5Nc"/>
+                                    <constraint firstItem="R2c-q0-TIc" firstAttribute="leading" secondItem="kZY-ar-7xe" secondAttribute="trailing" constant="15" id="XL4-kd-z45"/>
+                                    <constraint firstItem="R2c-q0-TIc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bEz-lV-rq0" secondAttribute="trailing" constant="8" symbolic="YES" id="cih-fK-NGL"/>
+                                    <constraint firstItem="ev7-fq-bAQ" firstAttribute="leading" secondItem="YpB-re-Edp" secondAttribute="leading" constant="20" id="fJu-vR-mDA"/>
+                                    <constraint firstAttribute="bottom" secondItem="R2c-q0-TIc" secondAttribute="bottom" constant="25" id="isW-az-IOC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cvj-0E-kKh" secondAttribute="bottom" constant="25" id="onO-sp-RjC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cvj-0E-kKh" secondAttribute="trailing" constant="20" id="rlX-Vz-KlB"/>
+                                    <constraint firstItem="bEz-lV-rq0" firstAttribute="top" secondItem="ev7-fq-bAQ" secondAttribute="top" id="uZ9-OK-Yrf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WP-ql-H0E" customClass="MDCFloatingButton">
+                                <rect key="frame" x="202.5" y="549.5" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="iuZ-k5-cHd"/>
+                                    <constraint firstAttribute="width" constant="75" id="izn-xB-qYW"/>
+                                </constraints>
+                                <state key="normal" image="button_volume"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.22865226864814758" green="0.34504550695419312" blue="0.37773388624191284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cP7-Bf-wSg" firstAttribute="bottom" secondItem="YpB-re-Edp" secondAttribute="top" id="D5Z-Yo-Nm3"/>
+                            <constraint firstItem="3WP-ql-H0E" firstAttribute="leading" secondItem="YpB-re-Edp" secondAttribute="centerX" constant="15" id="Jch-lx-DJh"/>
                             <constraint firstItem="YpB-re-Edp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RTP-YA-Hn3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YpB-re-Edp" secondAttribute="bottom" id="RXX-ZF-tAV"/>
                             <constraint firstItem="cP7-Bf-wSg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WUv-ch-iz0"/>
                             <constraint firstItem="cP7-Bf-wSg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bOV-P7-5ey"/>
+                            <constraint firstItem="3WP-ql-H0E" firstAttribute="centerY" secondItem="YpB-re-Edp" secondAttribute="top" id="gED-lF-MSe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cP7-Bf-wSg" secondAttribute="trailing" id="paw-MG-z2R"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YpB-re-Edp" secondAttribute="trailing" id="uab-4z-cMl"/>
                         </constraints>
@@ -119,15 +138,67 @@
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="YpB-re-Edp" id="UXx-9q-JvL"/>
+                        <outlet property="buttonVolume" destination="3WP-ql-H0E" id="hF0-ZZ-18K"/>
                         <outlet property="twitterWebView" destination="sQw-xe-xz9" id="Lk1-Rt-eSI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1079" y="94"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="dr7-AS-Gvk">
+            <objects>
+                <viewController id="Ucb-7B-K9a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="itw-yp-XQy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0V1-dN-EVY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="d0d-xf-DIx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rca-Up-k8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="-149"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="1ff-fb-YsO">
+            <objects>
+                <viewController id="lvc-5z-oFy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kW1-fc-n77">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BUk-bE-PK5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="iNH-hi-LWm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PhL-wZ-RVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="1020"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Yr2-6S-G48">
+            <objects>
+                <tabBarController id="yVs-Ze-kWl" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H6O-dG-Idj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lvc-5z-oFy" kind="relationship" relationship="viewControllers" id="BnE-bc-p9f"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9V-ss-MxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1164" y="507"/>
         </scene>
     </scenes>
     <resources>
         <image name="Radio_Humber_Logo" width="220" height="220"/>
+        <image name="button_volume" width="140" height="139"/>
         <image name="fav_button" width="334.39999389648438" height="295.20001220703125"/>
         <image name="play_button_round" width="170.39999389648438" height="206.39999389648438"/>
     </resources>

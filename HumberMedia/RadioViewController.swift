@@ -10,10 +10,13 @@ import UIKit
 import MaterialComponents
 import WebKit
 
+
 class RadioViewController: UIViewController, WKNavigationDelegate{
+    @IBOutlet weak var buttonVolume: MDCFloatingButton!
     @IBOutlet weak var twitterWebView: WKWebView!
     @IBOutlet weak var bottomView: UIView!
-  
+    final var valueRadius = 12;
+    
     
     var webContentTwitter = """
 <meta name='viewport' content='initial-scale=1.0'/>
@@ -38,9 +41,29 @@ class RadioViewController: UIViewController, WKNavigationDelegate{
         twitterWebView.navigationDelegate = self;
         twitterWebView.loadHTMLString(webContentTwitter, baseURL: nil);
         
+        //bottom view shadow
+//        bottomView.layer.cornerRadius = CGFloat(valueRadius);
+        bottomView.layer.masksToBounds = false;
+        bottomView.layer.shadowColor = hexStringToUIColor(hex: "#80555555").cgColor
+        bottomView.layer.shadowOpacity = 1
+        
+        bottomView.layer.shadowOffset = CGSize(width: 0, height: -3.0)
+        bottomView.layer.shadowOpacity = 0.6
+        bottomView.layer.shadowRadius = 0.0
         
         
-        
+        //setting inset fab
+        buttonVolume.setElevation(ShadowElevation(rawValue: 6), for: .normal);
+        buttonVolume.setElevation(ShadowElevation(rawValue: 12), for: .highlighted);
+//        buttonVolume.
+//        let buttonVerticalInset =
+//            min(0, -(kMinimumAccessibleButtonSize.height - button.bounds.height) / 2);
+//        let buttonHorizontalInset =
+//            min(0, -(kMinimumAccessibleButtonSize.width - button.bounds.width) / 2);
+//        buttonVolume.hitAreaInsets =
+//            UIEdgeInsetsMake(buttonVerticalInset, buttonHorizontalInset,
+//                             buttonVerticalInset, buttonHorizontalInset);
+
         
     }
     
