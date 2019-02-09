@@ -12,10 +12,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import "MDCCornerTreatment.h"
-#import "MDCEdgeTreatment.h"
-#import "MDCPathGenerator.h"
-#import "MDCRectangleShapeGenerator.h"
-#import "MDCShapeGenerating.h"
-#import "MDCShapedShadowLayer.h"
-#import "MDCShapedView.h"
+#import "MDCEdgeTreatmentNew.h"
+
+#import "MDCPathGeneratorNew.h"
+
+@implementation MDCEdgeTreatment
+
+- (instancetype)init {
+  return [super init];
+}
+
+- (MDCPathGenerator *)pathGeneratorForEdgeWithLength:(CGFloat)length {
+  MDCPathGenerator *path = [MDCPathGenerator pathGeneratorWithStartPoint:CGPointZero];
+  [path addLineToPoint:CGPointMake(length, 0)];
+  return path;
+}
+
+- (id)copyWithZone:(nullable NSZone *)__unused zone {
+  return [[[self class] alloc] init];
+}
+
+@end

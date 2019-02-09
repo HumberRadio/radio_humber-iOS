@@ -25,9 +25,13 @@
 		714A7D60220E0DA3005A0001 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D56220E0DA2005A0001 /* OpenSans-Bold.ttf */; };
 		714A7D61220E0DA3005A0001 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D57220E0DA3005A0001 /* OpenSans-Regular.ttf */; };
 		714A7D62220E0DA3005A0001 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D58220E0DA3005A0001 /* OpenSans-SemiBold.ttf */; };
+		714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D63220E73DF005A0001 /* NavigationViewController.swift */; };
+		714A7D66220E765B005A0001 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D65220E765B005A0001 /* TVViewController.swift */; };
+		7B4EA67FC54100C295A918E1 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC12AC5803C8C36BE2B02CC /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DC12AC5803C8C36BE2B02CC /* Pods_HumberMedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HumberMedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D84C998B5C198C11089582E /* Pods-HumberMedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.release.xcconfig"; sourceTree = "<group>"; };
 		7104599221FB91BC00677A19 /* HumberMedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HumberMedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7104599521FB91BC00677A19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		714A7D56220E0DA2005A0001 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		714A7D57220E0DA3005A0001 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		714A7D58220E0DA3005A0001 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		714A7D63220E73DF005A0001 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		714A7D65220E765B005A0001 /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,18 +63,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4EA67FC54100C295A918E1 /* Pods_HumberMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0119D4F045982DDB62753D5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DC12AC5803C8C36BE2B02CC /* Pods_HumberMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7104598921FB91BC00677A19 = {
 			isa = PBXGroup;
 			children = (
 				7104599421FB91BC00677A19 /* HumberMedia */,
 				7104599321FB91BC00677A19 /* Products */,
 				EB171AB6CBF989BD48CFD89C /* Pods */,
+				0119D4F045982DDB62753D5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +108,8 @@
 				7104599E21FB91BD00677A19 /* LaunchScreen.storyboard */,
 				710459A121FB91BD00677A19 /* Info.plist */,
 				710459A721FB99F100677A19 /* RadioViewController.swift */,
+				714A7D63220E73DF005A0001 /* NavigationViewController.swift */,
+				714A7D65220E765B005A0001 /* TVViewController.swift */,
 			);
 			path = HumberMedia;
 			sourceTree = "<group>";
@@ -246,6 +264,7 @@
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -255,6 +274,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -268,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714A7D66220E765B005A0001 /* TVViewController.swift in Sources */,
+				714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */,
 				710459AB21FED0C900677A19 /* ShadowUIView.swift in Sources */,
 				7104599821FB91BC00677A19 /* ViewController.swift in Sources */,
 				714A7D4D220CC117005A0001 /* Helper.swift in Sources */,
