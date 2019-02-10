@@ -15,8 +15,8 @@ class NavigationViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         
         // change selected bar color
-        settings.style.buttonBarBackgroundColor = .white
-        settings.style.buttonBarItemBackgroundColor = .white
+        settings.style.buttonBarBackgroundColor = .none
+        settings.style.buttonBarItemBackgroundColor = .none
         settings.style.selectedBarBackgroundColor = purpleInspireColor
         settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
         settings.style.selectedBarHeight = 2.0
