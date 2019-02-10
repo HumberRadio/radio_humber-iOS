@@ -33,17 +33,17 @@ class RadioViewController: UIViewController, WKNavigationDelegate, IndicatorInfo
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        bottomView.setDefaultElevation()
-        let tabBar = MDCTabBar(frame: view.bounds)
-        tabBar.items = [
-            UITabBarItem(title: "Radio", image: UIImage(named: "radio_black"), tag: 0),
-            UITabBarItem(title: "Tv", image: UIImage(named: "radio_black"), tag: 1),
-            UITabBarItem(title: "Journalism", image: UIImage(named: "radio_black"), tag: 2),
-        ]
-        tabBar.itemAppearance = .titledImages
-        tabBar.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
-        tabBar.sizeToFit()
-        view.addSubview(tabBar)
+////        bottomView.setDefaultElevation()
+//        let tabBar = MDCTabBar(frame: view.bounds)
+//        tabBar.items = [
+//            UITabBarItem(title: "Radio", image: UIImage(named: "radio_black"), tag: 0),
+//            UITabBarItem(title: "Tv", image: UIImage(named: "radio_black"), tag: 1),
+//            UITabBarItem(title: "Journalism", image: UIImage(named: "radio_black"), tag: 2),
+//        ]
+//        tabBar.itemAppearance = .titledImages
+//        tabBar.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+//        tabBar.sizeToFit()
+//        view.addSubview(tabBar)
         //embade web view twitter
         twitterWebView.navigationDelegate = self;
         twitterWebView.loadHTMLString(webContentTwitter, baseURL: nil);
