@@ -27,6 +27,7 @@
 		714A7D62220E0DA3005A0001 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D58220E0DA3005A0001 /* OpenSans-SemiBold.ttf */; };
 		714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D63220E73DF005A0001 /* NavigationViewController.swift */; };
 		714A7D66220E765B005A0001 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D65220E765B005A0001 /* TVViewController.swift */; };
+		714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D76220FC20A005A0001 /* NewsViewController.swift */; };
 		7B4EA67FC54100C295A918E1 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC12AC5803C8C36BE2B02CC /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		714A7D58220E0DA3005A0001 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		714A7D63220E73DF005A0001 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		714A7D65220E765B005A0001 /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
+		714A7D76220FC20A005A0001 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				710459A721FB99F100677A19 /* RadioViewController.swift */,
 				714A7D63220E73DF005A0001 /* NavigationViewController.swift */,
 				714A7D65220E765B005A0001 /* TVViewController.swift */,
+				714A7D76220FC20A005A0001 /* NewsViewController.swift */,
 			);
 			path = HumberMedia;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				714A7D4D220CC117005A0001 /* Helper.swift in Sources */,
 				7104599621FB91BC00677A19 /* AppDelegate.swift in Sources */,
 				710459A821FB99F100677A19 /* RadioViewController.swift in Sources */,
+				714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

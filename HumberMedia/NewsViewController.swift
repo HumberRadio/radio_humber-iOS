@@ -1,21 +1,19 @@
 //
-//  TVViewController.swift
+//  NewsViewController.swift
 //  HumberMedia
 //
-//  Created by Aleksandar Janakievski on 2/8/19.
+//  Created by Aleksandar Janakievski on 2/9/19.
 //  Copyright © 2019 J-Fat. All rights reserved.
 //
 
 import UIKit
 import XLPagerTabStrip
 
-class TVViewController: UIViewController, IndicatorInfoProvider  {
+class NewsViewController: UIViewController, IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-
-        return IndicatorInfo(title: "tv");
+        
+        return IndicatorInfo(title: "NEWS");
     }
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
