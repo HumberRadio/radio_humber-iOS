@@ -8,13 +8,14 @@
 
 import UIKit
 import XLPagerTabStrip
-
-class TVViewController: UIViewController, IndicatorInfoProvider {
+//import XLPagerTabStrip
+//IndicatorInfoProvider
+class TVViewController: UIViewController, IndicatorInfoProvider  {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        
+
         return IndicatorInfo(title: "tv");
     }
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

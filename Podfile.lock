@@ -45,7 +45,7 @@ PODS:
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
-  - XLPagerTabStrip (5.0.0)
+  - XLPagerTabStrip (8.1.1)
 
 DEPENDENCIES:
   - FaveButton
@@ -54,7 +54,7 @@ DEPENDENCIES:
   - MaterialComponents/HeaderStackView
   - MaterialComponents/ShadowElevations
   - "MaterialComponents/Tabs+ColorThemer"
-  - XLPagerTabStrip (from `https://github.com/KelvinJin/XLPagerTabStrip`, branch `swift3`)
+  - XLPagerTabStrip (~> 8.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -62,24 +62,15 @@ SPEC REPOS:
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
-
-EXTERNAL SOURCES:
-  XLPagerTabStrip:
-    :branch: swift3
-    :git: https://github.com/KelvinJin/XLPagerTabStrip
-
-CHECKOUT OPTIONS:
-  XLPagerTabStrip:
-    :commit: 99e3cbd5e6b99bb6b1fdf25f4af58fe2e38ad308
-    :git: https://github.com/KelvinJin/XLPagerTabStrip
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   MaterialComponents: 1aef341d47fbaed37ddb5163a01af94cb6da8506
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
-  XLPagerTabStrip: 87b8b705f9a7178e76a063ffaa2d70045944a965
+  XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: ada15eb3774f5902925bc032c4aa3672ee8bfd6b
+PODFILE CHECKSUM: e471514551d1ecbf1a58d606f714d9ab336f6531
 
 COCOAPODS: 1.5.3

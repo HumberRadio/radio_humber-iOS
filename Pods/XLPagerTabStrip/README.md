@@ -3,12 +3,13 @@
 <p align="left">
 <a href="https://travis-ci.org/xmartlabs/XLPagerTabStrip"><img src="https://travis-ci.org/xmartlabs/XLPagerTabStrip.svg?branch=master" alt="Build status" /></a>
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift2-compatible-4BC51D.svg?style=flat" alt="Swift 2 compatible" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat" alt="Swift 4 compatible" /></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
-<a href="https://cocoapods.org/pods/XLActionController"><img src="https://img.shields.io/badge/pod-5.0.0-blue.svg" alt="CocoaPods compatible" /></a>
+<a href="https://cocoapods.org/pods/XLPagerTabStrip"><img src="https://img.shields.io/cocoapods/v/XLPagerTabStrip.svg" alt="CocoaPods compatible" /></a>
 <a href="https://raw.githubusercontent.com/xmartlabs/XLPagerTabStrip/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" />
-<a href="https://codebeat.co/projects/github-com-xmartlabs-xlpagertabstrip"><img alt="codebeat badge" src="https://codebeat.co/badges/f32c9ad3-0aa1-4b40-a632-9421211bd39e" /></a>
 </a>
+<!-- <a href="https://codebeat.co/projects/github-com-xmartlabs-xlpagertabstrip"><img alt="codebeat badge" src="https://codebeat.co/badges/f32c9ad3-0aa1-4b40-a632-9421211bd39e" /></a> -->
+
 </p>
 
 Made with ❤️ by [XMARTLABS](http://xmartlabs.com).
@@ -34,7 +35,7 @@ Android [PagerTabStrip](http://developer.android.com/reference/android/support/v
 
 **Before contribute check the [CONTRIBUTING](CONTRIBUTING.md) file for more info.**
 
-If you use **XLPagerTabStrip** in your app We would love to hear about it! Drop us a line on [twitter](https://twitter.com/xmartlabs).
+If you use **XLPagerTabStrip** in your app we would love to hear about it! Drop us a line on [twitter](https://twitter.com/xmartlabs).
 
 ## Pager Types
 
@@ -42,7 +43,7 @@ The library provides 4 different ways to show the view controllers.
 
 ### Button Bar
 
-This is likely to be the most common pager type. It's used by many well known apps such as instagram, youtube, skype and many others.
+This is likely the most common pager type. It's used by many well-known apps such as instagram, youtube, skype, and many others.
 
 <img src="Example/barButton.gif" width="250"/>
 
@@ -54,28 +55,28 @@ This mode doesn't show a title neither an image. It only shows a bar that indica
 
 ### Twitter
 
-Long time ago twitter app made use of this type of pager in the app main screen.
+A long time ago, the twitter app made use of this type of pager in the app main screen.
 
 <img src="Example/twitter.gif" width="250"/>
 
 ### Segmented
 
-This mode uses a `UISegmentedControl` to indicates which is the view controller being displayed.
+This mode uses a `UISegmentedControl` to indicate which view controller is being displayed.
 
 <img src="Example/segmented.gif" width="250"/>
 
 ## Usage
 
-Basically we just need to provide the list of child view controllers to show and these view controllers should provide the information (title or image) that will be shown in the associated indicator.
+Basically, we just need to provide the list of child view controllers to show, and these view controllers should provide the information (title or image) that will be shown in the associated indicator.
 
 Let's see the steps to do this:
 
 ##### Choose which type of pager we want to create
 
-First we should choose the type of pager we want to create, depending on our choice we will have to create a view controller that extends from one of the following controllers: `TwitterPagerTabStripViewController`, `ButtonBarPagerTabStripViewController`, `SegmentedPagerTabStripViewController`, `BarPagerTabStripViewController`.
+First, we must choose the type of pager we want to create.  Depending on our choice, we will have to create a view controller that extends from one of the following controllers: `TwitterPagerTabStripViewController`, `ButtonBarPagerTabStripViewController`, `SegmentedPagerTabStripViewController`, `BarPagerTabStripViewController`.
 
-> All these build-in pager controllers extend from the base class `PagerTabStripViewController`.
-> You can also make your custom pager controller by extending directly from `PagerTabStripViewController` in case no pager menu type fits your needs.
+> All these built-in pager controllers extend from the base class `PagerTabStripViewController`.
+> You can also make your custom pager controller by extending directly from `PagerTabStripViewController` in the event that no pager menu type fits your needs.
 
 ```swift
 import XLPagerTabStrip
@@ -87,23 +88,23 @@ class MyPagerTabStripName: ButtonBarPagerTabStripViewController {
 
 ##### Connect outlets and add layout constraints
 
-We strongly recommend to use IB to set up our page controller views.
+We strongly recommend using IB to set up our page controller views.
 
-Drag into the storyboard a `UIViewController` and set up its class with your pager controller (`MyPagerTabStripName`).
+Drag a `UIViewController` into the storyboard and set up its class with your pager controller (`MyPagerTabStripName`).
 Drag a `UIScrollView` into your view controller view and connect `PagerTabStripViewController` `containerView` outlet with the scroll view.
 
 Depending on which type of paging view controller you are working with you may have to connect more outlets.
 
-For `BarPagerTabStripViewController` we should connect `barView` outlet. barView type is UIView. `ButtonBarPagerTabStripViewController` requires us to connect `buttonBarView` outlet. `buttonBarView` type is `ButtonBarView` which extends from `UICollectionView`. `SegmentedPagerTabStripViewController` has a `segmentedControl` outlet, if the outlet is not connected the library try to set up the navigationItem `titleView` property using a `UISegmentedControl`. `TwitterPagerTabStripViewController` doesn't require us to connect any additional outlet.
+For `BarPagerTabStripViewController`, we should connect `barView` outlet. barView type is UIView. `ButtonBarPagerTabStripViewController` requires us to connect `buttonBarView` outlet. `buttonBarView` type is `ButtonBarView` which extends from `UICollectionView`. `SegmentedPagerTabStripViewController` has a `segmentedControl` outlet; if the outlet is not connected the library try to set up the navigationItem `titleView` property using a `UISegmentedControl`. `TwitterPagerTabStripViewController` doesn't require us to connect any additional outlet.
 
 > The example project contains a example for each pager controller type and we can look into it to see how views were added and how outlets were connected.
 
 ##### Provide the view controllers that will appear embedded into the PagerTabStrip view controller
 
-You can provide the view controllers by overriding `func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController]` method.
+You can provide the view controllers by overriding `func viewControllers(for: pagerTabStripController: PagerTabStripViewController) -> [UIViewController]` method.
 
 ```swift
-override public func viewControllersForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
+override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
   return [MyEmbeddedViewController(), MySecondEmbeddedViewController()]
 }
 ```
@@ -114,17 +115,19 @@ override public func viewControllersForPagerTabStrip(pagerTabStripController: Pa
 ##### Provide information to show in each indicator
 
 Every UIViewController that will appear within the PagerTabStrip needs to provide either a title or an image.
-In order to do so they should conform to `IndicatorInfoProvider` by implementing `func indicatorInfoForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo`
+In order to do so they should conform to `IndicatorInfoProvider` by implementing `func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo`
  which provides the information required to show the PagerTabStrip menu (indicator) associated with the view controller.
 
 ```swift
 class MyEmbeddedViewController: UITableViewController, IndicatorInfoProvider {
 
-  func indicatorInfoForPagerTabStrip(pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+  func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
     return IndicatorInfo(title: "My Child title")
   }
 }
 ```
+
+**For a detailed step-by-step guide about how to use the library, please check out this community [blog post](https://medium.com/michaeladeyeri/how-to-implement-android-like-tab-layouts-in-ios-using-swift-3-578516c3aa9).**
 
 That's it! We're done! 🍻🍻
 
@@ -142,46 +145,46 @@ public var pagerBehaviour: PagerTabStripBehaviour
 
 ```swift
 public enum PagerTabStripBehaviour {
-    case Common(skipIntermediteViewControllers: Bool)
-    case Progressive(skipIntermediteViewControllers: Bool, elasticIndicatorLimit: Bool)
+    case common(skipIntermediteViewControllers: Bool)
+    case progressive(skipIntermediteViewControllers: Bool, elasticIndicatorLimit: Bool)
 }
 ```
 
 Default Values:
 ```swift
 // Twitter Type
-PagerTabStripBehaviour.Common(skipIntermediteViewControllers: true)
+PagerTabStripBehaviour.common(skipIntermediateViewControllers: true)
 // Segmented Type
-PagerTabStripBehaviour.Common(skipIntermediteViewControllers: true)
+PagerTabStripBehaviour.common(skipIntermediateViewControllers: true)
 // Bar Type
-PagerTabStripBehaviour.Progressive(skipIntermediteViewControllers: true, elasticIndicatorLimit: true)
+PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
 // ButtonBar Type
-PagerTabStripBehaviour.Progressive(skipIntermediteViewControllers: true, elasticIndicatorLimit: true)`
+PagerTabStripBehaviour.progressive(skipIntermediateViewControllers: true, elasticIndicatorLimit: true)
 ```
 
-As you might have noticed `Common` and `Progressive` enumeration cases has `skipIntermediteViewControllers` and `elasticIndicatorLimit` associated values.
+As you might have noticed, `common` and `progressive` enumeration cases have `skipIntermediateViewControllers` and `elasticIndicatorLimit` associated values.
 
-`skipIntermediteViewControllers` allows us to skip intermediate view controllers when a tab indicator is tapped.
+`skipIntermediateViewControllers` allows us to skip intermediate view controllers when a tab indicator is tapped.
 
 `elasticIndicatorLimit` allows us to tension the indicator when we reach a limit, I mean when we try to move forward from last indicator or move back from first indicator.
 
 ##### PagerTabStripDelegate & PagerTabStripIsProgressiveDelegate
 
-Normally we don't need to implement these protocols because each pager type already conforms to it in order to properly update its indicator. Anyway there may be some scenarios when overriding a method come come in handy.
+Normally we don't need to implement these protocols because each pager type already conforms to it in order to properly update its indicator. However, there may be some scenarios when overriding a method may come in handy.
 
 ```swift
 public protocol PagerTabStripDelegate: class {
 
-    func pagerTabStripViewController(pagerTabStripViewController: PagerTabStripViewController, updateIndicatorFromIndex fromIndex: Int, toIndex: Int) throws
+    func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int)
 }
 
 public protocol PagerTabStripIsProgressiveDelegate : PagerTabStripDelegate {
 
-    func pagerTabStripViewController(pagerTabStripViewController: PagerTabStripViewController, updateIndicatorFromIndex fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool) throws
+    func updateIndicator(for viewController: PagerTabStripViewController, fromIndex: Int, toIndex: Int, withProgressPercentage progressPercentage: CGFloat, indexWasChanged: Bool)
 }
 ```
 
-> Again, The method invoked by the library depends on the `pagerBehaviour` value.
+> Again, the method invoked by the library depends on the `pagerBehaviour` value.
 
 
 
@@ -201,12 +204,12 @@ settings.style.buttonBarLeftContentInset: CGFloat?
 settings.style.buttonBarRightContentInset: CGFloat?
 
 // selected bar view is created programmatically so it's important to set up the following 2 properties properly
-settings.style.selectedBarBackgroundColor = UIColor.blackColor()
+settings.style.selectedBarBackgroundColor = UIColor.black
 settings.style.selectedBarHeight: CGFloat = 5
 
 // each buttonBar item is a UICollectionView cell of type ButtonBarViewCell
 settings.style.buttonBarItemBackgroundColor: UIColor?
-settings.style.buttonBarItemFont = UIFont.systemFontOfSize(18)
+settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 18)
 // helps to determine the cell width, it represent the space before and after the title label
 settings.style.buttonBarItemLeftRightMargin: CGFloat = 8
 settings.style.buttonBarItemTitleColor: UIColor?
@@ -220,7 +223,7 @@ public var buttonBarHeight: CGFloat?
 ```swift
 override func viewDidLoad() {
    self.settings.style.selectedBarHeight = 2
-   self.settings.style.selectedBarBackgroundColor = UIColor.whiteColor()
+   self.settings.style.selectedBarBackgroundColor = UIColor.white
 
    super.viewDidLoad()
 }
@@ -242,17 +245,17 @@ changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonB
     guard changeCurrentIndex == true else { return }
 
     oldCell?.label.textColor = UIColor(white: 1, alpha: 0.6)
-    newCell?.label.textColor = .whiteColor()
+    newCell?.label.textColor = UIColor.white
 
     if animated {
-        UIView.animateWithDuration(0.1, animations: { () -> Void in
-            newCell?.transform = CGAffineTransformMakeScale(1.0, 1.0)
-            oldCell?.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        UIView.animate(withDuration: 0.1, animations: { () -> Void in
+            newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         })
     }
     else {
-        newCell?.transform = CGAffineTransformMakeScale(1.0, 1.0)
-        oldCell?.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
     }
 }
 ```
@@ -270,10 +273,10 @@ settings.style.barHeight: CGFloat = 5
 
 ```swift
 settings.style.dotColor = UIColor(white: 1, alpha: 0.4)
-settings.style.selectedDotColor = UIColor.whiteColor()
-settings.style.portraitTitleFont = UIFont.systemFontOfSize(18)
-settings.style.landscapeTitleFont = UIFont.systemFontOfSize(15)
-settings.style.titleColor = UIColor.whiteColor()
+settings.style.selectedDotColor = UIColor.white
+settings.style.portraitTitleFont = UIFont.systemFont(ofSize: 18)
+settings.style.landscapeTitleFont = UIFont.systemFont(ofSize: 15)
+settings.style.titleColor = UIColor.white
 ```
 
 ### Segmented Type Customization
@@ -286,8 +289,8 @@ settings.style.segmentedControlColor: UIColor?
 
 ## Requirements
 
-* iOS 8.0+
-* Xcode 7.3+
+* iOS 9.3+
+* Xcode 10.1+
 
 ## Examples
 
@@ -302,7 +305,7 @@ Follow these 3 steps to run Example project: Clone XLPagerTabStrip repository, o
 To install XLPagerTabStrip, simply add the following line to your Podfile:
 
 ```ruby
-pod 'XLPagerTabStrip', '~> 5.0'
+pod 'XLPagerTabStrip', '~> 8.1'
 ```
 
 ### Carthage
@@ -312,27 +315,30 @@ pod 'XLPagerTabStrip', '~> 5.0'
 To install XLPagerTabStrip, simply add the following line to your Cartfile:
 
 ```ogdl
-github "xmartlabs/XLPagerTabStrip" ~> 5.0
+github "xmartlabs/XLPagerTabStrip" ~> 8.1
 ```
 
 ## FAQ
 
 #### How to change the visible child view controller programmatically
 
-`XLPagerTabStripViewController` provides the following methods to programmatically change the visible child view controller:
+`PagerTabStripViewController` provides the following methods to programmatically change the visible child view controller:
 
 ```swift
-func moveToViewControllerAtIndex(index: Int)
-func moveToViewControllerAtIndex(index: Int, animated: Bool)
-func moveToViewController(viewController: UIViewController)
-func moveToViewController(viewController: UIViewController, animated: Bool)
+func moveToViewController(at index: Int)
+func moveToViewController(at index: Int, animated: Bool)
+func moveTo(viewController: UIViewController)
+func moveTo(viewController: UIViewController, animated: Bool)
 ```
 
+
+#### How to migrate from Swift 2 to Swift 3 <a name="migrate"></a>
+
+Check out [our migration guide](https://github.com/xmartlabs/XLPagerTabStrip/blob/master/Migration.md)
 
 ## Author
 
 * [Martin Barreto](https://github.com/mtnBarreto) ([@mtnBarreto](https://twitter.com/mtnBarreto))
-
 
 ## Change Log
 

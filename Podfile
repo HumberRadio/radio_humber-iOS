@@ -16,11 +16,7 @@ target 'HumberMedia' do
   pod 'MaterialComponents/HeaderStackView'
   pod 'MaterialComponents/BottomNavigation'
   
-  
-  
+  pod 'XLPagerTabStrip', '~> 8.1'
 
-pod 'XLPagerTabStrip', :git => 'https://github.com/KelvinJin/XLPagerTabStrip', :branch => 'swift3'
-
-  
 
 end
