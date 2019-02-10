@@ -12,7 +12,7 @@ import XLPagerTabStrip
 class TVViewController: UIViewController, IndicatorInfoProvider  {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
 
-        return IndicatorInfo(title: "tv");
+        return IndicatorInfo(title: "TV");
     }
 
 

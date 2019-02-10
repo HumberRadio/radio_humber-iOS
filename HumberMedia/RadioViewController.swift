@@ -14,7 +14,7 @@ import XLPagerTabStrip
 
 class RadioViewController: UIViewController, WKNavigationDelegate, IndicatorInfoProvider{
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-         return IndicatorInfo(title: "radio");
+         return IndicatorInfo(title: "RADIO");
     }
 
     @IBOutlet weak var twitterWebView: WKWebView!

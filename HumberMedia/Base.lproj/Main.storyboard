@@ -84,15 +84,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gqr-W9-vOY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CYL-o2-eTM">
+                                        <rect key="frame" x="10" y="10" width="345" height="140"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="igt-sP-OSZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="CYL-o2-eTM" secondAttribute="bottom" constant="10" id="P1A-j1-PCR"/>
+                                    <constraint firstAttribute="height" constant="160" id="igt-sP-OSZ"/>
+                                    <constraint firstItem="CYL-o2-eTM" firstAttribute="leading" secondItem="Gqr-W9-vOY" secondAttribute="leading" constant="10" id="rj0-bB-Gfg"/>
+                                    <constraint firstItem="CYL-o2-eTM" firstAttribute="top" secondItem="Gqr-W9-vOY" secondAttribute="top" constant="10" id="xhK-XY-O7I"/>
+                                    <constraint firstAttribute="trailing" secondItem="CYL-o2-eTM" secondAttribute="trailing" constant="20" id="yik-xg-kAC"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-jb-c42" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                <rect key="frame" x="0.0" y="120" width="375" height="25"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="135" width="375" height="25"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="W00-DM-9jp"/>
                                 </constraints>
@@ -105,7 +125,7 @@
                                 <cells/>
                             </collectionView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRf-nj-chG">
-                                <rect key="frame" x="0.0" y="150" width="375" height="434"/>
+                                <rect key="frame" x="0.0" y="165" width="375" height="419"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mih-ep-841" userLabel="bottomView">
                                 <rect key="frame" x="0.0" y="587" width="375" height="80"/>
@@ -245,7 +265,7 @@
                             <constraint firstItem="k5q-XY-Vqe" firstAttribute="centerY" secondItem="Mih-ep-841" secondAttribute="top" id="Loj-xx-dRv"/>
                             <constraint firstItem="Mih-ep-841" firstAttribute="leading" secondItem="udv-Jj-TdM" secondAttribute="leading" id="MlF-Ts-jW6"/>
                             <constraint firstItem="Gqr-W9-vOY" firstAttribute="leading" secondItem="udv-Jj-TdM" secondAttribute="leading" id="WnW-9y-uXI"/>
-                            <constraint firstItem="3yS-jb-c42" firstAttribute="top" secondItem="Gqr-W9-vOY" secondAttribute="bottom" id="b8K-Is-bBw"/>
+                            <constraint firstItem="3yS-jb-c42" firstAttribute="bottom" secondItem="Gqr-W9-vOY" secondAttribute="bottom" id="b8K-Is-bBw"/>
                             <constraint firstItem="JRf-nj-chG" firstAttribute="top" secondItem="3yS-jb-c42" secondAttribute="bottom" constant="5" id="duC-RT-N0U"/>
                             <constraint firstItem="udv-Jj-TdM" firstAttribute="trailing" secondItem="JRf-nj-chG" secondAttribute="trailing" id="jIl-mq-WWv"/>
                             <constraint firstItem="udv-Jj-TdM" firstAttribute="bottom" secondItem="Mih-ep-841" secondAttribute="bottom" id="jif-3k-2su"/>
@@ -257,6 +277,8 @@
                     <connections>
                         <outlet property="buttonBarView" destination="3yS-jb-c42" id="c6w-AX-nOv"/>
                         <outlet property="containerView" destination="JRf-nj-chG" id="Sap-Rc-b2G"/>
+                        <outlet property="headerImageView" destination="CYL-o2-eTM" id="TWS-kF-uiw"/>
+                        <outlet property="headerView" destination="Gqr-W9-vOY" id="y7C-dQ-oXS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GY0-ZX-Gtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
