@@ -172,6 +172,9 @@
                                                 <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="playbuttonClick:" destination="T3V-oG-sMF" eventType="touchUpInside" id="huj-wW-OrE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlO-ab-BlN" userLabel="favButton" customClass="FaveButton" customModule="FaveButton">
                                         <rect key="frame" x="279" y="25" width="36" height="30"/>
@@ -294,6 +297,7 @@
                         <outlet property="containerView" destination="JRf-nj-chG" id="Sap-Rc-b2G"/>
                         <outlet property="headerImageView" destination="CYL-o2-eTM" id="TWS-kF-uiw"/>
                         <outlet property="headerView" destination="Gqr-W9-vOY" id="y7C-dQ-oXS"/>
+                        <outlet property="playbutton" destination="v90-TW-GI5" id="R8Q-lD-jGJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GY0-ZX-Gtf" userLabel="First Responder" sceneMemberID="firstResponder"/>

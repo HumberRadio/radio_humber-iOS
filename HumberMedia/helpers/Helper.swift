@@ -30,8 +30,16 @@ class Helper {
         })
     }
 
-
+    public func getCurrentlyPlayingInfo() -> Track
+    {
+        let track = Track(title: "N/A", artist: "N/A");
+        
+        return track;
+        
+    }
 }
+
+
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         if (cString.hasPrefix("#")) {
@@ -64,4 +72,5 @@ class Helper {
     fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
         return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
     }
+
 
