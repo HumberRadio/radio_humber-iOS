@@ -32,7 +32,10 @@ class Helper {
 
     public func getCurrentlyPlayingInfo() -> Track
     {
+        // init the class with N/A
         let track = Track(title: "N/A", artist: "N/A");
+        
+        
         
         return track;
         

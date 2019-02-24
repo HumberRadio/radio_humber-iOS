@@ -33,6 +33,7 @@
 		71CE9E98222213B0002DA0FA /* HumberRadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */; };
 		71CE9E9B22221993002DA0FA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9A22221993002DA0FA /* ImageLoader.swift */; };
 		71CE9E9D2222278D002DA0FA /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9C2222278D002DA0FA /* URLConstants.swift */; };
+		71CE9E9F22224E50002DA0FA /* XMLParserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */; };
 		7B4EA67FC54100C295A918E1 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC12AC5803C8C36BE2B02CC /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumberRadioStation.swift; sourceTree = "<group>"; };
 		71CE9E9A22221993002DA0FA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		71CE9E9C2222278D002DA0FA /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserHelper.swift; sourceTree = "<group>"; };
 		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 				71CE9E95222212CE002DA0FA /* Track.swift */,
 				71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */,
 				71CE9E9C2222278D002DA0FA /* URLConstants.swift */,
+				71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */,
 			);
 			path = helpers;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				714A7D66220E765B005A0001 /* TVViewController.swift in Sources */,
 				71CE9E96222212CE002DA0FA /* Track.swift in Sources */,
+				71CE9E9F22224E50002DA0FA /* XMLParserHelper.swift in Sources */,
 				71CE9E9B22221993002DA0FA /* ImageLoader.swift in Sources */,
 				714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */,
 				710459AB21FED0C900677A19 /* ShadowUIView.swift in Sources */,

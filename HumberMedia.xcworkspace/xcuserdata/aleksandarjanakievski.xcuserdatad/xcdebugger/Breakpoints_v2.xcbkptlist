@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/helpers/HumberRadioPlayer.swift"
-            timestampString = "572672353.622912"
+            timestampString = "572676161.88553"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HumberMedia/NavigationViewController.swift"
-            timestampString = "572672353.6241961"
+            filePath = "HumberMedia/helpers/XMLParserHelper.swift"
+            timestampString = "572676161.885613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "playbuttonClick(_:)"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "parceCurentlyPlaying()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HumberMedia/NavigationViewController.swift"
-            timestampString = "572672353.624838"
+            filePath = "HumberMedia/helpers/XMLParserHelper.swift"
+            timestampString = "572676161.886045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "parser(_:foundCharacters:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "parceCurentlyPlaying()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HumberMedia/NavigationViewController.swift"
-            timestampString = "572672353.625159"
+            filePath = "HumberMedia/helpers/XMLParserHelper.swift"
+            timestampString = "572676161.886342"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
-            landmarkName = "parser(_:didEndElement:namespaceURI:qualifiedName:)"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "parceCurentlyPlaying()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

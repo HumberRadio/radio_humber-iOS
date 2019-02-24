@@ -12,22 +12,9 @@ import FaveButton
 
 class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate{
     
+    // UI outlets
     @IBOutlet weak var playbutton: FaveButton!
-    
-    
-    
-    // a few constants that identify what element names we're looking for inside the XML
-    
-    let recordKey = "record"
-    let dictionaryKeys = Set<String>(["artist", "songtitle", "albumart"])
-    
-    // a few variables to hold the results as we parse the XML
-    
-    var results = [[String: String]]()    // the whole array of dictionaries
-//    var currentDictionary: [String: String]? // the current dictionary
-    var currentValue: String?                // the current value for one of the keys in the dictionary
-//    ----------------------------
-    
+ 
     
     
     @IBOutlet weak var headerImageView: UIImageView!
@@ -147,87 +134,12 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     @IBAction func playbuttonClick(_ sender: Any){
         
-        let url = URL(string: URLConstants.Domains.curentPlayInfo)
+        let xmlparser = XMLParserHelper.init();
+        let currentlyPlayingTrack = xmlparser.parceCurentlyPlaying();
+        print(currentlyPlayingTrack.artist)
         
-//        let url = URL(string: "http://www.stackoverflow.com")
-        
-        let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
+    }
+    
 
-            guard let data = data, error == nil else {
-
-            print(error ?? "Unknown error")
-            return
-                
-            }
-        
-            let parser = XMLParser(data: data)
-            parser.delegate = self
-            if parser.parse() {
-                print(self.results ?? "No results")
-            }
-            print( NSString(data: data, encoding: String.Encoding.utf8.rawValue))
-        }
-
-        task.resume()
-//        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-//            guard let data = data, error == nil else {
-//                print(error ?? "Unknown error")
-//                return
-//            }
-//
-//            let parser = XMLParser(data: data)
-//            parser.delegate = self
-//            if parser.parse() {
-//                print(self.results ?? "No results")
-//            }
-//        }
-//        task.resume()
-        
-    }
-    // initialize results structure
-    
-    func parserDidStartDocument(_ parser: XMLParser) {
-        results = []
-    }
-    // start element
-    //
-    // - If we're starting a "record" create the dictionary that will hold the results
-    // - If we're starting one of our dictionary keys, initialize `currentValue` (otherwise leave `nil`)
-    
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-      if dictionaryKeys.contains(elementName) {
-            currentValue = ""
-        }
-    }
-    // found characters
-    //
-    // - If this is an element we care about, append those characters.
-    // - If `currentValue` still `nil`, then do nothing.
-    
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
-        currentValue? += string
-    }
-    // end element
-    //
-    // - If we're at the end of the whole dictionary, then save that dictionary in our array
-    // - If we're at the end of an element that belongs in the dictionary, then save that value in the dictionary
-    
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-       if dictionaryKeys.contains(elementName) {
-        let currentDictionary: [String: String] = [elementName:currentValue!]
-        results.append(currentDictionary)
-//            currentDictionary![elementName] = currentValue
-            currentValue = nil
-        }
-    }
-    // Just in case, if there's an error, report it. (We don't want to fly blind here.)
-    
-    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
-        print(parseError)
-        
-        currentValue = nil
-//        currentDictionary = nil
-//        results = nil
-    }
 
 }
