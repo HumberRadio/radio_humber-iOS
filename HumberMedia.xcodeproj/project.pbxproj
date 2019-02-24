@@ -28,6 +28,10 @@
 		714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D63220E73DF005A0001 /* NavigationViewController.swift */; };
 		714A7D66220E765B005A0001 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D65220E765B005A0001 /* TVViewController.swift */; };
 		714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D76220FC20A005A0001 /* NewsViewController.swift */; };
+		71CE9E9422221252002DA0FA /* HumberRadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */; };
+		71CE9E96222212CE002DA0FA /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E95222212CE002DA0FA /* Track.swift */; };
+		71CE9E98222213B0002DA0FA /* HumberRadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */; };
+		71CE9E9B22221993002DA0FA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9A22221993002DA0FA /* ImageLoader.swift */; };
 		7B4EA67FC54100C295A918E1 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC12AC5803C8C36BE2B02CC /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +61,10 @@
 		714A7D63220E73DF005A0001 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		714A7D65220E765B005A0001 /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 		714A7D76220FC20A005A0001 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumberRadioPlayer.swift; sourceTree = "<group>"; };
+		71CE9E95222212CE002DA0FA /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumberRadioStation.swift; sourceTree = "<group>"; };
+		71CE9E9A22221993002DA0FA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,10 +128,22 @@
 		710459A921FED0A800677A19 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				71CE9E99222218EB002DA0FA /* spring */,
 				710459AA21FED0C900677A19 /* ShadowUIView.swift */,
 				714A7D4C220CC117005A0001 /* Helper.swift */,
+				71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */,
+				71CE9E95222212CE002DA0FA /* Track.swift */,
+				71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */,
 			);
 			path = helpers;
+			sourceTree = "<group>";
+		};
+		71CE9E99222218EB002DA0FA /* spring */ = {
+			isa = PBXGroup;
+			children = (
+				71CE9E9A22221993002DA0FA /* ImageLoader.swift */,
+			);
+			path = spring;
 			sourceTree = "<group>";
 		};
 		EAB31D9533FA1A8CA9CCD39C /* fonts */ = {
@@ -294,13 +314,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				714A7D66220E765B005A0001 /* TVViewController.swift in Sources */,
+				71CE9E96222212CE002DA0FA /* Track.swift in Sources */,
+				71CE9E9B22221993002DA0FA /* ImageLoader.swift in Sources */,
 				714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */,
 				710459AB21FED0C900677A19 /* ShadowUIView.swift in Sources */,
 				7104599821FB91BC00677A19 /* ViewController.swift in Sources */,
 				714A7D4D220CC117005A0001 /* Helper.swift in Sources */,
 				7104599621FB91BC00677A19 /* AppDelegate.swift in Sources */,
+				71CE9E9422221252002DA0FA /* HumberRadioPlayer.swift in Sources */,
 				710459A821FB99F100677A19 /* RadioViewController.swift in Sources */,
 				714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */,
+				71CE9E98222213B0002DA0FA /* HumberRadioStation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
