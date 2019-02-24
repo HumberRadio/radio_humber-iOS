@@ -25,6 +25,10 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
     
     public func parceCurentlyPlaying () -> Track
     {
+        // create the semaphore gie it background value 0 and start it
+      let semaphore = DispatchSemaphore(value: 0)
+       
+        
         
         var track = Track(title: "N/A",artist: "N/A")
         let url = URL(string: URLConstants.Domains.curentPlayInfo)
@@ -63,12 +67,17 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
                 }
                 
                 print(self.results.count )
+                // we signal the semaphore to stop waiting
+                semaphore.signal()
             }
+            
             //            print( NSString(data: data, encoding: String.Encoding.utf8.rawValue))
         }
         
         task.resume()
         
+        //when we signal we get semaphore to stop waiting and proceed to next line
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
         return track;
     }
     

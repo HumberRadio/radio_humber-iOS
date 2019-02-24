@@ -15,6 +15,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     // UI outlets
     @IBOutlet weak var playbutton: FaveButton!
  
+    @IBOutlet weak var songTitleLabel: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
+    
     
     
     @IBOutlet weak var headerImageView: UIImageView!
@@ -134,11 +137,19 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     @IBAction func playbuttonClick(_ sender: Any){
         
-        let xmlparser = XMLParserHelper.init();
-        let currentlyPlayingTrack = xmlparser.parceCurentlyPlaying();
-        print(currentlyPlayingTrack.artist)
+            self.updateSongInfo()
         
     }
+    
+    private func updateSongInfo()
+    {
+        let xmlparser = XMLParserHelper.init();
+        let currentlyPlayingTrack = xmlparser.parceCurentlyPlaying();
+        songTitleLabel.text = currentlyPlayingTrack.title
+        artistNameLabel.text = currentlyPlayingTrack.artist
+    }
+    
+    
     
 
 

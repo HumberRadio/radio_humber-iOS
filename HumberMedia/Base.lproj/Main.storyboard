@@ -203,7 +203,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio Humber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-a8-06M">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio Humber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVC-a8-06M">
                                         <rect key="frame" x="78" y="15" width="150" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="LHx-qy-CwJ"/>
@@ -230,9 +230,28 @@
                                             <constraint firstAttribute="trailing" secondItem="HgS-wb-3dB" secondAttribute="trailing" id="zmh-Ra-uxU"/>
                                         </constraints>
                                     </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skU-YC-hcl">
+                                        <rect key="frame" x="78" y="15" width="191" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIAMOND CAFE - THE WAY YOU USED TO LOVE ME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xup-kC-nP1">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Xup-kC-nP1" firstAttribute="leading" secondItem="skU-YC-hcl" secondAttribute="leading" id="W3a-Ff-Rs8"/>
+                                            <constraint firstItem="Xup-kC-nP1" firstAttribute="top" secondItem="skU-YC-hcl" secondAttribute="top" id="sOI-GX-4OG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xup-kC-nP1" secondAttribute="trailing" id="t72-bo-GGb"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xup-kC-nP1" secondAttribute="bottom" id="y6r-Hc-uBu"/>
+                                        </constraints>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="skU-YC-hcl" firstAttribute="trailing" secondItem="vlO-ab-BlN" secondAttribute="leading" constant="-10" id="2ia-IZ-jD0"/>
+                                    <constraint firstItem="skU-YC-hcl" firstAttribute="bottom" secondItem="eVC-a8-06M" secondAttribute="bottom" id="2vR-Le-Gzh"/>
                                     <constraint firstItem="vlO-ab-BlN" firstAttribute="top" secondItem="Mih-ep-841" secondAttribute="top" constant="25" id="5oS-ao-U09"/>
                                     <constraint firstItem="noi-Mp-CVS" firstAttribute="leading" secondItem="Mih-ep-841" secondAttribute="leading" constant="20" id="8yN-hQ-bE8"/>
                                     <constraint firstAttribute="trailing" secondItem="v90-TW-GI5" secondAttribute="trailing" constant="20" id="DEs-9I-ZOq"/>
@@ -242,6 +261,7 @@
                                     <constraint firstItem="a0c-TS-zlS" firstAttribute="top" secondItem="eVC-a8-06M" secondAttribute="bottom" constant="5" id="WMr-Hq-nh0"/>
                                     <constraint firstItem="noi-Mp-CVS" firstAttribute="top" secondItem="Mih-ep-841" secondAttribute="top" constant="15" id="WaJ-a5-h0B"/>
                                     <constraint firstItem="vlO-ab-BlN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eVC-a8-06M" secondAttribute="trailing" constant="8" symbolic="YES" id="Wh3-1a-NtS"/>
+                                    <constraint firstItem="skU-YC-hcl" firstAttribute="top" secondItem="noi-Mp-CVS" secondAttribute="top" id="eMm-CE-thx"/>
                                     <constraint firstAttribute="height" constant="80" id="fYd-L8-eLf"/>
                                     <constraint firstItem="eVC-a8-06M" firstAttribute="leading" secondItem="noi-Mp-CVS" secondAttribute="trailing" constant="8" id="ihm-xd-1DA"/>
                                     <constraint firstItem="a0c-TS-zlS" firstAttribute="trailing" secondItem="vlO-ab-BlN" secondAttribute="leading" constant="-10" id="kRY-In-yPA"/>
@@ -249,6 +269,7 @@
                                     <constraint firstItem="vlO-ab-BlN" firstAttribute="trailing" secondItem="v90-TW-GI5" secondAttribute="leading" constant="-10" id="qgI-lz-w8C"/>
                                     <constraint firstAttribute="bottom" secondItem="v90-TW-GI5" secondAttribute="bottom" constant="25" id="vqk-jx-ave"/>
                                     <constraint firstItem="v90-TW-GI5" firstAttribute="top" secondItem="Mih-ep-841" secondAttribute="top" constant="25" id="wgW-t6-iZN"/>
+                                    <constraint firstItem="skU-YC-hcl" firstAttribute="leading" secondItem="noi-Mp-CVS" secondAttribute="trailing" constant="8" id="yNe-QE-ffg"/>
                                     <constraint firstItem="eVC-a8-06M" firstAttribute="top" secondItem="noi-Mp-CVS" secondAttribute="top" id="zgD-wW-3nz"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -293,11 +314,13 @@
                         <viewLayoutGuide key="safeArea" id="udv-Jj-TdM"/>
                     </view>
                     <connections>
+                        <outlet property="artistNameLabel" destination="HgS-wb-3dB" id="p3R-2V-Em1"/>
                         <outlet property="buttonBarView" destination="3yS-jb-c42" id="c6w-AX-nOv"/>
                         <outlet property="containerView" destination="JRf-nj-chG" id="Sap-Rc-b2G"/>
                         <outlet property="headerImageView" destination="CYL-o2-eTM" id="TWS-kF-uiw"/>
                         <outlet property="headerView" destination="Gqr-W9-vOY" id="y7C-dQ-oXS"/>
                         <outlet property="playbutton" destination="v90-TW-GI5" id="R8Q-lD-jGJ"/>
+                        <outlet property="songTitleLabel" destination="Xup-kC-nP1" id="AQj-Sx-12B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GY0-ZX-Gtf" userLabel="First Responder" sceneMemberID="firstResponder"/>

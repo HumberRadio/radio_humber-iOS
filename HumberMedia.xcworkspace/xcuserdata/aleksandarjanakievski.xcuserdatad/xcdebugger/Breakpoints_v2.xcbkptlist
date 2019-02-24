@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/helpers/HumberRadioPlayer.swift"
-            timestampString = "572676161.88553"
+            timestampString = "572677988.008135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/helpers/XMLParserHelper.swift"
-            timestampString = "572676161.885613"
+            timestampString = "572677988.0082819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "parceCurentlyPlaying()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/helpers/XMLParserHelper.swift"
-            timestampString = "572676161.886045"
+            timestampString = "572677988.008365"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "parceCurentlyPlaying()"
             landmarkType = "7">
          </BreakpointContent>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HumberMedia/helpers/XMLParserHelper.swift"
-            timestampString = "572676161.886342"
+            filePath = "HumberMedia/NavigationViewController.swift"
+            timestampString = "572678003.137948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "parceCurentlyPlaying()"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "updateSongInfo()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
