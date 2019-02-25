@@ -12,8 +12,7 @@ import FaveButton
 import FRadioPlayer
 
 class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate, FRadioPlayerDelegate  {
-
-
+    
     //FradioPlayer Delegate implementaions
     func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
         //do staff wehn state has chnaged
@@ -27,7 +26,8 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     // UI outlets
     
     @IBOutlet weak var playbutton: FaveButton!
- 
+    @IBOutlet weak var stopbutton: FaveButton!
+    
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
     
@@ -35,8 +35,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet weak var headerView: UIView!
-    let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0);
- 
+    let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
+    var headphonesStatus:Bool = false
+    let player = FRadioPlayer.shared
     
     override func viewDidLoad() {
         
@@ -44,13 +45,21 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         //setup ui logic
         self.prepareUI()
 //seting up radio player
-        let player = FRadioPlayer.shared
+//        let player = FRadioPlayer.shared
         player.delegate = self
         player.radioURL = URL(string: URLConstants.Domains.radioStreamUrl);
 //        player.play()
         
-        //TO DO: Do a checkup to see if headphones are connected
+        //checkup to see if headphones are connected
 //        checkForPermissionAudio()
+        
+        headphonesStatus = areHeadphonesPluggedIn()
+        if headphonesStatus{
+            player.play()
+        }
+        
+        //love one liners :)
+//        toglePlayButton(isPlaying: player.isPlaying)
         
         
         
@@ -183,6 +192,41 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         
     }
     
-
-
+  
+    
+    
+    @IBAction func playButtonPressed(_ sender: Any) {
+        
+        
+    
+    }
+    @IBAction func playButtonClick(_ sender: FaveButton, forEvent event: UIEvent) {
+        
+        UIButton.animate(withDuration: 0.6,
+                       animations: {
+                        self.playbutton.alpha = 0
+        },
+                       completion: { _ in
+                        UIButton.animate(withDuration: 0.2) {
+                            self.stopbutton.isHidden = false;
+                            self.playbutton.isHidden = true;
+                            self.stopbutton.alpha = 1;
+                        }
+        })
+    }
+  
+    @IBAction func stopButtonClicked(_ sender: FaveButton, forEvent event: UIEvent) {
+        UIButton.animate(withDuration: 0.6,
+                         animations: {
+                            self.stopbutton.alpha = 0
+        },
+                         completion: { _ in
+                            UIButton.animate(withDuration: 0.2) {
+                                self.playbutton.isHidden = false;
+                                self.stopbutton.isHidden = true;
+                                self.playbutton.alpha = 1;
+                            }
+        })
+    }
+    
 }

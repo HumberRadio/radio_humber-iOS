@@ -161,6 +161,7 @@
                                             <constraint firstAttribute="width" secondItem="v90-TW-GI5" secondAttribute="height" multiplier="1:1" id="fER-0r-hyg"/>
                                         </constraints>
                                         <state key="normal" image="play_button_round"/>
+                                        <state key="selected" image="fav_button"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="dotFirstColor">
                                                 <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -176,7 +177,30 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="playButtonClick:forEvent:" destination="T3V-oG-sMF" eventType="touchUpInside" id="ctp-xW-LTt"/>
+                                            <action selector="playButtonPressed:" destination="T3V-oG-sMF" eventType="touchUpInside" id="SvZ-F3-WSq"/>
                                             <action selector="playbuttonClick:" destination="T3V-oG-sMF" eventType="touchUpInside" id="huj-wW-OrE"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fu-g7-SJh" userLabel="stopButton" customClass="FaveButton" customModule="FaveButton">
+                                        <rect key="frame" x="325" y="25" width="30" height="30"/>
+                                        <state key="normal" image="stopbutton"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dotFirstColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dotSecondColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleFromColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleToColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="stopButtonClicked:forEvent:" destination="T3V-oG-sMF" eventType="touchUpInside" id="FqN-XZ-cnt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlO-ab-BlN" userLabel="favButton" customClass="FaveButton" customModule="FaveButton">
@@ -253,21 +277,26 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="9fu-g7-SJh" firstAttribute="top" secondItem="Mih-ep-841" secondAttribute="top" constant="25" id="26E-cW-WWH"/>
                                     <constraint firstItem="skU-YC-hcl" firstAttribute="trailing" secondItem="vlO-ab-BlN" secondAttribute="leading" constant="-10" id="2ia-IZ-jD0"/>
                                     <constraint firstItem="skU-YC-hcl" firstAttribute="bottom" secondItem="eVC-a8-06M" secondAttribute="bottom" id="2vR-Le-Gzh"/>
                                     <constraint firstItem="vlO-ab-BlN" firstAttribute="top" secondItem="Mih-ep-841" secondAttribute="top" constant="25" id="5oS-ao-U09"/>
                                     <constraint firstItem="noi-Mp-CVS" firstAttribute="leading" secondItem="Mih-ep-841" secondAttribute="leading" constant="20" id="8yN-hQ-bE8"/>
+                                    <constraint firstItem="9fu-g7-SJh" firstAttribute="width" secondItem="9fu-g7-SJh" secondAttribute="height" multiplier="1:1" id="CKV-qN-j8Q"/>
                                     <constraint firstAttribute="trailing" secondItem="v90-TW-GI5" secondAttribute="trailing" constant="20" id="DEs-9I-ZOq"/>
                                     <constraint firstItem="a0c-TS-zlS" firstAttribute="bottom" secondItem="noi-Mp-CVS" secondAttribute="bottom" id="InJ-gb-uPy"/>
                                     <constraint firstItem="a0c-TS-zlS" firstAttribute="leading" secondItem="eVC-a8-06M" secondAttribute="leading" id="Swy-Zz-L4w"/>
                                     <constraint firstAttribute="bottom" secondItem="vlO-ab-BlN" secondAttribute="bottom" constant="25" id="U3B-cc-1R2"/>
                                     <constraint firstItem="a0c-TS-zlS" firstAttribute="top" secondItem="eVC-a8-06M" secondAttribute="bottom" constant="5" id="WMr-Hq-nh0"/>
+                                    <constraint firstItem="vlO-ab-BlN" firstAttribute="leading" secondItem="Mih-ep-841" secondAttribute="trailing" constant="-96" id="WPn-CV-VwX"/>
                                     <constraint firstItem="noi-Mp-CVS" firstAttribute="top" secondItem="Mih-ep-841" secondAttribute="top" constant="15" id="WaJ-a5-h0B"/>
                                     <constraint firstItem="vlO-ab-BlN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eVC-a8-06M" secondAttribute="trailing" constant="8" symbolic="YES" id="Wh3-1a-NtS"/>
                                     <constraint firstItem="skU-YC-hcl" firstAttribute="top" secondItem="noi-Mp-CVS" secondAttribute="top" id="eMm-CE-thx"/>
                                     <constraint firstAttribute="height" constant="80" id="fYd-L8-eLf"/>
+                                    <constraint firstAttribute="trailing" secondItem="9fu-g7-SJh" secondAttribute="trailing" constant="20" id="gh1-l7-Yed"/>
                                     <constraint firstItem="eVC-a8-06M" firstAttribute="leading" secondItem="noi-Mp-CVS" secondAttribute="trailing" constant="8" id="ihm-xd-1DA"/>
                                     <constraint firstItem="a0c-TS-zlS" firstAttribute="trailing" secondItem="vlO-ab-BlN" secondAttribute="leading" constant="-10" id="kRY-In-yPA"/>
+                                    <constraint firstAttribute="bottom" secondItem="9fu-g7-SJh" secondAttribute="bottom" constant="25" id="mIX-n4-EPa"/>
                                     <constraint firstAttribute="bottom" secondItem="noi-Mp-CVS" secondAttribute="bottom" constant="15" id="qfc-gT-myy"/>
                                     <constraint firstItem="vlO-ab-BlN" firstAttribute="trailing" secondItem="v90-TW-GI5" secondAttribute="leading" constant="-10" id="qgI-lz-w8C"/>
                                     <constraint firstAttribute="bottom" secondItem="v90-TW-GI5" secondAttribute="bottom" constant="25" id="vqk-jx-ave"/>
@@ -324,6 +353,7 @@
                         <outlet property="headerView" destination="Gqr-W9-vOY" id="y7C-dQ-oXS"/>
                         <outlet property="playbutton" destination="v90-TW-GI5" id="R8Q-lD-jGJ"/>
                         <outlet property="songTitleLabel" destination="Xup-kC-nP1" id="AQj-Sx-12B"/>
+                        <outlet property="stopbutton" destination="9fu-g7-SJh" id="KQD-Hw-zAz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GY0-ZX-Gtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,5 +396,6 @@
         <image name="fav_button" width="334.39999389648438" height="295.20001220703125"/>
         <image name="play_button_round" width="170.39999389648438" height="206.39999389648438"/>
         <image name="radio_thumb_image" width="140" height="140"/>
+        <image name="stopbutton" width="4.320000171661377" height="4.320000171661377"/>
     </resources>
 </document>
