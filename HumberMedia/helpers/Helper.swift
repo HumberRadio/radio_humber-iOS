@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import AVFoundation
 class Helper {
 
     func showToast( view:UIView) {
@@ -75,5 +75,41 @@ class Helper {
     fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
         return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
     }
+    //This method checks if headphones are plugged in.
+
+    func areHeadphonesPluggedIn()->Bool
+    {
+        var availableOutputs = AVAudioSession.sharedInstance().currentRoute.outputs
+        for portDescription in availableOutputs
+        {
+            if portDescription.portType == AVAudioSession.Port.headphones
+            {
+                return true
+            }
+        }
+        return false
+    }
+    func checkForPermissionAudio()
+    {
+        let authorizationStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.audio)
+
+        switch authorizationStatus {
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: AVMediaType.audio) { granted in
+                if granted {
+                    print("access granted")
+                }
+                else {
+                    print("access denied")
+                }
+            }
+        case .authorized:
+            print("Access authorized")
+        case .denied, .restricted:
+            print("restricted")
+            
+        }
+    }
+
 
 

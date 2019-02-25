@@ -10,9 +10,9 @@ struct URLConstants {
     public struct Domains
     {
         static let curentPlayInfo = "https://xml.leanplayer.com/CKHCFM/nowplaying.xml"
-        static let radioStreamUrl = "https://humber.leanstream.co/CKHCFM" //AAC
-//        static let radioStreamUrl = "https://humber.leanstream.co/CKHCFM-MP3" //MP3
+//        static let radioStreamUrl = "https://humber.leanstream.co/CKHCFM" //AAC
+        static let radioStreamUrl = "https://humber.leanstream.co/CKHCFM-MP3" //MP3
         static let recentlyPlayed = "https://xml.leanplayer.com/CKHCFM/history.xml"
-        
+    
     }
 }
