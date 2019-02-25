@@ -10,16 +10,20 @@ import UIKit
 import XLPagerTabStrip
 import FaveButton
 import FRadioPlayer
+import AVFoundation
 
 class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate, FRadioPlayerDelegate  {
     
     //FradioPlayer Delegate implementaions
     func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
         //do staff wehn state has chnaged
+        
+        print(state.description)
     }
 
     func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
         //do stuff when playback has changed
+        print(state.description)
     }
     
     
@@ -38,6 +42,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
     var headphonesStatus:Bool = false
     let player = FRadioPlayer.shared
+    var player2: AVPlayer?
     
     override func viewDidLoad() {
         
@@ -46,16 +51,25 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         self.prepareUI()
 //seting up radio player
 //        let player = FRadioPlayer.shared
-        player.delegate = self
-        player.radioURL = URL(string: URLConstants.Domains.radioStreamUrl);
-//        player.play()
-        
+//        player.delegate = self
+//        player.radioURL = URL(string: URLConstants.Domains.radioStreamUrl);
+//        player.stop()
+       
         //checkup to see if headphones are connected
 //        checkForPermissionAudio()
         
+        guard let url = URL.init(string: URLConstants.Domains.radioStreamUrl)
+            else {
+                return
+        }
+        let playerItem = AVPlayerItem.init(url: url)
+        player2 = AVPlayer.init(playerItem: playerItem)
+//        player2?.play()
+
+        
         headphonesStatus = areHeadphonesPluggedIn()
         if headphonesStatus{
-            player.play()
+            playbutton.sendActions(for: .touchUpInside)
         }
         
         //love one liners :)
@@ -68,6 +82,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         
         
      
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        player.stop()
     }
 
     
@@ -92,8 +109,6 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     @IBAction func playbuttonClick(_ sender: Any){
         
         self.updateSongInfo()
-        
-        
         
     }
     
@@ -213,6 +228,8 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
                             self.stopbutton.alpha = 1;
                         }
         })
+//        player.play()
+        player2?.play()
     }
   
     @IBAction func stopButtonClicked(_ sender: FaveButton, forEvent event: UIEvent) {
@@ -227,6 +244,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
                                 self.playbutton.alpha = 1;
                             }
         })
+//        player.stop()
+        player2?.pause()
+        
     }
     
 }
