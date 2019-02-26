@@ -1,4 +1,5 @@
 PODS:
+  - CircleMenu (4.0.1)
   - FaveButton (3.2.0)
   - FRadioPlayer (0.1.15)
   - MaterialComponents/AnimationTiming (76.1.2)
@@ -49,6 +50,7 @@ PODS:
   - XLPagerTabStrip (8.1.1)
 
 DEPENDENCIES:
+  - CircleMenu
   - FaveButton
   - FRadioPlayer
   - MaterialComponents/BottomNavigation
@@ -60,6 +62,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CircleMenu
     - FaveButton
     - FRadioPlayer
     - MaterialComponents
@@ -68,6 +71,7 @@ SPEC REPOS:
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  CircleMenu: d846569acbe805b75cef5793056707224240db64
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   FRadioPlayer: 0ad8b63756c3597af3c4a2672334c5dc22e026e4
   MaterialComponents: 1aef341d47fbaed37ddb5163a01af94cb6da8506
@@ -75,6 +79,6 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: c9caa7e685dde2889147b1ca1139c0d00eec8ae5
+PODFILE CHECKSUM: 984453d8d59b9caad9edff18983686af49b6b21f
 
 COCOAPODS: 1.5.3

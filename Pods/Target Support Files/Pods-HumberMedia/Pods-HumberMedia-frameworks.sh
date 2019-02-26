@@ -143,6 +143,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FRadioPlayer/FRadioPlayer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework"
@@ -151,6 +152,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FRadioPlayer/FRadioPlayer.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework"

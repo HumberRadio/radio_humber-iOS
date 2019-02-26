@@ -107,11 +107,26 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CYL-o2-eTM">
                                         <rect key="frame" x="10" y="10" width="345" height="140"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGd-wQ-xR7" customClass="CircleMenu" customModule="CircleMenu">
+                                        <rect key="frame" x="305" y="20" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="5Ig-v1-L6h"/>
+                                            <constraint firstAttribute="width" secondItem="KGd-wQ-xR7" secondAttribute="height" multiplier="1:1" id="M0q-lB-HHT"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KGd-wQ-xR7" secondAttribute="trailing" constant="20" id="0me-6R-olh"/>
                                     <constraint firstAttribute="bottom" secondItem="CYL-o2-eTM" secondAttribute="bottom" constant="10" id="P1A-j1-PCR"/>
+                                    <constraint firstItem="KGd-wQ-xR7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gqr-W9-vOY" secondAttribute="leading" constant="20" symbolic="YES" id="axa-Ox-zyZ"/>
                                     <constraint firstAttribute="height" constant="160" id="igt-sP-OSZ"/>
+                                    <constraint firstItem="KGd-wQ-xR7" firstAttribute="top" secondItem="Gqr-W9-vOY" secondAttribute="top" constant="20" id="kSf-xP-hfm"/>
                                     <constraint firstItem="CYL-o2-eTM" firstAttribute="leading" secondItem="Gqr-W9-vOY" secondAttribute="leading" constant="10" id="rj0-bB-Gfg"/>
                                     <constraint firstItem="CYL-o2-eTM" firstAttribute="top" secondItem="Gqr-W9-vOY" secondAttribute="top" constant="10" id="xhK-XY-O7I"/>
                                     <constraint firstAttribute="trailing" secondItem="CYL-o2-eTM" secondAttribute="trailing" constant="20" id="yik-xg-kAC"/>
@@ -261,8 +276,8 @@
                                         <rect key="frame" x="78" y="15" width="191" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIAMOND CAFE - THE WAY YOU USED TO LOVE ME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xup-kC-nP1">
-                                                <rect key="frame" x="0.0" y="0.0" width="415" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="390.5" height="22"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

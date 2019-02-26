@@ -11,21 +11,16 @@ import XLPagerTabStrip
 import FaveButton
 import FRadioPlayer
 import AVFoundation
+import CircleMenu
 
-class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate, FRadioPlayerDelegate  {
-    
-    //FradioPlayer Delegate implementaions
+class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate, FRadioPlayerDelegate, CircleMenuDelegate  {
     func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
-        //do staff wehn state has chnaged
         
-        print(state.description)
-    }
-
-    func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
-        //do stuff when playback has changed
-        print(state.description)
     }
     
+    func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
+        
+    }
     
     // UI outlets
     
@@ -34,21 +29,21 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
-    
-    
-    
+ 
     @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet weak var headerView: UIView!
+    
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
     var headphonesStatus:Bool = false
     let player = FRadioPlayer.shared
     var player2: AVPlayer?
     
     override func viewDidLoad() {
+          self.prepareUI()
         
         super.viewDidLoad()
         //setup ui logic
-        self.prepareUI()
+      
 //seting up radio player
 //        let player = FRadioPlayer.shared
 //        player.delegate = self
@@ -217,12 +212,12 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     }
     @IBAction func playButtonClick(_ sender: FaveButton, forEvent event: UIEvent) {
         
-        UIButton.animate(withDuration: 0.6,
+        UIButton.animate(withDuration: 0.4,
                        animations: {
                         self.playbutton.alpha = 0
         },
                        completion: { _ in
-                        UIButton.animate(withDuration: 0.2) {
+                        UIButton.animate(withDuration: 0.1) {
                             self.stopbutton.isHidden = false;
                             self.playbutton.isHidden = true;
                             self.stopbutton.alpha = 1;
@@ -230,15 +225,16 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         })
 //        player.play()
         player2?.play()
+        sender.isSelected = false
     }
   
     @IBAction func stopButtonClicked(_ sender: FaveButton, forEvent event: UIEvent) {
-        UIButton.animate(withDuration: 0.6,
+        UIButton.animate(withDuration: 0.4,
                          animations: {
                             self.stopbutton.alpha = 0
         },
                          completion: { _ in
-                            UIButton.animate(withDuration: 0.2) {
+                            UIButton.animate(withDuration: 0.1) {
                                 self.playbutton.isHidden = false;
                                 self.stopbutton.isHidden = true;
                                 self.playbutton.alpha = 1;
@@ -246,6 +242,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         })
 //        player.stop()
         player2?.pause()
+        sender.isSelected = false
         
     }
     
