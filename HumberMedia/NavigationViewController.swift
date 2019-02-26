@@ -23,6 +23,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     @IBOutlet weak var playbutton: FaveButton!
     @IBOutlet weak var stopbutton: FaveButton!
+    @IBOutlet weak var infobutton: FaveButton!
+    
+    @IBOutlet weak var infoMenuButton: CircleMenu!
     
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
@@ -252,6 +255,34 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         sender.isSelected = false
         
     }
+    
+    
+    @IBAction func infoButtonClick(_ sender: FaveButton, forEvent event: UIEvent) {
+        
+        UIButton.animate(withDuration: 0.4, animations: {
+            self.infoMenuButton.alpha = 1
+            self.infoMenuButton.isHidden = false
+        }, completion: {_ in
+            self.infoMenuButton.sendActions(for: .touchUpInside)
+        })
+    }
+    @IBAction func infoMenuButtonClciked(_ sender: CircleMenu, forEvent event: UIEvent) {
+        if sender.isSelected == false{
+            self.infobutton.setSelected(selected: false, animated: true)
+            UIButton.animate(withDuration: 0.4, animations: {
+                self.infoMenuButton.alpha = 0
+                
+            }, completion: {_ in
+                self.infoMenuButton.isHidden = true
+            })
+        }
+        // will nedeve be executed cause menu button is hidden by logic
+        if sender.isSelected == true{
+            self.infobutton.setSelected(selected: true, animated: true)
+        }
+    }
+    
+    
     
     // MARK: <CircleMenuDelegate>
     

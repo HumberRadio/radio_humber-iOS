@@ -128,38 +128,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bju-5w-GE5" customClass="CircleMenu" customModule="CircleMenu">
-                                <rect key="frame" x="290" y="25" width="60" height="60"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="6Tj-mf-JvV"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="deS-gO-6O2"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="hOn-s6-VOk"/>
-                                    <constraint firstAttribute="height" constant="60" id="vsf-Pb-7lj"/>
-                                </constraints>
-                                <state key="normal" image="icon_menu"/>
-                                <state key="selected" image="icon_close"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
-                                        <real key="value" value="120"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                        <real key="value" value="0.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="T3V-oG-sMF" id="yjL-Vm-jZl"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-jb-c42" customClass="ButtonBarView" customModule="XLPagerTabStrip">
                                 <rect key="frame" x="0.0" y="135" width="375" height="25"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -212,6 +180,31 @@
                                             <action selector="playButtonClick:forEvent:" destination="T3V-oG-sMF" eventType="touchUpInside" id="ctp-xW-LTt"/>
                                             <action selector="playButtonPressed:" destination="T3V-oG-sMF" eventType="touchUpInside" id="SvZ-F3-WSq"/>
                                             <action selector="playbuttonClick:" destination="T3V-oG-sMF" eventType="touchUpInside" id="huj-wW-OrE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXc-gO-PDY" userLabel="infoButton" customClass="FaveButton" customModule="FaveButton">
+                                        <rect key="frame" x="237" y="24" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="BXc-gO-PDY" secondAttribute="height" multiplier="1:1" id="xHg-u2-1j1"/>
+                                        </constraints>
+                                        <state key="normal" image="info_button"/>
+                                        <state key="selected" image="fav_button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dotFirstColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="dotSecondColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleFromColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleToColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="infoButtonClick:forEvent:" destination="T3V-oG-sMF" eventType="touchUpInside" id="xqe-pu-DO7"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fu-g7-SJh" userLabel="stopButton" customClass="FaveButton" customModule="FaveButton">
@@ -273,10 +266,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-TS-zlS">
-                                        <rect key="frame" x="78" y="41" width="191" height="24"/>
+                                        <rect key="frame" x="78" y="41" width="149" height="24"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIAMOND CAFE - THE WAY YOU USED TO LOVE ME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgS-wb-3dB">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please press play to start your journey :)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgS-wb-3dB">
+                                                <rect key="frame" x="0.0" y="0.0" width="270.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="14"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -290,10 +283,10 @@
                                         </constraints>
                                     </scrollView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skU-YC-hcl">
-                                        <rect key="frame" x="78" y="15" width="191" height="21"/>
+                                        <rect key="frame" x="78" y="15" width="149" height="21"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIAMOND CAFE - THE WAY YOU USED TO LOVE ME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xup-kC-nP1">
-                                                <rect key="frame" x="0.0" y="0.0" width="390.5" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Radio Humber" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xup-kC-nP1">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="22"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -310,13 +303,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="9fu-g7-SJh" firstAttribute="top" secondItem="Mih-ep-841" secondAttribute="top" constant="25" id="26E-cW-WWH"/>
-                                    <constraint firstItem="skU-YC-hcl" firstAttribute="trailing" secondItem="vlO-ab-BlN" secondAttribute="leading" constant="-10" id="2ia-IZ-jD0"/>
+                                    <constraint firstItem="skU-YC-hcl" firstAttribute="trailing" secondItem="BXc-gO-PDY" secondAttribute="leading" constant="-10" id="2ia-IZ-jD0"/>
                                     <constraint firstItem="skU-YC-hcl" firstAttribute="bottom" secondItem="eVC-a8-06M" secondAttribute="bottom" id="2vR-Le-Gzh"/>
                                     <constraint firstItem="vlO-ab-BlN" firstAttribute="top" secondItem="Mih-ep-841" secondAttribute="top" constant="25" id="5oS-ao-U09"/>
                                     <constraint firstItem="noi-Mp-CVS" firstAttribute="leading" secondItem="Mih-ep-841" secondAttribute="leading" constant="20" id="8yN-hQ-bE8"/>
                                     <constraint firstItem="9fu-g7-SJh" firstAttribute="width" secondItem="9fu-g7-SJh" secondAttribute="height" multiplier="1:1" id="CKV-qN-j8Q"/>
                                     <constraint firstAttribute="trailing" secondItem="v90-TW-GI5" secondAttribute="trailing" constant="20" id="DEs-9I-ZOq"/>
                                     <constraint firstItem="a0c-TS-zlS" firstAttribute="bottom" secondItem="noi-Mp-CVS" secondAttribute="bottom" id="InJ-gb-uPy"/>
+                                    <constraint firstItem="BXc-gO-PDY" firstAttribute="top" secondItem="Mih-ep-841" secondAttribute="top" constant="24" id="QbX-Fi-zGq"/>
                                     <constraint firstItem="a0c-TS-zlS" firstAttribute="leading" secondItem="eVC-a8-06M" secondAttribute="leading" id="Swy-Zz-L4w"/>
                                     <constraint firstAttribute="bottom" secondItem="vlO-ab-BlN" secondAttribute="bottom" constant="25" id="U3B-cc-1R2"/>
                                     <constraint firstItem="a0c-TS-zlS" firstAttribute="top" secondItem="eVC-a8-06M" secondAttribute="bottom" constant="5" id="WMr-Hq-nh0"/>
@@ -327,8 +321,10 @@
                                     <constraint firstAttribute="height" constant="80" id="fYd-L8-eLf"/>
                                     <constraint firstAttribute="trailing" secondItem="9fu-g7-SJh" secondAttribute="trailing" constant="20" id="gh1-l7-Yed"/>
                                     <constraint firstItem="eVC-a8-06M" firstAttribute="leading" secondItem="noi-Mp-CVS" secondAttribute="trailing" constant="8" id="ihm-xd-1DA"/>
-                                    <constraint firstItem="a0c-TS-zlS" firstAttribute="trailing" secondItem="vlO-ab-BlN" secondAttribute="leading" constant="-10" id="kRY-In-yPA"/>
+                                    <constraint firstItem="a0c-TS-zlS" firstAttribute="trailing" secondItem="BXc-gO-PDY" secondAttribute="leading" constant="-10" id="kRY-In-yPA"/>
+                                    <constraint firstItem="BXc-gO-PDY" firstAttribute="trailing" secondItem="vlO-ab-BlN" secondAttribute="leading" constant="-10" id="l8E-x7-2fQ"/>
                                     <constraint firstAttribute="bottom" secondItem="9fu-g7-SJh" secondAttribute="bottom" constant="25" id="mIX-n4-EPa"/>
+                                    <constraint firstAttribute="bottom" secondItem="BXc-gO-PDY" secondAttribute="bottom" constant="24" id="pig-8X-GjM"/>
                                     <constraint firstAttribute="bottom" secondItem="noi-Mp-CVS" secondAttribute="bottom" constant="15" id="qfc-gT-myy"/>
                                     <constraint firstItem="vlO-ab-BlN" firstAttribute="trailing" secondItem="v90-TW-GI5" secondAttribute="leading" constant="-10" id="qgI-lz-w8C"/>
                                     <constraint firstAttribute="bottom" secondItem="v90-TW-GI5" secondAttribute="bottom" constant="25" id="vqk-jx-ave"/>
@@ -356,22 +352,53 @@
                                 </constraints>
                                 <state key="normal" image="button_radio_volume"/>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYd-tE-Ufb" customClass="CircleMenu" customModule="CircleMenu">
+                                <rect key="frame" x="157.5" y="303.5" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="OmB-cf-WSv"/>
+                                    <constraint firstAttribute="width" constant="60" id="SGH-gq-E8L"/>
+                                </constraints>
+                                <state key="normal" image="icon_menu"/>
+                                <state key="selected" image="icon_close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="120"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="infoMenuButtonClciked:forEvent:" destination="T3V-oG-sMF" eventType="touchUpInside" id="mk0-y2-kio"/>
+                                    <outlet property="delegate" destination="T3V-oG-sMF" id="zY8-Wj-qg5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mih-ep-841" firstAttribute="trailing" secondItem="udv-Jj-TdM" secondAttribute="trailing" id="2b7-Um-ttX"/>
-                            <constraint firstItem="Bju-5w-GE5" firstAttribute="top" secondItem="K5I-NZ-Fwe" secondAttribute="top" constant="25" id="5Nq-X7-er9"/>
                             <constraint firstItem="JRf-nj-chG" firstAttribute="leading" secondItem="udv-Jj-TdM" secondAttribute="leading" id="7Ey-es-SQE"/>
                             <constraint firstItem="Gqr-W9-vOY" firstAttribute="top" secondItem="K5I-NZ-Fwe" secondAttribute="top" id="9kR-aY-pnA"/>
                             <constraint firstItem="3yS-jb-c42" firstAttribute="leading" secondItem="udv-Jj-TdM" secondAttribute="leading" id="BV3-I0-sRu"/>
                             <constraint firstItem="udv-Jj-TdM" firstAttribute="trailing" secondItem="3yS-jb-c42" secondAttribute="trailing" id="Elk-ll-Rga"/>
-                            <constraint firstItem="udv-Jj-TdM" firstAttribute="trailing" secondItem="Bju-5w-GE5" secondAttribute="trailing" constant="25" id="Jtr-wo-PYn"/>
+                            <constraint firstItem="MYd-tE-Ufb" firstAttribute="centerX" secondItem="K5I-NZ-Fwe" secondAttribute="centerX" id="HtT-4l-yRj"/>
                             <constraint firstItem="k5q-XY-Vqe" firstAttribute="leading" secondItem="Mih-ep-841" secondAttribute="centerX" constant="15" id="LVR-ko-X84"/>
                             <constraint firstItem="k5q-XY-Vqe" firstAttribute="centerY" secondItem="Mih-ep-841" secondAttribute="top" id="Loj-xx-dRv"/>
                             <constraint firstItem="Mih-ep-841" firstAttribute="leading" secondItem="udv-Jj-TdM" secondAttribute="leading" id="MlF-Ts-jW6"/>
                             <constraint firstItem="Gqr-W9-vOY" firstAttribute="leading" secondItem="udv-Jj-TdM" secondAttribute="leading" id="WnW-9y-uXI"/>
                             <constraint firstItem="3yS-jb-c42" firstAttribute="bottom" secondItem="Gqr-W9-vOY" secondAttribute="bottom" id="b8K-Is-bBw"/>
                             <constraint firstItem="JRf-nj-chG" firstAttribute="top" secondItem="3yS-jb-c42" secondAttribute="bottom" constant="5" id="duC-RT-N0U"/>
+                            <constraint firstItem="MYd-tE-Ufb" firstAttribute="centerY" secondItem="K5I-NZ-Fwe" secondAttribute="centerY" id="i9X-t3-FJP"/>
                             <constraint firstItem="udv-Jj-TdM" firstAttribute="trailing" secondItem="JRf-nj-chG" secondAttribute="trailing" id="jIl-mq-WWv"/>
                             <constraint firstItem="udv-Jj-TdM" firstAttribute="bottom" secondItem="Mih-ep-841" secondAttribute="bottom" id="jif-3k-2su"/>
                             <constraint firstItem="udv-Jj-TdM" firstAttribute="trailing" secondItem="Gqr-W9-vOY" secondAttribute="trailing" id="kRO-kk-SGS"/>
@@ -385,6 +412,8 @@
                         <outlet property="containerView" destination="JRf-nj-chG" id="Sap-Rc-b2G"/>
                         <outlet property="headerImageView" destination="CYL-o2-eTM" id="TWS-kF-uiw"/>
                         <outlet property="headerView" destination="Gqr-W9-vOY" id="y7C-dQ-oXS"/>
+                        <outlet property="infoMenuButton" destination="MYd-tE-Ufb" id="oin-fz-Vp5"/>
+                        <outlet property="infobutton" destination="BXc-gO-PDY" id="tS2-0x-Pb8"/>
                         <outlet property="playbutton" destination="v90-TW-GI5" id="R8Q-lD-jGJ"/>
                         <outlet property="songTitleLabel" destination="Xup-kC-nP1" id="AQj-Sx-12B"/>
                         <outlet property="stopbutton" destination="9fu-g7-SJh" id="KQD-Hw-zAz"/>
@@ -430,6 +459,7 @@
         <image name="fav_button" width="334.39999389648438" height="295.20001220703125"/>
         <image name="icon_close" width="120" height="120"/>
         <image name="icon_menu" width="120" height="120"/>
+        <image name="info_button" width="7.1999998092651367" height="7.1999998092651367"/>
         <image name="play_button_round" width="170.39999389648438" height="206.39999389648438"/>
         <image name="radio_thumb_image" width="140" height="140"/>
         <image name="stopbutton" width="4.320000171661377" height="4.320000171661377"/>
