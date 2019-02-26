@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="2092" y="-1529"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--Delegate-->
         <scene sceneID="Jkn-0w-SrA">
             <objects>
                 <viewController id="T3V-oG-sMF" customClass="NavigationViewController" customModule="HumberMedia" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,26 +107,11 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CYL-o2-eTM">
                                         <rect key="frame" x="10" y="10" width="345" height="140"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGd-wQ-xR7" customClass="CircleMenu" customModule="CircleMenu">
-                                        <rect key="frame" x="305" y="20" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="5Ig-v1-L6h"/>
-                                            <constraint firstAttribute="width" secondItem="KGd-wQ-xR7" secondAttribute="height" multiplier="1:1" id="M0q-lB-HHT"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="KGd-wQ-xR7" secondAttribute="trailing" constant="20" id="0me-6R-olh"/>
                                     <constraint firstAttribute="bottom" secondItem="CYL-o2-eTM" secondAttribute="bottom" constant="10" id="P1A-j1-PCR"/>
-                                    <constraint firstItem="KGd-wQ-xR7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gqr-W9-vOY" secondAttribute="leading" constant="20" symbolic="YES" id="axa-Ox-zyZ"/>
                                     <constraint firstAttribute="height" constant="160" id="igt-sP-OSZ"/>
-                                    <constraint firstItem="KGd-wQ-xR7" firstAttribute="top" secondItem="Gqr-W9-vOY" secondAttribute="top" constant="20" id="kSf-xP-hfm"/>
                                     <constraint firstItem="CYL-o2-eTM" firstAttribute="leading" secondItem="Gqr-W9-vOY" secondAttribute="leading" constant="10" id="rj0-bB-Gfg"/>
                                     <constraint firstItem="CYL-o2-eTM" firstAttribute="top" secondItem="Gqr-W9-vOY" secondAttribute="top" constant="10" id="xhK-XY-O7I"/>
                                     <constraint firstAttribute="trailing" secondItem="CYL-o2-eTM" secondAttribute="trailing" constant="20" id="yik-xg-kAC"/>
@@ -143,6 +128,38 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bju-5w-GE5" customClass="CircleMenu" customModule="CircleMenu">
+                                <rect key="frame" x="290" y="25" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6Tj-mf-JvV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="deS-gO-6O2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="hOn-s6-VOk"/>
+                                    <constraint firstAttribute="height" constant="60" id="vsf-Pb-7lj"/>
+                                </constraints>
+                                <state key="normal" image="icon_menu"/>
+                                <state key="selected" image="icon_close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="120"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="T3V-oG-sMF" id="yjL-Vm-jZl"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-jb-c42" customClass="ButtonBarView" customModule="XLPagerTabStrip">
                                 <rect key="frame" x="0.0" y="135" width="375" height="25"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -343,10 +360,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mih-ep-841" firstAttribute="trailing" secondItem="udv-Jj-TdM" secondAttribute="trailing" id="2b7-Um-ttX"/>
+                            <constraint firstItem="Bju-5w-GE5" firstAttribute="top" secondItem="K5I-NZ-Fwe" secondAttribute="top" constant="25" id="5Nq-X7-er9"/>
                             <constraint firstItem="JRf-nj-chG" firstAttribute="leading" secondItem="udv-Jj-TdM" secondAttribute="leading" id="7Ey-es-SQE"/>
                             <constraint firstItem="Gqr-W9-vOY" firstAttribute="top" secondItem="K5I-NZ-Fwe" secondAttribute="top" id="9kR-aY-pnA"/>
                             <constraint firstItem="3yS-jb-c42" firstAttribute="leading" secondItem="udv-Jj-TdM" secondAttribute="leading" id="BV3-I0-sRu"/>
                             <constraint firstItem="udv-Jj-TdM" firstAttribute="trailing" secondItem="3yS-jb-c42" secondAttribute="trailing" id="Elk-ll-Rga"/>
+                            <constraint firstItem="udv-Jj-TdM" firstAttribute="trailing" secondItem="Bju-5w-GE5" secondAttribute="trailing" constant="25" id="Jtr-wo-PYn"/>
                             <constraint firstItem="k5q-XY-Vqe" firstAttribute="leading" secondItem="Mih-ep-841" secondAttribute="centerX" constant="15" id="LVR-ko-X84"/>
                             <constraint firstItem="k5q-XY-Vqe" firstAttribute="centerY" secondItem="Mih-ep-841" secondAttribute="top" id="Loj-xx-dRv"/>
                             <constraint firstItem="Mih-ep-841" firstAttribute="leading" secondItem="udv-Jj-TdM" secondAttribute="leading" id="MlF-Ts-jW6"/>
@@ -409,6 +428,8 @@
     <resources>
         <image name="button_radio_volume" width="114" height="114"/>
         <image name="fav_button" width="334.39999389648438" height="295.20001220703125"/>
+        <image name="icon_close" width="120" height="120"/>
+        <image name="icon_menu" width="120" height="120"/>
         <image name="play_button_round" width="170.39999389648438" height="206.39999389648438"/>
         <image name="radio_thumb_image" width="140" height="140"/>
         <image name="stopbutton" width="4.320000171661377" height="4.320000171661377"/>

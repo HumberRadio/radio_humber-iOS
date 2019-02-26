@@ -14,14 +14,11 @@ import AVFoundation
 import CircleMenu
 
 class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate, FRadioPlayerDelegate, CircleMenuDelegate  {
-    func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
-        
-    }
+   
     
-    func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
-        
-    }
+   
     
+  
     // UI outlets
     
     @IBOutlet weak var playbutton: FaveButton!
@@ -37,6 +34,16 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     var headphonesStatus:Bool = false
     let player = FRadioPlayer.shared
     var player2: AVPlayer?
+    
+    //more info buttons colors
+    //    let colors = [UIColor.redColor(), UIColor.grayColor(), UIColor.greenColor(), UIColor.purpleColor()]
+    let items: [(icon: String, color: UIColor)] = [
+        ("icon_home", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),
+        ("icon_search", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),
+        ("notifications-btn", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),
+        ("settings-btn", UIColor(red: 0.51, green: 0.15, blue: 1, alpha: 1)),
+        ("nearby-btn", UIColor(red: 1, green: 0.39, blue: 0, alpha: 1))]
+    
     
     override func viewDidLoad() {
           self.prepareUI()
@@ -246,4 +253,33 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         
     }
     
+    // MARK: <CircleMenuDelegate>
+    
+    func circleMenu(_: CircleMenu, willDisplay button: UIButton, atIndex: Int) {
+        button.backgroundColor = items[atIndex].color
+        
+        button.setImage(UIImage(named: items[atIndex].icon), for: .normal)
+        
+        // set highlited image
+        let highlightedImage = UIImage(named: items[atIndex].icon)?.withRenderingMode(.alwaysTemplate)
+        button.setImage(highlightedImage, for: .highlighted)
+        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+    }
+    
+    func circleMenu(_: CircleMenu, buttonWillSelected _: UIButton, atIndex: Int) {
+        print("button will selected: \(atIndex)")
+    }
+    
+    func circleMenu(_: CircleMenu, buttonDidSelected _: UIButton, atIndex: Int) {
+        print("button did selected: \(atIndex)")
+    }
+    
+    //MARK: <FRadioPlayerDelegate>
+    func radioPlayer(_ player: FRadioPlayer, playerStateDidChange state: FRadioPlayerState) {
+        
+    }
+    
+    func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
+        
+    }
 }
