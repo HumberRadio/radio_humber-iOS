@@ -42,7 +42,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/helpers/HumberRadioPlayer.swift"
-                  timestampString = "572909329.453603"
+                  timestampString = "573065889.677992"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "95"
@@ -57,7 +57,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/helpers/HumberRadioPlayer.swift"
-                  timestampString = "572909329.461533"
+                  timestampString = "573065889.683606"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "96"
@@ -74,12 +74,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/NavigationViewController.swift"
-            timestampString = "572909329.237533"
+            timestampString = "573065889.505756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "306"
+            endingLineNumber = "306"
             landmarkName = "infoMenuButtonClciked(_:forEvent:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HumberMedia/NavigationViewController.swift"
+            timestampString = "573065889.506273"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "tapDetectedImage()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

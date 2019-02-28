@@ -17,8 +17,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
    
     
    
+    // layout constrains
+    @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     
-  
     // UI outlets
     
     @IBOutlet weak var playbutton: FaveButton!
@@ -32,7 +33,20 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
  
     @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var buttonsView: UIView!
+    @IBOutlet weak var infoTextView: UIView!
     
+    
+    //specific UI constains (needed for animation)
+    @IBOutlet weak var trailingButtonView: NSLayoutConstraint!
+    
+    @IBOutlet weak var centerYInfoView: NSLayoutConstraint!
+    @IBOutlet weak var trailingInfoView: NSLayoutConstraint!
+    
+    @IBOutlet weak var leadingInfoViuew: NSLayoutConstraint!
+    
+    @IBOutlet weak var radioImageView: UIImageView!
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
     var headphonesStatus:Bool = false
     let player = FRadioPlayer.shared
@@ -42,7 +56,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     //    let colors = [UIColor.redColor(), UIColor.grayColor(), UIColor.greenColor(), UIColor.purpleColor()]
     let items: [(icon: String, color: UIColor)] = [
         ("icon_home", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),
-        ("icon_search", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),
+        ("teamInfobutton", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),
         ("notifications-btn", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),
         ("settings-btn", UIColor(red: 0.51, green: 0.15, blue: 1, alpha: 1)),
         ("nearby-btn", UIColor(red: 1, green: 0.39, blue: 0, alpha: 1))]
@@ -209,10 +223,37 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             
             
         }
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(NavigationViewController.tapDetectedImage))
+        radioImageView.isUserInteractionEnabled = true
+        radioImageView.addGestureRecognizer(singleTap)
         
     }
     
-  
+   
+    @objc func tapDetectedImage() {
+//        print("Imageview Clicked")
+        UIView.animate(withDuration: 2.0, animations:{
+//            self.bottomView.setheig = 500.0
+            // bring whole bottme view to top
+            self.bottomViewHeight.constant = self.view.frame.height * 0.70
+            //animate buttons
+            self.trailingButtonView.constant = self.view.frame.width * 0.5
+            
+            //animate info text
+            
+            //animate imageview
+            
+        
+            self.view.layoutIfNeeded()
+            
+
+           
+            
+        }, completion: {_ in
+            print("done")
+        })
+        
+    }
     
     
     @IBAction func playButtonPressed(_ sender: Any) {

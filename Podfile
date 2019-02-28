@@ -22,6 +22,8 @@ target 'HumberMedia' do
   
   pod 'XLPagerTabStrip', '~> 8.1'
   pod 'FRadioPlayer'
+  pod 'anim'
+
 
 
 
