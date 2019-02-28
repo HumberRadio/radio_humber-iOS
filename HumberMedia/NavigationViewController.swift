@@ -252,10 +252,10 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             // bring whole bottme view to top
             self.bottomViewHeight.constant = self.view.frame.height * 0.70
             //animate buttons
-            self.trailingButtonView.constant = self.view.frame.width * 0.33
-            self.widthButtonView.constant = self.view.frame.width * 0.33
-            self.heightButtonView.constant = 120
-            self.topButtonsView.constant = (self.view.frame.width * 0.36) + 110
+            self.trailingButtonView.constant = self.view.frame.width * 0.32
+//            self.widthButtonView.constant = self.view.frame.width * 0.33
+//            self.heightButtonView.constant = 120
+            self.topButtonsView.constant = (self.view.frame.width * 0.36) + 65
             
             
             
