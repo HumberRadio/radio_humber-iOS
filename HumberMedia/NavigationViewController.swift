@@ -15,8 +15,6 @@ import CircleMenu
 
 class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate, FRadioPlayerDelegate, CircleMenuDelegate  {
    
-    
-   
     // layout constrains
     @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     
@@ -64,8 +62,10 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     @IBOutlet weak var radioImageView: UIImageView!
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
     var headphonesStatus:Bool = false
+    var isradioOpen:Bool = false
     let player = FRadioPlayer.shared
     var player2: AVPlayer?
+    
     
     //more info buttons colors
     //    let colors = [UIColor.redColor(), UIColor.grayColor(), UIColor.greenColor(), UIColor.purpleColor()]
@@ -247,37 +247,15 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
    
     @objc func tapDetectedImage() {
 //        print("Imageview Clicked")
-        UIView.animate(withDuration: 3.0, animations:{
-//            self.bottomView.setheig = 500.0
-            // bring whole bottme view to top
-            self.bottomViewHeight.constant = self.view.frame.height * 0.70
-            //animate buttons
-            self.trailingButtonView.constant = self.view.frame.width * 0.32
-//            self.widthButtonView.constant = self.view.frame.width * 0.33
-//            self.heightButtonView.constant = 120
-            self.topButtonsView.constant = (self.view.frame.width * 0.36) + 65
-            
-            
-            
-            //animate info text
-            self.self.leadingInfoViuew.constant = self.view.frame.width * 0.15
-            self.trailingInfoView.constant = self.view.frame.width * 0.15
-            self.topInfoTextView.constant = 15
-            
-            //animate imageview
-            self.widthRadioImage.constant = self.view.frame.width * 0.36
-            self.heightRadioImage.constant = self.widthRadioImage.constant
-            self.topRadioImage.constant = 80
-            self.leadingRadioImage.constant = self.view.frame.width * 0.32
-        
-            self.view.layoutIfNeeded()
-            
-
-           
-            
-        }, completion: {_ in
-            print("done")
-        })
+        if !isradioOpen
+        {
+            animateRadioBarOpen()
+        }
+        else
+        {
+            animateRadioBarClose()
+        }
+       
         
     }
     
@@ -378,6 +356,80 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     }
     
     func radioPlayer(_ player: FRadioPlayer, playbackStateDidChange state: FRadioPlaybackState) {
+        
+    }
+    
+    //*****************************************************************
+    // MARK: - RADIO BAR ANIMATIONS
+    //*****************************************************************
+    
+    private func animateRadioBarOpen()
+    {
+        UIView.animate(withDuration: 3.0, animations:{
+           
+            // bring whole bottme view to top
+            self.bottomViewHeight.constant = self.view.frame.height * 0.70
+            
+            //animate buttons
+            self.trailingButtonView.constant = self.view.frame.width * 0.32
+            self.topButtonsView.constant = (self.view.frame.width * 0.36) + 65
+
+            //animate info text
+            self.leadingInfoViuew.constant = self.view.frame.width * 0.15
+            self.trailingInfoView.constant = self.view.frame.width * 0.15
+            self.topInfoTextView.constant = 15
+            
+            //animate imageview
+            self.widthRadioImage.constant = self.view.frame.width * 0.36
+            self.heightRadioImage.constant = self.widthRadioImage.constant
+            self.topRadioImage.constant = 80
+            self.leadingRadioImage.constant = self.view.frame.width * 0.32
+            
+            self.view.layoutIfNeeded()
+            
+            
+            
+            
+        }, completion: {_ in
+            print("done")
+            self.isradioOpen = true
+        })
+        
+    }
+    private func animateRadioBarClose()
+    {
+        self.isradioOpen = true
+        UIView.animate(withDuration: 3.0, animations:{
+            
+            // bring whole bottme view to top
+            self.bottomViewHeight.constant = 80
+            
+            //animate buttons
+            self.trailingButtonView.constant = 0
+            self.topButtonsView.constant = 0
+            
+            //animate info text
+            self.leadingInfoViuew.constant = 70
+            self.trailingInfoView.constant = 145
+            self.topInfoTextView.constant = 15
+            
+            //animate imageview
+            self.widthRadioImage.constant = 50
+            self.heightRadioImage.constant = self.widthRadioImage.constant
+            self.topRadioImage.constant = 15
+            self.leadingRadioImage.constant = 15
+            
+            self.view.layoutIfNeeded()
+            
+            
+            
+            
+        }, completion: {_ in
+            print("done")
+             self.isradioOpen = false
+        })
+       
+        
         
     }
 }
