@@ -40,11 +40,26 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     //specific UI constains (needed for animation)
     @IBOutlet weak var trailingButtonView: NSLayoutConstraint!
+     @IBOutlet weak var topButtonsView: NSLayoutConstraint!
     
-    @IBOutlet weak var centerYInfoView: NSLayoutConstraint!
+    @IBOutlet weak var widthButtonView: NSLayoutConstraint!
+    @IBOutlet weak var heightButtonView: NSLayoutConstraint!
+    // infotext View constrains
     @IBOutlet weak var trailingInfoView: NSLayoutConstraint!
     
     @IBOutlet weak var leadingInfoViuew: NSLayoutConstraint!
+    
+    @IBOutlet weak var topInfoTextView: NSLayoutConstraint!
+    
+    // radio imageview constains
+    @IBOutlet weak var widthRadioImage: NSLayoutConstraint!
+    @IBOutlet weak var heightRadioImage: NSLayoutConstraint!
+    
+    @IBOutlet weak var leadingRadioImage: NSLayoutConstraint!
+    
+    @IBOutlet weak var topRadioImage: NSLayoutConstraint!
+    
+   
     
     @IBOutlet weak var radioImageView: UIImageView!
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
@@ -232,17 +247,28 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
    
     @objc func tapDetectedImage() {
 //        print("Imageview Clicked")
-        UIView.animate(withDuration: 2.0, animations:{
+        UIView.animate(withDuration: 3.0, animations:{
 //            self.bottomView.setheig = 500.0
             // bring whole bottme view to top
             self.bottomViewHeight.constant = self.view.frame.height * 0.70
             //animate buttons
-            self.trailingButtonView.constant = self.view.frame.width * 0.5
+            self.trailingButtonView.constant = self.view.frame.width * 0.33
+            self.widthButtonView.constant = self.view.frame.width * 0.33
+            self.heightButtonView.constant = 120
+            self.topButtonsView.constant = (self.view.frame.width * 0.36) + 110
+            
+            
             
             //animate info text
+            self.self.leadingInfoViuew.constant = self.view.frame.width * 0.15
+            self.trailingInfoView.constant = self.view.frame.width * 0.15
+            self.topInfoTextView.constant = 15
             
             //animate imageview
-            
+            self.widthRadioImage.constant = self.view.frame.width * 0.36
+            self.heightRadioImage.constant = self.widthRadioImage.constant
+            self.topRadioImage.constant = 80
+            self.leadingRadioImage.constant = self.view.frame.width * 0.32
         
             self.view.layoutIfNeeded()
             
