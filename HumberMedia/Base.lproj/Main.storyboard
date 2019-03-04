@@ -446,7 +446,7 @@
                         <outlet property="leadingInfoViuew" destination="6Wx-zL-34U" id="oWg-I4-ZDD"/>
                         <outlet property="leadingRadioImage" destination="e0b-eu-x2n" id="JSD-z5-LuK"/>
                         <outlet property="playbutton" destination="v90-TW-GI5" id="R8Q-lD-jGJ"/>
-                        <outlet property="radioImageView" destination="noi-Mp-CVS" id="cwa-dt-aIs"/>
+                        <outlet property="radioImageView" destination="noi-Mp-CVS" id="LhE-R1-xDb"/>
                         <outlet property="songTitleLabel" destination="Xup-kC-nP1" id="AQj-Sx-12B"/>
                         <outlet property="stopbutton" destination="9fu-g7-SJh" id="KQD-Hw-zAz"/>
                         <outlet property="topButtonsView" destination="xkY-vw-UWS" id="VuN-ie-O5a"/>
