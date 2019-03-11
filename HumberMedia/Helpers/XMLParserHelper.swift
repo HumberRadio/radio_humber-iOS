@@ -80,6 +80,64 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
         return track;
     }
+    public func parceRecentlyPlayed () -> [Track]
+    {
+        // create the semaphore get it background value 0 and start it
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        
+        var tracks = [Track]()
+        var track = Track(title: "N/A",artist: "N/A")
+        let url = URL(string: URLConstants.Domains.curentPlayInfo)
+        
+        let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
+            
+            guard let data = data, error == nil else {
+                
+                print(error ?? "Unknown error")
+                return
+                
+            }
+            
+            let parser = XMLParser(data: data)
+            parser.delegate = self
+            if parser.parse() {
+                // parce completed sucessfuly
+                //                self.results.count
+                for songinfo in self.results
+                {
+                    for (key,value) in songinfo{
+                        switch key {
+                        case "artist":
+                            track.artist = value
+                            break;
+                        case "songtitle":
+                            track.title = value
+                            break;
+                        case "albumart":
+                            track.imageUrl = value
+                            break;
+                        default:
+                            break;
+                        }
+                    }
+                    tracks.append(track)
+                }
+                
+                print(self.results.count )
+                // we signal the semaphore to stop waiting
+                semaphore.signal()
+            }
+            
+            //            print( NSString(data: data, encoding: String.Encoding.utf8.rawValue))
+        }
+        
+        task.resume()
+        
+        //when we signal we get semaphore to stop waiting and proceed to next line
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        return tracks;
+    }
     
     //*****************************************************************
     // XMLParcerDelegate: functions to parce the returned results in result array for dictionalries.

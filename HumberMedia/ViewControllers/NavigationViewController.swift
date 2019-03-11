@@ -386,8 +386,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             break;
         case 4:
             print("this is Maps ")
-            let campusNavigationViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
-            self.present(campusNavigationViewController, animated: true, completion: nil)
+//            let campusNavigationViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
+           let campusSelectViewController:CampusSelectViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusSelectionID") as! CampusSelectViewController
+            self.present(campusSelectViewController, animated: true, completion: nil)
             break;
         default:
             print("this is default")
