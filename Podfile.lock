@@ -3,6 +3,13 @@ PODS:
   - CircleMenu (4.0.1)
   - FaveButton (3.2.0)
   - FRadioPlayer (0.1.15)
+  - GoogleMaps (3.0.3):
+    - GoogleMaps/Maps (= 3.0.3)
+  - GoogleMaps/Base (3.0.3)
+  - GoogleMaps/Maps (3.0.3):
+    - GoogleMaps/Base
+  - GooglePlaces (3.0.3):
+    - GoogleMaps/Base (= 3.0.3)
   - MaterialComponents/AnimationTiming (76.1.2)
   - MaterialComponents/BottomNavigation (76.1.2):
     - MaterialComponents/Ink
@@ -55,6 +62,8 @@ DEPENDENCIES:
   - CircleMenu
   - FaveButton
   - FRadioPlayer
+  - GoogleMaps
+  - GooglePlaces
   - MaterialComponents/BottomNavigation
   - MaterialComponents/Buttons
   - MaterialComponents/HeaderStackView
@@ -68,6 +77,8 @@ SPEC REPOS:
     - CircleMenu
     - FaveButton
     - FRadioPlayer
+    - GoogleMaps
+    - GooglePlaces
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -78,11 +89,13 @@ SPEC CHECKSUMS:
   CircleMenu: d846569acbe805b75cef5793056707224240db64
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   FRadioPlayer: 0ad8b63756c3597af3c4a2672334c5dc22e026e4
+  GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
+  GooglePlaces: f09e76993c9c3ee4af8f4f7f535bb94d6aa3b649
   MaterialComponents: 1aef341d47fbaed37ddb5163a01af94cb6da8506
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: c8fa7e5afc7c36742acdaa500cdecff170417060
+PODFILE CHECKSUM: bfb644625538b2be96f9e54d4728dc0ae010038d
 
 COCOAPODS: 1.5.3

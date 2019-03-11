@@ -9,78 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HumberMedia/helpers/HumberRadioPlayer.swift"
-            timestampString = "573071719.814573"
+            filePath = "HumberMedia/Helpers/HumberRadioPlayer.swift"
+            timestampString = "574021603.2113889"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "radioPlayer(_:artworkDidChange:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HumberMedia/helpers/HumberRadioPlayer.swift"
-            timestampString = "573071719.814658"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "getStationImage(from:completionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HumberMedia.RadioPlayer.(getStationImage in _8CA03D164C00541513E223E31F0EB333)(from: HumberMedia.HumberRadioStation, completionHandler: (__C.UIImage) -&gt; ()) -&gt; ()"
-                  moduleName = "HumberMedia"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/helpers/HumberRadioPlayer.swift"
-                  timestampString = "573414621.508495"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "973">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.String) -&gt; () in HumberMedia.RadioPlayer.(getStationImage in _8CA03D164C00541513E223E31F0EB333)(from: HumberMedia.HumberRadioStation, completionHandler: (__C.UIImage) -&gt; ()) -&gt; ()"
-                  moduleName = "HumberMedia"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/helpers/HumberRadioPlayer.swift"
-                  timestampString = "573414621.511566"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "38">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HumberMedia/NavigationViewController.swift"
-            timestampString = "573414620.900575"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "317"
-            endingLineNumber = "317"
-            landmarkName = "infoMenuButtonClciked(_:forEvent:)"
-            landmarkType = "7">
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "RadioPlayer"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

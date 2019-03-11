@@ -14,6 +14,8 @@
 		710459A021FB91BD00677A19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7104599E21FB91BD00677A19 /* LaunchScreen.storyboard */; };
 		710459A821FB99F100677A19 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710459A721FB99F100677A19 /* RadioViewController.swift */; };
 		710459AB21FED0C900677A19 /* ShadowUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710459AA21FED0C900677A19 /* ShadowUIView.swift */; };
+		711984E8222DF42500CFF621 /* CampusNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711984E7222DF42500CFF621 /* CampusNavigationViewController.swift */; };
+		711984EA222DFB6500CFF621 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711984E9222DFB6500CFF621 /* Campus.swift */; };
 		714A7D4D220CC117005A0001 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D4C220CC117005A0001 /* Helper.swift */; };
 		714A7D59220E0DA3005A0001 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D4F220E0DA1005A0001 /* OpenSans-LightItalic.ttf */; };
 		714A7D5A220E0DA3005A0001 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D50220E0DA1005A0001 /* OpenSans-SemiBoldItalic.ttf */; };
@@ -28,16 +30,11 @@
 		714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D63220E73DF005A0001 /* NavigationViewController.swift */; };
 		714A7D66220E765B005A0001 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D65220E765B005A0001 /* TVViewController.swift */; };
 		714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D76220FC20A005A0001 /* NewsViewController.swift */; };
-		71AC01482228672E0039F611 /* SongLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC01472228672E0039F611 /* SongLayout.swift */; };
 		71CE9E9422221252002DA0FA /* HumberRadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */; };
 		71CE9E96222212CE002DA0FA /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E95222212CE002DA0FA /* Track.swift */; };
 		71CE9E98222213B0002DA0FA /* HumberRadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */; };
-		71CE9E9B22221993002DA0FA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9A22221993002DA0FA /* ImageLoader.swift */; };
 		71CE9E9D2222278D002DA0FA /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9C2222278D002DA0FA /* URLConstants.swift */; };
 		71CE9E9F22224E50002DA0FA /* XMLParserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */; };
-		71DAA30E222B60E6008C13B6 /* AnimEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DAA30D222B60E6008C13B6 /* AnimEvents.swift */; };
-		71DAA310222D8A3C008C13B6 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DAA30F222D8A3C008C13B6 /* Math.swift */; };
-		71DAA312222D8C14008C13B6 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DAA311222D8C14008C13B6 /* Layout.swift */; };
 		7B4EA67FC54100C295A918E1 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC12AC5803C8C36BE2B02CC /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +50,8 @@
 		710459A121FB91BD00677A19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		710459A721FB99F100677A19 /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		710459AA21FED0C900677A19 /* ShadowUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowUIView.swift; sourceTree = "<group>"; };
+		711984E7222DF42500CFF621 /* CampusNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusNavigationViewController.swift; sourceTree = "<group>"; };
+		711984E9222DFB6500CFF621 /* Campus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
 		714A7D4C220CC117005A0001 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		714A7D4F220E0DA1005A0001 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		714A7D50220E0DA1005A0001 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -67,16 +66,11 @@
 		714A7D63220E73DF005A0001 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		714A7D65220E765B005A0001 /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 		714A7D76220FC20A005A0001 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		71AC01472228672E0039F611 /* SongLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongLayout.swift; sourceTree = "<group>"; };
 		71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumberRadioPlayer.swift; sourceTree = "<group>"; };
 		71CE9E95222212CE002DA0FA /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumberRadioStation.swift; sourceTree = "<group>"; };
-		71CE9E9A22221993002DA0FA /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		71CE9E9C2222278D002DA0FA /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserHelper.swift; sourceTree = "<group>"; };
-		71DAA30D222B60E6008C13B6 /* AnimEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimEvents.swift; sourceTree = "<group>"; };
-		71DAA30F222D8A3C008C13B6 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
-		71DAA311222D8C14008C13B6 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,8 +115,9 @@
 		7104599421FB91BC00677A19 /* HumberMedia */ = {
 			isa = PBXGroup;
 			children = (
-				EAB31D9533FA1A8CA9CCD39C /* fonts */,
-				710459A921FED0A800677A19 /* helpers */,
+				7118A8D02236DCD0002140A5 /* Cells */,
+				EAB31D9533FA1A8CA9CCD39C /* Fonts */,
+				710459A921FED0A800677A19 /* Helpers */,
 				7104599521FB91BC00677A19 /* AppDelegate.swift */,
 				7104599721FB91BC00677A19 /* ViewController.swift */,
 				7104599921FB91BC00677A19 /* Main.storyboard */,
@@ -133,11 +128,12 @@
 				714A7D63220E73DF005A0001 /* NavigationViewController.swift */,
 				714A7D65220E765B005A0001 /* TVViewController.swift */,
 				714A7D76220FC20A005A0001 /* NewsViewController.swift */,
+				711984E7222DF42500CFF621 /* CampusNavigationViewController.swift */,
 			);
 			path = HumberMedia;
 			sourceTree = "<group>";
 		};
-		710459A921FED0A800677A19 /* helpers */ = {
+		710459A921FED0A800677A19 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				71CE9E99222218EB002DA0FA /* spring */,
@@ -148,23 +144,26 @@
 				71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */,
 				71CE9E9C2222278D002DA0FA /* URLConstants.swift */,
 				71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */,
-				71AC01472228672E0039F611 /* SongLayout.swift */,
-				71DAA30D222B60E6008C13B6 /* AnimEvents.swift */,
-				71DAA30F222D8A3C008C13B6 /* Math.swift */,
-				71DAA311222D8C14008C13B6 /* Layout.swift */,
+				711984E9222DFB6500CFF621 /* Campus.swift */,
 			);
-			path = helpers;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7118A8D02236DCD0002140A5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		71CE9E99222218EB002DA0FA /* spring */ = {
 			isa = PBXGroup;
 			children = (
-				71CE9E9A22221993002DA0FA /* ImageLoader.swift */,
 			);
 			path = spring;
 			sourceTree = "<group>";
 		};
-		EAB31D9533FA1A8CA9CCD39C /* fonts */ = {
+		EAB31D9533FA1A8CA9CCD39C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				714A7D56220E0DA2005A0001 /* OpenSans-Bold.ttf */,
@@ -178,7 +177,7 @@
 				714A7D58220E0DA3005A0001 /* OpenSans-SemiBold.ttf */,
 				714A7D50220E0DA1005A0001 /* OpenSans-SemiBoldItalic.ttf */,
 			);
-			name = fonts;
+			name = Fonts;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -203,6 +202,7 @@
 				7104598F21FB91BC00677A19 /* Frameworks */,
 				7104599021FB91BC00677A19 /* Resources */,
 				E7E3375F26EF780EAAF04269 /* [CP] Embed Pods Frameworks */,
+				00B32278FE0E67A225A07653 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +270,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00B32278FE0E67A225A07653 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D49277F9F6E714D466CD6F12 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,17 +360,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				714A7D66220E765B005A0001 /* TVViewController.swift in Sources */,
-				71AC01482228672E0039F611 /* SongLayout.swift in Sources */,
 				71CE9E96222212CE002DA0FA /* Track.swift in Sources */,
 				71CE9E9F22224E50002DA0FA /* XMLParserHelper.swift in Sources */,
-				71CE9E9B22221993002DA0FA /* ImageLoader.swift in Sources */,
-				71DAA312222D8C14008C13B6 /* Layout.swift in Sources */,
-				71DAA30E222B60E6008C13B6 /* AnimEvents.swift in Sources */,
+				711984EA222DFB6500CFF621 /* Campus.swift in Sources */,
 				714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */,
 				710459AB21FED0C900677A19 /* ShadowUIView.swift in Sources */,
+				711984E8222DF42500CFF621 /* CampusNavigationViewController.swift in Sources */,
 				7104599821FB91BC00677A19 /* ViewController.swift in Sources */,
 				71CE9E9D2222278D002DA0FA /* URLConstants.swift in Sources */,
-				71DAA310222D8A3C008C13B6 /* Math.swift in Sources */,
 				714A7D4D220CC117005A0001 /* Helper.swift in Sources */,
 				7104599621FB91BC00677A19 /* AppDelegate.swift in Sources */,
 				71CE9E9422221252002DA0FA /* HumberRadioPlayer.swift in Sources */,
