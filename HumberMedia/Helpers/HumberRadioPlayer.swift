@@ -86,24 +86,8 @@ class RadioPlayer {
 //            self.updateTrackArtwork(with: image, artworkLoaded: false)
 //        }
 //    }
-    
-    //*****************************************************************
-    // MARK: - Private helpers
-    //*****************************************************************
-    
-//    private func getStationImage(from station: HumberRadioStation, completionHandler: @escaping (_ image: UIImage) -> ()) {
 //
-//        if station.imageURL.range(of: "http") != nil {
-//            // load current station image from network
-//            ImageLoader.sharedLoader.imageForUrl(urlString: station.imageURL) { (image, stringURL) in
-//                completionHandler(image ?? #imageLiteral(resourceName: "albumArt"))
-//            }
-//        } else {
-//            // load local station image
-//            let image = UIImage(named: station.imageURL) ?? #imageLiteral(resourceName: "albumArt")
-//            completionHandler(image)
-//        }
-//    }
+
 }
 
 extension RadioPlayer: FRadioPlayerDelegate {

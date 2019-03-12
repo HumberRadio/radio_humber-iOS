@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class SongTableViewCell: UITableViewCell {
 
     @IBOutlet weak var trackImageView: UIImageView!
@@ -39,14 +39,31 @@ class SongTableViewCell: UITableViewCell {
         trackNameLabel.text = track.title
         trackArtistLabel.text = track.artist
         
-        let imageURL = track.imageUrl! as NSString
+        var imageURL = track.imageUrl
+       
         
-        if imageURL.contains("http") {
-            
-            if let url = URL(string: track.imageUrl!) {
-                trackImageView.loadImageWithURL(url: url) { (image) in
-                    // station image loaded
-                }
+        if imageURL.contains("albumart") {
+            _ = String(imageURL.removeFirst())
+            _ = String(imageURL.removeFirst())
+            imageURL = "https://" + imageURL
+            if let url = URL(string: imageURL) {
+                trackImageView.sd_setImage(
+                    with: url,
+                    placeholderImage: UIImage(named: track.artist),
+                    options: SDWebImageOptions(rawValue: 0),
+                    completed:
+                    { (img, err, cacheType, imgURL) in
+                        // code
+                        print("heherrreee")
+//                        print("test:" + (err?.localizedDescription)! )
+                    }
+                    
+                )
+//                trackImageView.downloaded(from: track.imageUrl.removeFirst(2), contentMode: UIView.ContentMode.scaleToFill)
+//                trackImageView.pin_setImage(from: URL(string: "http://www.apple.com/euro/ios/ios8/a/generic/images/og.png")!)
+//                ImageLoader.image(for: NSURL(fileURLWithPath: track.imageUrl!) as URL) { image in
+//                    self.trackImageView.image = image
+//                }
             }
             
         } else if imageURL != "" {

@@ -26,6 +26,8 @@ target 'HumberMedia' do
   
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'SDWebImage'
+  
 
 
 

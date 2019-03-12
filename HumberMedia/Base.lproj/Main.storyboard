@@ -580,6 +580,9 @@
                             <outlet property="delegate" destination="ca9-6a-yZd" id="PkO-xN-XBb"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableView" destination="N3d-RL-SD9" id="yOm-WI-ZbA"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="546" y="-1556"/>

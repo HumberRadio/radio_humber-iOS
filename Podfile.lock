@@ -55,6 +55,9 @@ PODS:
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
+  - SDWebImage (4.4.5):
+    - SDWebImage/Core (= 4.4.5)
+  - SDWebImage/Core (4.4.5)
   - XLPagerTabStrip (8.1.1)
 
 DEPENDENCIES:
@@ -69,6 +72,7 @@ DEPENDENCIES:
   - MaterialComponents/HeaderStackView
   - MaterialComponents/ShadowElevations
   - "MaterialComponents/Tabs+ColorThemer"
+  - SDWebImage
   - XLPagerTabStrip (~> 8.1)
 
 SPEC REPOS:
@@ -82,6 +86,7 @@ SPEC REPOS:
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
+    - SDWebImage
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
@@ -94,8 +99,9 @@ SPEC CHECKSUMS:
   MaterialComponents: 1aef341d47fbaed37ddb5163a01af94cb6da8506
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: bfb644625538b2be96f9e54d4728dc0ae010038d
+PODFILE CHECKSUM: 430be7921981ec02f88db8f2b6213985f090d62b
 
 COCOAPODS: 1.5.3

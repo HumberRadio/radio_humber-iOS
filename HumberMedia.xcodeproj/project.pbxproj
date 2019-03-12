@@ -136,7 +136,6 @@
 		710459A921FED0A800677A19 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				71CE9E99222218EB002DA0FA /* spring */,
 				710459AA21FED0C900677A19 /* ShadowUIView.swift */,
 				714A7D4C220CC117005A0001 /* Helper.swift */,
 				71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */,
@@ -176,13 +175,6 @@
 				7118A8DD223724D9002140A5 /* ImageDownload.swift */,
 			);
 			path = UIHelpers;
-			sourceTree = "<group>";
-		};
-		71CE9E99222218EB002DA0FA /* spring */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = spring;
 			sourceTree = "<group>";
 		};
 		EAB31D9533FA1A8CA9CCD39C /* Fonts */ = {
@@ -353,6 +345,7 @@
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/anim/anim.framework",
 			);
@@ -366,6 +359,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/anim.framework",
 			);

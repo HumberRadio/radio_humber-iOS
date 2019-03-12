@@ -100,10 +100,10 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
 //        player2?.play()
 
         
-        headphonesStatus = areHeadphonesPluggedIn()
-        if headphonesStatus{
-            playbutton.sendActions(for: .touchUpInside)
-        }
+//        headphonesStatus = areHeadphonesPluggedIn()
+//        if headphonesStatus{
+//            playbutton.sendActions(for: .touchUpInside)
+//        }
         
         //love one liners :)
 //        toglePlayButton(isPlaying: player.isPlaying)

@@ -87,8 +87,8 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
         
         
         var tracks = [Track]()
-        var track = Track(title: "N/A",artist: "N/A")
-        let url = URL(string: URLConstants.Domains.curentPlayInfo)
+       
+        let url = URL(string: URLConstants.Domains.recentlyPlayed)
         
         let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
             
@@ -104,11 +104,13 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
             if parser.parse() {
                 // parce completed sucessfuly
                 //                self.results.count
+                var track = Track(title: "N/A",artist: "N/A")
                 for songinfo in self.results
                 {
                     for (key,value) in songinfo{
                         switch key {
                         case "artist":
+                            track.resetTrack()
                             track.artist = value
                             break;
                         case "songtitle":
@@ -116,14 +118,14 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
                             break;
                         case "albumart":
                             track.imageUrl = value
+                            tracks.append(track)
                             break;
                         default:
                             break;
                         }
                     }
-                    tracks.append(track)
+                 
                 }
-                
                 print(self.results.count )
                 // we signal the semaphore to stop waiting
                 semaphore.signal()
@@ -171,5 +173,6 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
         print(parseError)
         // TO DO:
     }
+  
     
 }
