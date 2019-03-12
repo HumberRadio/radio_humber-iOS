@@ -69,11 +69,11 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     //more info buttons colors
     //    let colors = [UIColor.redColor(), UIColor.grayColor(), UIColor.greenColor(), UIColor.purpleColor()]
     let items: [(icon: String, color: UIColor)] = [
-        ("icon_home", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),
-        ("teamInfobutton", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),
-        ("notifications-btn", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),
-        ("settings-btn", UIColor(red: 0.51, green: 0.15, blue: 1, alpha: 1)),
-        ("nearby-btn", UIColor(red: 1, green: 0.39, blue: 0, alpha: 1))]
+        ("icon_home", UIColor.humberPurple),
+        ("teamInfobutton", UIColor.humberLightBlue),
+        ("notifications-btn", UIColor.humberNavy),
+        ("settings-btn", UIColor.humberLightGreen),
+        ("nearby-btn", UIColor.humberMagenta)]
     
     
     override func viewDidLoad() {
@@ -383,13 +383,17 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             break;
         case 3:
             print("this is settings")
+           
             break;
         case 4:
             print("this is Maps ")
+            let selectCampusViewController:SelectCampusViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectCampusID") as! SelectCampusViewController
+            self.present(selectCampusViewController,animated: true,completion: nil)
+            
 //            let campusNavigationViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
-           let campusSelectViewController:CampusSelectViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusSelectionID") as! CampusSelectViewController
-            self.present(campusSelectViewController, animated: true, completion: nil)
-            break;
+//           let campusSelectViewController:CampusSelectViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusSelectionID") as! CampusSelectViewController
+//            self.present(campusSelectViewController, animated: true, completion: nil)
+//            break;
         default:
             print("this is default")
             break;

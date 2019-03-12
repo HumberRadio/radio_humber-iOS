@@ -18,6 +18,10 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
+  - MaterialComponents/ButtonBar (76.1.2):
+    - MaterialComponents/Buttons
+    - MaterialComponents/private/Application
+    - MDFInternationalization
   - MaterialComponents/Buttons (76.1.2):
     - MaterialComponents/Ink
     - MaterialComponents/private/Math
@@ -30,6 +34,12 @@ PODS:
   - MaterialComponents/HeaderStackView (76.1.2)
   - MaterialComponents/Ink (76.1.2):
     - MaterialComponents/private/Math
+  - MaterialComponents/NavigationBar (76.1.2):
+    - MaterialComponents/ButtonBar
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
   - MaterialComponents/private/Application (76.1.2)
   - MaterialComponents/private/Math (76.1.2)
   - MaterialComponents/schemes/Color (76.1.2)
@@ -70,6 +80,7 @@ DEPENDENCIES:
   - MaterialComponents/BottomNavigation
   - MaterialComponents/Buttons
   - MaterialComponents/HeaderStackView
+  - MaterialComponents/NavigationBar
   - MaterialComponents/ShadowElevations
   - "MaterialComponents/Tabs+ColorThemer"
   - SDWebImage
@@ -102,6 +113,6 @@ SPEC CHECKSUMS:
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: 430be7921981ec02f88db8f2b6213985f090d62b
+PODFILE CHECKSUM: 15bdf6d6cd33c2a01e20cb09ff1af9cf0abd38ae
 
 COCOAPODS: 1.5.3

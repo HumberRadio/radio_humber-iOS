@@ -19,6 +19,7 @@ target 'HumberMedia' do
   pod 'MaterialComponents/Buttons'
   pod 'MaterialComponents/HeaderStackView'
   pod 'MaterialComponents/BottomNavigation'
+  pod 'MaterialComponents/NavigationBar'
   
   pod 'XLPagerTabStrip', '~> 8.1'
   pod 'FRadioPlayer'
