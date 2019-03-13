@@ -527,7 +527,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" backIndicatorImage="button_compass.png" translatesAutoresizingMaskIntoConstraints="NO" id="47D-bp-nEm">
                                 <rect key="frame" x="0.0" y="20" width="375" height="70"/>
-                                <color key="backgroundColor" red="0.17950394749641418" green="0.62319201231002808" blue="0.80254602432250977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.87597590684890747" green="0.32173463702201843" blue="0.41937077045440674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="BFg-gx-IFq"/>
                                 </constraints>
@@ -540,7 +540,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.17950394750000001" green="0.62319201229999999" blue="0.80254602429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.87597590684890747" green="0.32173463702201843" blue="0.41937077045440674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="suh-Ja-LuR" firstAttribute="top" secondItem="47D-bp-nEm" secondAttribute="bottom" id="4Pn-fS-Sd9"/>
                             <constraint firstItem="SKx-mb-sfD" firstAttribute="trailing" secondItem="suh-Ja-LuR" secondAttribute="trailing" id="CKT-7e-6Ge"/>

@@ -13,6 +13,8 @@ import FRadioPlayer
 import AVFoundation
 import CircleMenu
 import anim
+import RZTransitions
+
 
 class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate, FRadioPlayerDelegate, CircleMenuDelegate  {
     // UI outlets
@@ -63,6 +65,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     var isradioOpen:Bool = false
     let player = FRadioPlayer.shared
     var player2: AVPlayer?
+    
 
     
     
@@ -81,6 +84,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         
         super.viewDidLoad()
         //setup ui logic
+        
+        RZTransitionsManager.shared().defaultPresentDismissAnimationController = RZCirclePushAnimationController()
+        RZTransitionsManager.shared().defaultPushPopAnimationController = RZCirclePushAnimationController()
       
 //seting up radio player
 //        let player = FRadioPlayer.shared
@@ -312,6 +318,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         }, completion: {_ in
             self.infoMenuButton.sendActions(for: .touchUpInside)
         })
+        
     }
     @IBAction func infoMenuButtonClciked(_ sender: CircleMenu, forEvent event: UIEvent) {
         if sender.isSelected == false{
@@ -342,6 +349,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         let highlightedImage = UIImage(named: items[atIndex].icon)?.withRenderingMode(.alwaysTemplate)
         button.setImage(highlightedImage, for: .highlighted)
         button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+        
     }
     
     func circleMenu(_: CircleMenu, buttonWillSelected _: UIButton, atIndex: Int) {
@@ -387,8 +395,14 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             break;
         case 4:
             print("this is Maps ")
-            let selectCampusViewController:SelectCampusViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectCampusID") as! SelectCampusViewController
-            self.present(selectCampusViewController,animated: true,completion: nil)
+            self.transitioningDelegate = RZTransitionsManager.shared()
+                       let selectCampusViewController:SelectCampusViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectCampusID") as! SelectCampusViewController
+            let nextViewController = selectCampusViewController
+            nextViewController.transitioningDelegate = RZTransitionsManager.shared()
+            self.present(nextViewController, animated:true) {}
+//
+
+//            self.present(selectCampusViewController,animated: true,completion: nil)
             
 //            let campusNavigationViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
 //           let campusSelectViewController:CampusSelectViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusSelectionID") as! CampusSelectViewController

@@ -29,6 +29,7 @@ class SelectCampusViewController: UIViewController {
     }
     @objc func backTapped()
     {
+        self.dismiss(animated: true, completion: nil)
         
     }
     

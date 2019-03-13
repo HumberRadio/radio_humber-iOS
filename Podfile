@@ -22,6 +22,7 @@ target 'HumberMedia' do
   pod 'MaterialComponents/NavigationBar'
   
   pod 'XLPagerTabStrip', '~> 8.1'
+  pod 'RZTransitions'
   pod 'FRadioPlayer'
   pod 'anim'
   
