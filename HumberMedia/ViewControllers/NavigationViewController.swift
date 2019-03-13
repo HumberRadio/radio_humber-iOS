@@ -35,6 +35,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     @IBOutlet weak var infoTextView: UIView!
     
     @IBOutlet weak var radioImageView: UIImageView!
+    @IBOutlet weak var blurView: UIView!
     
     
     //specific UI constains (needed for animation)
@@ -85,9 +86,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         super.viewDidLoad()
         //setup ui logic
         
-        RZTransitionsManager.shared().defaultPresentDismissAnimationController = RZCirclePushAnimationController()
-        RZTransitionsManager.shared().defaultPushPopAnimationController = RZCirclePushAnimationController()
-      
+       
 //seting up radio player
 //        let player = FRadioPlayer.shared
 //        player.delegate = self
@@ -124,6 +123,10 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     }
     override func viewDidAppear(_ animated: Bool) {
         player.stop()
+        //blur efect on UI view
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+        visualEffectView.frame = self.blurView.bounds
+        self.blurView.addSubview(visualEffectView)
     }
 
     
@@ -161,6 +164,11 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     private func prepareUI()
     {
+        //cutsom trasition - butble from center
+        RZTransitionsManager.shared().defaultPresentDismissAnimationController = RZCirclePushAnimationController()
+        RZTransitionsManager.shared().defaultPushPopAnimationController = RZCirclePushAnimationController()
+    
+        //button style
         settings.style.buttonBarBackgroundColor = UIColor.clear;
         settings.style.buttonBarItemBackgroundColor  = UIColor.clear;
         settings.style.selectedBarBackgroundColor = UIColor.black
@@ -313,11 +321,16 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     @IBAction func infoButtonClick(_ sender: FaveButton, forEvent event: UIEvent) {
         
         UIButton.animate(withDuration: 0.4, animations: {
-            self.infoMenuButton.alpha = 1
-            self.infoMenuButton.isHidden = false
+            self.infoMenuButton.alpha = 0.5
+            
+            self.blurView.alpha = 1
+            
         }, completion: {_ in
             self.infoMenuButton.sendActions(for: .touchUpInside)
+            self.blurView.isHidden = false
+            self.infoMenuButton.isHidden = false
         })
+      
         
     }
     @IBAction func infoMenuButtonClciked(_ sender: CircleMenu, forEvent event: UIEvent) {
@@ -325,9 +338,11 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             self.infobutton.setSelected(selected: false, animated: true)
             UIButton.animate(withDuration: 0.4, animations: {
                 self.infoMenuButton.alpha = 0
+                self.blurView.alpha = 0
                 
             }, completion: {_ in
                 self.infoMenuButton.isHidden = true
+                self.blurView.isHidden = true
             })
         }
         // will nedeve be executed cause menu button is hidden by logic
