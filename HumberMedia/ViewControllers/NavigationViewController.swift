@@ -66,6 +66,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     var isradioOpen:Bool = false
     let player = FRadioPlayer.shared
     var player2: AVPlayer?
+    var isblured:Bool = false;
     
 
     
@@ -85,7 +86,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         
         super.viewDidLoad()
         //setup ui logic
-        
+     
        
 //seting up radio player
 //        let player = FRadioPlayer.shared
@@ -95,6 +96,8 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
        
         //checkup to see if headphones are connected
 //        checkForPermissionAudio()
+        
+     
         
         guard let url = URL.init(string: URLConstants.Domains.radioStreamUrl)
             else {
@@ -121,13 +124,25 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         
      
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         player.stop()
-        //blur efect on UI view
-        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
-        visualEffectView.frame = self.blurView.bounds
-        self.blurView.addSubview(visualEffectView)
+        if !self.infoMenuButton.isHidden {
+            self.infoMenuButton.sendActions(for: .touchUpInside)
+            
+        }
+       
+        
+        if !isblured
+        {    //blur efect on UI view
+            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+            visualEffectView.frame = self.blurView.bounds
+            self.blurView.addSubview(visualEffectView)
+            isblured = true
+        }
+        
     }
+    
 
     
 
