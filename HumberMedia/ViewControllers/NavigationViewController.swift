@@ -116,7 +116,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         //love one liners :)
 //        toglePlayButton(isPlaying: player.isPlaying)
         
-        
+       
         
         
         
@@ -132,14 +132,22 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             
         }
        
+//        if !isblured
+//        {    //blur efect on UI view
+//            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+//            visualEffectView.frame = self.blurView.bounds
+//            self.blurView.addSubview(visualEffectView)
+//            isblured = true
+//        }
         
         if !isblured
-        {    //blur efect on UI view
-            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
-            visualEffectView.frame = self.blurView.bounds
-            self.blurView.addSubview(visualEffectView)
-            isblured = true
-        }
+                {    //blur efect on UI view
+                    let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+                    visualEffectView.frame = self.blurView.bounds
+                    self.blurView.addSubview(visualEffectView)
+                    isblured = true
+                }
+       
         
     }
     
@@ -338,7 +346,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         UIButton.animate(withDuration: 0.4, animations: {
             self.infoMenuButton.alpha = 0.5
             
-            self.blurView.alpha = 1
+            self.blurView.alpha = 1.0
             
         }, completion: {_ in
             self.infoMenuButton.sendActions(for: .touchUpInside)
