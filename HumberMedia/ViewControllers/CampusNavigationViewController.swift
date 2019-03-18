@@ -12,14 +12,20 @@ import GoogleMaps
 class CampusNavigationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: GMSMapView!
     
+    var campus:Campus = Campus()
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //google maps api
         GMSServices.provideAPIKey("AIzaSyBm_sU8GO6mrJwlee5P5KsdrchRTGsBQ5k")
-//        43.7300417,-79.6081359,18z
-        let camera = GMSCameraPosition.camera(withLatitude: 43.7344449, longitude: -79.612143, zoom: 16)
+        var camera = GMSCameraPosition.camera(withLatitude: 43.7344449, longitude: -79.612143, zoom: 16)
+        if !campus.campusName.isEmpty
+        {
+            camera = GMSCameraPosition.camera(withLatitude: CLLocationDegrees(campus.latitute), longitude: CLLocationDegrees(campus.longitute), zoom: 16.5)
+        }
+        
+       
 //        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         self.mapView.animate(to: camera)
 //        let mapView1 = GMSMapView.map(withFrame: self.mapView.frame, camera: camera)
@@ -42,6 +48,7 @@ class CampusNavigationViewController: UIViewController, CLLocationManagerDelegat
         //marker.snippet = "Toronto"
         //marker.map = mapView
         // Do any additional setup after loading the view.
+        
     }
     
 

@@ -59,9 +59,9 @@ class SelectCampusViewController: UIViewController {
 extension SelectCampusViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         self.transitioningDelegate = RZTransitionsManager.shared()
         let mapsViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
+        mapsViewController.campus = campusList[indexPath.row]
         let nextViewController = mapsViewController
         nextViewController.transitioningDelegate = RZTransitionsManager.shared()
         self.present(nextViewController, animated:true)
