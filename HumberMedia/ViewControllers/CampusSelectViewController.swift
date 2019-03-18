@@ -15,13 +15,6 @@ class CampusSelectViewController: UIViewController {
     
     
 //    // MARK: - Lists
-//
-//    var tracks = [Track]() {
-//        didSet {
-//            guard tracks != oldValue else { return }
-//            tracksDidUpdate()
-//        }
-//    }
     private var finishedLoadingInitialTableCells = false
     private var rowHeight = 100
 //
@@ -47,40 +40,6 @@ class CampusSelectViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    //*****************************************************************
-    // MARK: - Private helpers
-    //*****************************************************************
-    
-//    private func tracksDidUpdate() {
-//        DispatchQueue.main.async {
-//            self.tableView.reloadData()
-////            guard let currentStation = self.radioPlayer.station else { return }
-//
-//            // Reset everything if the new stations list doesn't have the current station
-//            if self.stations.index(of: currentStation) == nil { self.resetCurrentStation() }
-//        }
-//    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-//     // MARK: - Table view
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 15;
-//    }
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath)
-//        return cell
-//    }
-    
 }
     
     //*****************************************************************

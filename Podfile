@@ -20,6 +20,7 @@ target 'HumberMedia' do
   pod 'MaterialComponents/HeaderStackView'
   pod 'MaterialComponents/BottomNavigation'
   pod 'MaterialComponents/NavigationBar'
+  pod 'MaterialComponents/List'
   
   pod 'XLPagerTabStrip', '~> 8.1'
   pod 'RZTransitions'

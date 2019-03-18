@@ -59,11 +59,7 @@ class SongTableViewCell: UITableViewCell {
                     }
                     
                 )
-//                trackImageView.downloaded(from: track.imageUrl.removeFirst(2), contentMode: UIView.ContentMode.scaleToFill)
-//                trackImageView.pin_setImage(from: URL(string: "http://www.apple.com/euro/ios/ios8/a/generic/images/og.png")!)
-//                ImageLoader.image(for: NSURL(fileURLWithPath: track.imageUrl!) as URL) { image in
-//                    self.trackImageView.image = image
-//                }
+
             }
             
         } else if imageURL != "" {

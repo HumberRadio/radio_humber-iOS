@@ -127,28 +127,17 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     override func viewDidAppear(_ animated: Bool) {
         player.stop()
-        if !self.infoMenuButton.isHidden {
+        if !self.infoMenuButton.isHidden
+        {
             self.infoMenuButton.sendActions(for: .touchUpInside)
-            
         }
-       
-//        if !isblured
-//        {    //blur efect on UI view
-//            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
-//            visualEffectView.frame = self.blurView.bounds
-//            self.blurView.addSubview(visualEffectView)
-//            isblured = true
-//        }
-        
         if !isblured
-                {    //blur efect on UI view
-                    let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
-                    visualEffectView.frame = self.blurView.bounds
-                    self.blurView.addSubview(visualEffectView)
-                    isblured = true
-                }
-       
-        
+        {    //blur efect on UI view
+            let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+            visualEffectView.frame = self.blurView.bounds
+            self.blurView.addSubview(visualEffectView)
+            isblured = true
+        }
     }
     
 
@@ -423,13 +412,23 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             break;
         case 1:
             print("this is People")
+            self.transitioningDelegate = RZTransitionsManager.shared()
+            let aboutUsViewController:AboutUsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AboutUsID") as! AboutUsViewController
+            let nextViewController = aboutUsViewController
+            nextViewController.transitioningDelegate = RZTransitionsManager.shared()
+            self.present(nextViewController, animated:true)
+            
             break;
         case 2:
             print("this is alarm")
             break;
         case 3:
             print("this is settings")
-           
+            self.transitioningDelegate = RZTransitionsManager.shared()
+            let mapsViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
+            let nextViewController = mapsViewController
+            nextViewController.transitioningDelegate = RZTransitionsManager.shared()
+            self.present(nextViewController, animated:true)
             break;
         case 4:
             print("this is Maps ")
@@ -437,15 +436,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
                        let selectCampusViewController:SelectCampusViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectCampusID") as! SelectCampusViewController
             let nextViewController = selectCampusViewController
             nextViewController.transitioningDelegate = RZTransitionsManager.shared()
-            self.present(nextViewController, animated:true) {}
-//
-
-//            self.present(selectCampusViewController,animated: true,completion: nil)
-            
-//            let campusNavigationViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
-//           let campusSelectViewController:CampusSelectViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusSelectionID") as! CampusSelectViewController
-//            self.present(campusSelectViewController, animated: true, completion: nil)
-//            break;
+            self.present(nextViewController, animated:true)
         default:
             print("this is default")
             break;
