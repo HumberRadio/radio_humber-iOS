@@ -10,6 +10,7 @@ import UIKit
 
 class CampusTableViewCell: UITableViewCell {
     @IBOutlet weak var titleTextView: UILabel!
+    @IBOutlet weak var backGroundImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

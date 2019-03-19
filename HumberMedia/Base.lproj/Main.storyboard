@@ -612,38 +612,69 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" backIndicatorImage="button_compass.png" translatesAutoresizingMaskIntoConstraints="NO" id="47D-bp-nEm">
                                 <rect key="frame" x="0.0" y="20" width="375" height="70"/>
-                                <color key="backgroundColor" red="0.87597590684890747" green="0.32173463702201843" blue="0.41937077045440674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="BFg-gx-IFq"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Humber Campuses" id="ahU-Lc-iVh"/>
+                                    <navigationItem title="Campuses and Facilities" id="ahU-Lc-iVh"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="suh-Ja-LuR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="4" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="suh-Ja-LuR">
                                 <rect key="frame" x="0.0" y="90" width="375" height="537"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CampusCell" id="7xa-Qo-LNS" customClass="CampusTableViewCell" customModule="HumberMedia" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7xa-Qo-LNS" id="yWa-Hs-Q9k">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hey School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIF-sY-TK9">
-                                                    <rect key="frame" x="145" y="11.5" width="85" height="21"/>
+                                                    <rect key="frame" x="145" y="89.5" width="85" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humber_north_campus_thumb2" translatesAutoresizingMaskIntoConstraints="NO" id="nJZ-As-0sm">
+                                                    <rect key="frame" x="5" y="5" width="365" height="189.5"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIM-2X-Y1a">
+                                                    <rect key="frame" x="5" y="5" width="220" height="189.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple_background" translatesAutoresizingMaskIntoConstraints="NO" id="V16-gB-pTr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="220" height="189.5"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="V16-gB-pTr" secondAttribute="trailing" id="3mf-Q5-CcZ"/>
+                                                        <constraint firstAttribute="width" constant="220" id="ANd-Iu-WLV"/>
+                                                        <constraint firstItem="V16-gB-pTr" firstAttribute="leading" secondItem="FIM-2X-Y1a" secondAttribute="leading" id="Nju-gS-cmV"/>
+                                                        <constraint firstItem="V16-gB-pTr" firstAttribute="top" secondItem="FIM-2X-Y1a" secondAttribute="top" id="nZ2-e5-Z7q"/>
+                                                        <constraint firstAttribute="bottom" secondItem="V16-gB-pTr" secondAttribute="bottom" id="yf8-23-F6H"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="FIM-2X-Y1a" firstAttribute="top" secondItem="nJZ-As-0sm" secondAttribute="top" id="4J2-Ur-72F"/>
+                                                <constraint firstAttribute="trailing" secondItem="nJZ-As-0sm" secondAttribute="trailing" constant="5" id="7kx-nb-tf6"/>
+                                                <constraint firstAttribute="bottom" secondItem="nJZ-As-0sm" secondAttribute="bottom" constant="5" id="G3p-Ui-jpD"/>
                                                 <constraint firstItem="cIF-sY-TK9" firstAttribute="centerX" secondItem="yWa-Hs-Q9k" secondAttribute="centerX" id="HLu-Vv-0b6"/>
+                                                <constraint firstItem="nJZ-As-0sm" firstAttribute="top" secondItem="yWa-Hs-Q9k" secondAttribute="top" constant="5" id="OKK-8M-dg7"/>
+                                                <constraint firstItem="FIM-2X-Y1a" firstAttribute="bottom" secondItem="nJZ-As-0sm" secondAttribute="bottom" id="UCO-iA-I37"/>
+                                                <constraint firstItem="FIM-2X-Y1a" firstAttribute="leading" secondItem="nJZ-As-0sm" secondAttribute="leading" id="dEy-Kk-jfg"/>
                                                 <constraint firstItem="cIF-sY-TK9" firstAttribute="centerY" secondItem="yWa-Hs-Q9k" secondAttribute="centerY" id="hrU-1m-aUE"/>
+                                                <constraint firstItem="nJZ-As-0sm" firstAttribute="leading" secondItem="yWa-Hs-Q9k" secondAttribute="leading" constant="5" id="uA7-cP-vRD"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="17"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="backGroundImage" destination="V16-gB-pTr" id="LHA-sJ-ZgI"/>
                                             <outlet property="titleTextView" destination="cIF-sY-TK9" id="58r-5E-Ndl"/>
                                         </connections>
                                     </tableViewCell>
@@ -654,7 +685,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.87597590684890747" green="0.32173463702201843" blue="0.41937077045440674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="suh-Ja-LuR" firstAttribute="top" secondItem="47D-bp-nEm" secondAttribute="bottom" id="4Pn-fS-Sd9"/>
                             <constraint firstItem="SKx-mb-sfD" firstAttribute="trailing" secondItem="suh-Ja-LuR" secondAttribute="trailing" id="CKT-7e-6Ge"/>
@@ -765,10 +796,12 @@
         <image name="button_compass.png" width="40" height="40"/>
         <image name="button_radio_volume" width="114" height="114"/>
         <image name="fav_button" width="334.39999389648438" height="295.20001220703125"/>
+        <image name="humber_north_campus_thumb2" width="700" height="497"/>
         <image name="icon_close" width="120" height="120"/>
         <image name="icon_menu" width="120" height="120"/>
         <image name="info_button" width="7.1999998092651367" height="7.1999998092651367"/>
         <image name="play_button_round" width="170.39999389648438" height="206.39999389648438"/>
+        <image name="purple_background" width="220.08000183105469" height="199.91999816894531"/>
         <image name="radio_thumb_image" width="140" height="140"/>
         <image name="stationImage" width="120" height="75"/>
         <image name="stopbutton" width="4.320000171661377" height="4.320000171661377"/>
