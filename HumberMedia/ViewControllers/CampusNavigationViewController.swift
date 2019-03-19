@@ -79,4 +79,7 @@ class CampusNavigationViewController: UIViewController, CLLocationManagerDelegat
         
     }
 
+    @IBAction func backPressed(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }

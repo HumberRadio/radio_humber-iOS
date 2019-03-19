@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2092" y="-1529"/>
+            <point key="canvasLocation" x="3970.4000000000001" y="-1529.6851574212894"/>
         </scene>
         <!--Delegate-->
         <scene sceneID="Jkn-0w-SrA">
@@ -487,7 +487,7 @@
                                 <rect key="frame" x="15" y="35" width="120" height="120"/>
                                 <state key="normal" backgroundImage="icon_close"/>
                                 <connections>
-                                    <segue destination="T3V-oG-sMF" kind="show" id="MAp-AZ-e0N"/>
+                                    <action selector="backPressed:" destination="dtb-N5-AKn" eventType="touchUpInside" id="B7V-IO-ha8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -509,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjH-Tm-m0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394.39999999999998" y="-54.422788605697157"/>
+            <point key="canvasLocation" x="-39" y="-209"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PMf-tA-9Mh">
@@ -718,6 +718,50 @@
             </objects>
             <point key="canvasLocation" x="-39.200000000000003" y="-901.79910044977521"/>
         </scene>
+        <!--Interactive Map View Controller-->
+        <scene sceneID="UvO-D9-hL0">
+            <objects>
+                <viewController storyboardIdentifier="interactiveMapID" id="roB-5T-77p" customClass="InteractiveMapViewController" customModule="HumberMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6W2-rQ-fMe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtI-AV-Ig3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFY-pL-oa0" customClass="MDCFloatingButton">
+                                <rect key="frame" x="15" y="35" width="120" height="120"/>
+                                <state key="normal" backgroundImage="icon_close"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="roB-5T-77p" eventType="touchUpInside" id="tV5-DV-Hsp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gtI-AV-Ig3" firstAttribute="leading" secondItem="7iZ-nW-4FR" secondAttribute="leading" id="68g-uB-Ltu"/>
+                            <constraint firstItem="VFY-pL-oa0" firstAttribute="leading" secondItem="7iZ-nW-4FR" secondAttribute="leading" constant="15" id="Ct2-10-8Dt"/>
+                            <constraint firstItem="VFY-pL-oa0" firstAttribute="top" secondItem="7iZ-nW-4FR" secondAttribute="top" constant="15" id="HMR-5b-geA"/>
+                            <constraint firstItem="gtI-AV-Ig3" firstAttribute="top" secondItem="6W2-rQ-fMe" secondAttribute="top" id="JDe-We-nZH"/>
+                            <constraint firstItem="7iZ-nW-4FR" firstAttribute="bottom" secondItem="gtI-AV-Ig3" secondAttribute="bottom" id="oab-Hn-eeC"/>
+                            <constraint firstItem="7iZ-nW-4FR" firstAttribute="trailing" secondItem="gtI-AV-Ig3" secondAttribute="trailing" id="zDO-tm-6zr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7iZ-nW-4FR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bja-4y-L5Z"/>
+                    <connections>
+                        <outlet property="webView" destination="gtI-AV-Ig3" id="vq7-hy-MLd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5K-Ef-Y0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1386.4000000000001" y="-1758.1709145427287"/>
+        </scene>
         <!--Campus Select View Controller-->
         <scene sceneID="mVH-Zp-Iux">
             <objects>
@@ -786,7 +830,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYj-KP-Orb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="546" y="-1556"/>
+            <point key="canvasLocation" x="2423.1999999999998" y="-1556.6716641679161"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="igl-SX-mBC">

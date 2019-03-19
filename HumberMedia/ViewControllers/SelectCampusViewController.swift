@@ -60,12 +60,23 @@ class SelectCampusViewController: UIViewController {
 extension SelectCampusViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0
+        {
+            self.transitioningDelegate = RZTransitionsManager.shared()
+            let mapsViewController:InteractiveMapViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "interactiveMapID") as! InteractiveMapViewController
+//            mapsViewController.campus = campusList[indexPath.row]
+            let nextViewController = mapsViewController
+            nextViewController.transitioningDelegate = RZTransitionsManager.shared()
+            self.present(nextViewController, animated:true)
+        }
+        else {
         self.transitioningDelegate = RZTransitionsManager.shared()
         let mapsViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
         mapsViewController.campus = campusList[indexPath.row]
         let nextViewController = mapsViewController
         nextViewController.transitioningDelegate = RZTransitionsManager.shared()
         self.present(nextViewController, animated:true)
+        }
     }
 }
 
@@ -160,7 +171,7 @@ extension SelectCampusViewController: UITableViewDataSource {
             cell.transform = CGAffineTransform(translationX: 0, y: CGFloat(90/2))
             cell.alpha = 0
             
-            UIView.animate(withDuration: 0.5, delay: 0.05*Double(indexPath.row), options: [.curveEaseInOut], animations: {
+            UIView.animate(withDuration: 0.5, delay: 0.12*Double(indexPath.row+1), options: [.curveEaseOut], animations: {
                 cell.transform = CGAffineTransform(translationX: 0, y: 0)
                 cell.alpha = 1
             }, completion: nil)
