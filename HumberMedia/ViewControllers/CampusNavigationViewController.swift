@@ -19,6 +19,7 @@ class CampusNavigationViewController: UIViewController, CLLocationManagerDelegat
         super.viewDidLoad()
         //google maps api
         GMSServices.provideAPIKey("AIzaSyBm_sU8GO6mrJwlee5P5KsdrchRTGsBQ5k")
+        
         var camera = GMSCameraPosition.camera(withLatitude: 43.7344449, longitude: -79.612143, zoom: 16)
         if !campus.campusName.isEmpty
         {

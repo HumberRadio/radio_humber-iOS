@@ -480,12 +480,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ok7-dS-BCT" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="85" width="375" height="582"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="934-dX-40w" customClass="MDCFloatingButton">
-                                <rect key="frame" x="15" y="35" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="934-dX-40w" customClass="MDCFloatingButton">
+                                <rect key="frame" x="15" y="35" width="120" height="120"/>
+                                <state key="normal" backgroundImage="icon_close"/>
                                 <connections>
                                     <segue destination="T3V-oG-sMF" kind="show" id="MAp-AZ-e0N"/>
                                 </connections>
@@ -495,7 +495,7 @@
                         <constraints>
                             <constraint firstItem="934-dX-40w" firstAttribute="top" secondItem="hpS-4R-OiU" secondAttribute="top" constant="15" id="5md-c3-hcj"/>
                             <constraint firstItem="hpS-4R-OiU" firstAttribute="trailing" secondItem="ok7-dS-BCT" secondAttribute="trailing" id="7zy-Xq-a0h"/>
-                            <constraint firstItem="ok7-dS-BCT" firstAttribute="top" secondItem="934-dX-40w" secondAttribute="bottom" constant="20" id="H63-Q4-76l"/>
+                            <constraint firstItem="ok7-dS-BCT" firstAttribute="top" secondItem="hpS-4R-OiU" secondAttribute="top" id="H63-Q4-76l"/>
                             <constraint firstItem="934-dX-40w" firstAttribute="leading" secondItem="hpS-4R-OiU" secondAttribute="leading" constant="15" id="Q9W-L6-Qa8"/>
                             <constraint firstItem="hpS-4R-OiU" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="934-dX-40w" secondAttribute="trailing" symbolic="YES" id="b2e-DL-H6a"/>
                             <constraint firstItem="ok7-dS-BCT" firstAttribute="leading" secondItem="hpS-4R-OiU" secondAttribute="leading" id="hS1-im-2Bb"/>
@@ -509,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VjH-Tm-m0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394" y="-54"/>
+            <point key="canvasLocation" x="-394.39999999999998" y="-54.422788605697157"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PMf-tA-9Mh">
