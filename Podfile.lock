@@ -3,6 +3,7 @@ PODS:
   - CircleMenu (4.0.1)
   - FaveButton (3.2.0)
   - FRadioPlayer (0.1.15)
+  - Google-Mobile-Ads-SDK (7.40.0)
   - GoogleMaps (3.0.3):
     - GoogleMaps/Maps (= 3.0.3)
   - GoogleMaps/Base (3.0.3)
@@ -83,6 +84,7 @@ DEPENDENCIES:
   - CircleMenu
   - FaveButton
   - FRadioPlayer
+  - Google-Mobile-Ads-SDK
   - GoogleMaps
   - GooglePlaces
   - MaterialComponents/BottomNavigation
@@ -102,6 +104,7 @@ SPEC REPOS:
     - CircleMenu
     - FaveButton
     - FRadioPlayer
+    - Google-Mobile-Ads-SDK
     - GoogleMaps
     - GooglePlaces
     - MaterialComponents
@@ -116,6 +119,7 @@ SPEC CHECKSUMS:
   CircleMenu: d846569acbe805b75cef5793056707224240db64
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
   FRadioPlayer: 0ad8b63756c3597af3c4a2672334c5dc22e026e4
+  Google-Mobile-Ads-SDK: 9d1c38a83febea769470aa514a9c7954e2d1483d
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
   GooglePlaces: f09e76993c9c3ee4af8f4f7f535bb94d6aa3b649
   MaterialComponents: 1aef341d47fbaed37ddb5163a01af94cb6da8506
@@ -125,6 +129,6 @@ SPEC CHECKSUMS:
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: 39cd357183a29d0ad471a1f4ffe372d9610e67fe
+PODFILE CHECKSUM: b323a3a793d4ad2403e7599808d70879dd853112
 
 COCOAPODS: 1.5.3

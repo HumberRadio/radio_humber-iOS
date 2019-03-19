@@ -56,10 +56,10 @@ class TeamMember {
                 teamMember = TeamMember.init(name: "Feba", role: "Android developer", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
                 break;
             case "Jaspreet":
-                teamMember = TeamMember.init(name: "Dean", role: "Project management", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+                teamMember = TeamMember.init(name: "Jaspreet", role: "Project management", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
                 break;
             case "Taj":
-                teamMember = TeamMember.init(name: "Dean", role: "Android developer", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+                teamMember = TeamMember.init(name: "Taj", role: "Android developer", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
                 break;
                 
             default:

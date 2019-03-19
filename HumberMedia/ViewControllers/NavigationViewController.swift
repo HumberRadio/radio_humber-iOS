@@ -76,9 +76,12 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     let items: [(icon: String, color: UIColor)] = [
         ("icon_home", UIColor.humberPurple),
         ("teamInfobutton", UIColor.humberLightBlue),
-        ("notifications-btn", UIColor.humberNavy),
+//        ("notifications-btn", UIColor.humberNavy),
+        ("schedule_icon", UIColor.humberNavy),
         ("settings-btn", UIColor.humberLightGreen),
         ("nearby-btn", UIColor.humberMagenta)]
+
+    
     
     
     override func viewDidLoad() {
@@ -202,19 +205,6 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         settings.style.buttonBarItemTitleColor = UIColor.red;
         // in case the barView items do not fill the screen width this property stretch the cells to fill the screen
         settings.style.buttonBarItemsShouldFillAvailiableWidth = true
-        
-        
-        // change selected bar color
-        //        settings.style.buttonBarBackgroundColor = .none
-        //        settings.style.buttonBarItemBackgroundColor = .none
-        //        settings.style.selectedBarBackgroundColor = .black
-        //        settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
-        //        settings.style.selectedBarHeight = 2.0
-        //        settings.style.buttonBarMinimumLineSpacing = 5
-        //        settings.style.buttonBarItemTitleColor = .black
-        //        settings.style.buttonBarItemsShouldFillAvailiableWidth = true
-        //        settings.style.buttonBarLeftContentInset = 5
-        //        settings.style.buttonBarRightContentInset = 5
         changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             //            oldCell?.label.textColor = .black
@@ -225,13 +215,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
                 oldCell?.label.textColor = .white
                 newCell?.label.textColor = .white
                 self?.headerImageView.image = UIImage(named: "logo_radio_humber")
-                //                self?.settings.style.buttonBarItemTitleColor = .white
-                //                self?.settings.style.buttonBarBackgroundColor = .black;
-                //                self?.settings.style.buttonBarItemBackgroundColor  = .gray
-                //                self?.settings.style.selectedBarBackgroundColor = UIColor.white
                 break;
             case "TV":
-                self?.headerView.backgroundColor = .blue;
+                self?.headerView.backgroundColor = UIColor.humberPurple;
                 oldCell?.label.textColor = .black
                 newCell?.label.textColor = .black
                 self?.headerImageView.image = UIImage(named: "logo_humber_hawks")

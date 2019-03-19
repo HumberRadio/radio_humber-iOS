@@ -33,4 +33,9 @@ extension UIColor {
             blue: 1.0 / 255.0 * CGFloat(blue),
             alpha: CGFloat(alpha))
     }
+    
+    
+    static var humberHawks: UIColor {
+        return color(1, green: 8, blue: 36, alpha: 1.0)
+    }
 }

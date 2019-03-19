@@ -8,7 +8,6 @@ target 'HumberMedia' do
   # Pods for HumberMedia
   pod 'FaveButton'
   pod 'CircleMenu'
-#  pod 'FaveButton', :git => 'https://github.com/martihag/fave-button', :commit => '13ac0536f9ec41e46c4025cfa060ed34962bb76c'
 
   pod 'MaterialComponents/ShadowElevations'
   pod 'MaterialComponents/Tabs+ColorThemer'
@@ -26,6 +25,8 @@ target 'HumberMedia' do
   pod 'RZTransitions'
   pod 'FRadioPlayer'
   pod 'anim'
+  
+  pod 'Google-Mobile-Ads-SDK'
   
   pod 'GoogleMaps'
   pod 'GooglePlaces'

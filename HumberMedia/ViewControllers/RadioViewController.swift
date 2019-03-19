@@ -10,6 +10,7 @@ import UIKit
 import MaterialComponents
 import WebKit
 import XLPagerTabStrip
+import GoogleMobileAds
 
 
 class RadioViewController: UIViewController, WKNavigationDelegate, IndicatorInfoProvider{
@@ -18,8 +19,9 @@ class RadioViewController: UIViewController, WKNavigationDelegate, IndicatorInfo
     }
     @IBOutlet weak var weatherView: UIView!
     
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var twitterWebView: WKWebView!
-
+    var bannerView1: GADBannerView!
     @IBOutlet weak var instagramWebView: WKWebView!
     @IBOutlet weak var weatherWebView: WKWebView!
     final var valueRadius = 12;
@@ -98,7 +100,28 @@ class RadioViewController: UIViewController, WKNavigationDelegate, IndicatorInfo
 //            UIEdgeInsetsMake(buttonVerticalInset, buttonHorizontalInset,
 //                             buttonVerticalInset, buttonHorizontalInset);
 
-        
+         bannerView1 = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView1)
+    }
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+            ])
     }
     
     
