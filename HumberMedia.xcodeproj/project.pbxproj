@@ -44,6 +44,7 @@
 		71CE9E9F22224E50002DA0FA /* XMLParserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */; };
 		71F1F8CA22403A3200986B62 /* WebMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8C922403A3200986B62 /* WebMapsViewController.swift */; };
 		71F1F8CC22404D0500986B62 /* InteractiveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8CB22404D0500986B62 /* InteractiveMapViewController.swift */; };
+		71F1F8D02240ABA400986B62 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8CF2240ABA400986B62 /* TeamMember.swift */; };
 		7B4EA67FC54100C295A918E1 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC12AC5803C8C36BE2B02CC /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserHelper.swift; sourceTree = "<group>"; };
 		71F1F8C922403A3200986B62 /* WebMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMapsViewController.swift; sourceTree = "<group>"; };
 		71F1F8CB22404D0500986B62 /* InteractiveMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveMapViewController.swift; sourceTree = "<group>"; };
+		71F1F8CF2240ABA400986B62 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
 		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				71CE9E9C2222278D002DA0FA /* URLConstants.swift */,
 				71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */,
 				711984E9222DFB6500CFF621 /* Campus.swift */,
+				71F1F8CF2240ABA400986B62 /* TeamMember.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				71CE9E9422221252002DA0FA /* HumberRadioPlayer.swift in Sources */,
 				710459A821FB99F100677A19 /* RadioViewController.swift in Sources */,
 				714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */,
+				71F1F8D02240ABA400986B62 /* TeamMember.swift in Sources */,
 				71CE9E98222213B0002DA0FA /* HumberRadioStation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
