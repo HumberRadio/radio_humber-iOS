@@ -10,8 +10,10 @@ import UIKit
 
 class CampusTableViewCell: UITableViewCell {
     @IBOutlet weak var titleTextView: UILabel!
+    @IBOutlet weak var addressTextView: UILabel!
     @IBOutlet weak var backGroundImage: UIImageView!
     
+    @IBOutlet weak var campusBackroundImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,6 +31,11 @@ class CampusTableViewCell: UITableViewCell {
     }
      func configureCampusCell(campus: Campus) {
         self.titleTextView.text = campus.campusName
+        let helper = Helper()
+        var backgroundColorList = helper.getBackgroundList()
+        backGroundImage.image = UIImage.init(named: backgroundColorList[campus.id])
+        self.addressTextView.text = campus.address
+        self.campusBackroundImageView.image = campus.image
         
     }
     

@@ -30,7 +30,8 @@ class SelectCampusViewController: UIViewController {
 //        let playUIBar = UIBarButtonItem(title: "Play", style: .plain, target: self, action: #selector(playTapped))
          topNavigationItem.leftBarButtonItem = backUIBar
         var campustest = Campus(campusName: "test", longitute: -79.612143, latitute: 43.7344449 )
-        campusList = campustest.loadDummyData()
+//        campusList = campustest.loadDummyData() depreciated method
+        campusList = campustest.loadDummyDataEnabler()
         // Do any additional setup after loading the view.
     }
     @objc func backTapped()

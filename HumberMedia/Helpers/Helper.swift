@@ -29,6 +29,11 @@ class Helper {
             toastLabel.removeFromSuperview()
         })
     }
+    public func getBackgroundList() ->[String]
+    {
+        var backgroudnNameList:[String] = ["light_blue_background", "purple_background.png", "navy_blue_background.png", "dark_yellow_background.png", "blue_background.png"];
+        return backgroudnNameList
+    }
 
     public func getCurrentlyPlayingInfo() -> Track
     {
@@ -110,11 +115,7 @@ class Helper {
             
         }
     }
-public func getBackgroundList() ->[String]
-{
-    var backgroudnNameList:[String] = ["light_blue_background", "purple_background.png", "navy_blue_background.png", "dark_yellow_background.png", "blue_background.png"];
-    return backgroudnNameList
-}
+
 
 class ImageLoader {
     

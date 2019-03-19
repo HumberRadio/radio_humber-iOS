@@ -630,26 +630,38 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hey School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIF-sY-TK9">
-                                                    <rect key="frame" x="145" y="89.5" width="85" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="humber_north_campus_thumb2" translatesAutoresizingMaskIntoConstraints="NO" id="nJZ-As-0sm">
-                                                    <rect key="frame" x="5" y="5" width="365" height="189.5"/>
+                                                    <rect key="frame" x="7" y="7" width="361" height="185.5"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIM-2X-Y1a">
-                                                    <rect key="frame" x="5" y="5" width="220" height="189.5"/>
+                                                    <rect key="frame" x="7" y="7" width="220" height="185.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple_background" translatesAutoresizingMaskIntoConstraints="NO" id="V16-gB-pTr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="220" height="189.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="220" height="185.5"/>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUMBER NORTH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIF-sY-TK9">
+                                                            <rect key="frame" x="8" y="90" width="119" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUMBER NORTH" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3V-D5-hnX">
+                                                            <rect key="frame" x="8" y="115" width="84.5" height="12"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="w3V-D5-hnX" firstAttribute="leading" secondItem="FIM-2X-Y1a" secondAttribute="leading" constant="8" id="0ig-DJ-geC"/>
                                                         <constraint firstAttribute="trailing" secondItem="V16-gB-pTr" secondAttribute="trailing" id="3mf-Q5-CcZ"/>
                                                         <constraint firstAttribute="width" constant="220" id="ANd-Iu-WLV"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="w3V-D5-hnX" secondAttribute="trailing" constant="65" id="Aqp-bb-TAf"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cIF-sY-TK9" secondAttribute="trailing" constant="20" symbolic="YES" id="Di9-as-Fq0"/>
+                                                        <constraint firstItem="w3V-D5-hnX" firstAttribute="top" secondItem="cIF-sY-TK9" secondAttribute="bottom" constant="8" id="Fx3-m4-KB9"/>
+                                                        <constraint firstItem="cIF-sY-TK9" firstAttribute="leading" secondItem="FIM-2X-Y1a" secondAttribute="leading" constant="8" id="Gfv-zy-5h3"/>
                                                         <constraint firstItem="V16-gB-pTr" firstAttribute="leading" secondItem="FIM-2X-Y1a" secondAttribute="leading" id="Nju-gS-cmV"/>
+                                                        <constraint firstItem="cIF-sY-TK9" firstAttribute="top" secondItem="FIM-2X-Y1a" secondAttribute="top" constant="90" id="VV0-TN-cmv"/>
                                                         <constraint firstItem="V16-gB-pTr" firstAttribute="top" secondItem="FIM-2X-Y1a" secondAttribute="top" id="nZ2-e5-Z7q"/>
                                                         <constraint firstAttribute="bottom" secondItem="V16-gB-pTr" secondAttribute="bottom" id="yf8-23-F6H"/>
                                                     </constraints>
@@ -657,14 +669,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FIM-2X-Y1a" firstAttribute="top" secondItem="nJZ-As-0sm" secondAttribute="top" id="4J2-Ur-72F"/>
-                                                <constraint firstAttribute="trailing" secondItem="nJZ-As-0sm" secondAttribute="trailing" constant="5" id="7kx-nb-tf6"/>
-                                                <constraint firstAttribute="bottom" secondItem="nJZ-As-0sm" secondAttribute="bottom" constant="5" id="G3p-Ui-jpD"/>
-                                                <constraint firstItem="cIF-sY-TK9" firstAttribute="centerX" secondItem="yWa-Hs-Q9k" secondAttribute="centerX" id="HLu-Vv-0b6"/>
-                                                <constraint firstItem="nJZ-As-0sm" firstAttribute="top" secondItem="yWa-Hs-Q9k" secondAttribute="top" constant="5" id="OKK-8M-dg7"/>
+                                                <constraint firstAttribute="trailing" secondItem="nJZ-As-0sm" secondAttribute="trailing" constant="7" id="7kx-nb-tf6"/>
+                                                <constraint firstAttribute="bottom" secondItem="nJZ-As-0sm" secondAttribute="bottom" constant="7" id="G3p-Ui-jpD"/>
+                                                <constraint firstItem="nJZ-As-0sm" firstAttribute="top" secondItem="yWa-Hs-Q9k" secondAttribute="top" constant="7" id="OKK-8M-dg7"/>
                                                 <constraint firstItem="FIM-2X-Y1a" firstAttribute="bottom" secondItem="nJZ-As-0sm" secondAttribute="bottom" id="UCO-iA-I37"/>
                                                 <constraint firstItem="FIM-2X-Y1a" firstAttribute="leading" secondItem="nJZ-As-0sm" secondAttribute="leading" id="dEy-Kk-jfg"/>
-                                                <constraint firstItem="cIF-sY-TK9" firstAttribute="centerY" secondItem="yWa-Hs-Q9k" secondAttribute="centerY" id="hrU-1m-aUE"/>
-                                                <constraint firstItem="nJZ-As-0sm" firstAttribute="leading" secondItem="yWa-Hs-Q9k" secondAttribute="leading" constant="5" id="uA7-cP-vRD"/>
+                                                <constraint firstItem="nJZ-As-0sm" firstAttribute="leading" secondItem="yWa-Hs-Q9k" secondAttribute="leading" constant="7" id="uA7-cP-vRD"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -674,7 +684,9 @@
                                             </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="addressTextView" destination="w3V-D5-hnX" id="jRU-El-hNp"/>
                                             <outlet property="backGroundImage" destination="V16-gB-pTr" id="LHA-sJ-ZgI"/>
+                                            <outlet property="campusBackroundImageView" destination="nJZ-As-0sm" id="iWa-nN-ziQ"/>
                                             <outlet property="titleTextView" destination="cIF-sY-TK9" id="58r-5E-Ndl"/>
                                         </connections>
                                     </tableViewCell>
@@ -704,7 +716,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="goD-XQ-g1P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="-901"/>
+            <point key="canvasLocation" x="-39.200000000000003" y="-901.79910044977521"/>
         </scene>
         <!--Campus Select View Controller-->
         <scene sceneID="mVH-Zp-Iux">

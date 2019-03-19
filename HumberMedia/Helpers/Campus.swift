@@ -25,6 +25,7 @@ struct Campus {
     var phone:String
     var url:String
     var image:UIImage
+    var id:Int
     
     init()
     {
@@ -36,6 +37,7 @@ struct Campus {
         self.phone = "(416) 675-3111"
         self.url = ""
         self.image = UIImage.init(imageLiteralResourceName: "lakeshore_campus_thumbnail")
+        self.id = 1;
 //            Bundle.main.url(forResource: "Radio_Humber_Logo", withExtension: "jpg")!
         
     }
@@ -49,9 +51,10 @@ struct Campus {
         self.phone = "(416) 675-3111"
         self.url = ""
         self.image = UIImage.init(imageLiteralResourceName: "lakeshore_campus_thumbnail")
+         self.id = 1;
 
     }
-    init(campusName:String, longitute:Float, latitute:Float, zoom:Float, address:String, url:String, image:URL) {
+    init(campusName:String, longitute:Float, latitute:Float, zoom:Float, address:String, url:String, image:URL, id:Int) {
         
         self.campusName = campusName
         self.longitute = longitute
@@ -59,8 +62,9 @@ struct Campus {
         self.zoom = zoom
         self.address = ""
         self.phone = "(416) 675-3111"
-        self.url = ""
+        self.url = url
         self.image =  UIImage.init(imageLiteralResourceName: "lakeshore_campus_thumbnail")
+        self.id = id;
         
     }
 
@@ -120,44 +124,48 @@ struct Campus {
             switch campusName
             {
             case "North Campus":
+                campus.id = 1;
                 campus.campusName = "North Campus"
                 campus.latitute = 43.7287697
                 campus.longitute = -79.6078194
                 campus.zoom = 16.0
-                campus.address = "205 Humber College Blvd"
+                campus.address = "205 Humber College Blvd., Toronto, ON, M9W 5L7"
                 campus.phone = "(416) 675-3111"
                 campus.url = ""
-                campus.image = UIImage.init(imageLiteralResourceName: "lakeshore_campus_thumbnail")
+                campus.image = UIImage.init(imageLiteralResourceName: "humber_north_campus_thumb2")
 //                    Bundle.main.url(forResource: "humber_north_campus_thumb2", withExtension: "jpg")!
                 break;
             case "Lakeshore Campus":
+                campus.id = 2;
                 campus.campusName = "Lakeshore Campus"
                 campus.latitute = 43.5956909
                 campus.longitute = -79.5155826
                 campus.zoom = 17.0
-                campus.address = "2 Colonel Samuel Smith Park Drive, Toronto, Ontario, Canada M8V 4B6"
+                campus.address = "2 Colonel Samuel Smith Park Drive, Toronto, ON, M8V 4B6"
                 campus.phone = "(416) 675-6622"
                 campus.url = ""
                 campus.image = UIImage.init(imageLiteralResourceName: "lakeshore_campus_thumbnail")
 //                    Bundle.main.url(forResource: "lakeshore_campus_thumbnail", withExtension: "jpg")!
                 break;
             case "Orangevile Campus":
+                campus.id = 3;
                 campus.campusName = "Orangevile Campus"
                 campus.latitute = 43.9060121
                 campus.longitute = -80.1273669
                 campus.zoom = 16.0
-                campus.address = "2nd Floor, 275 Alder St, Orangeville, ON L9W 5H6"
+                campus.address = "2nd Floor, 275 Alder St, Orangeville, ON, L9W 5H6"
                 campus.phone = "(416) 675-3111"
                 campus.url = ""
-                campus.image = UIImage.init(imageLiteralResourceName: "lakeshore_campus_thumbnail")
+                campus.image = UIImage.init(imageLiteralResourceName: "orangeville_at_night")
 //                    Bundle.main.url(forResource: "orangeville_at_night", withExtension: "jpg")!
                 break;
             case "Career Drive":
+                campus.id = 4;
                 campus.campusName = "Career Drive"
                 campus.latitute = 43.7398309
                 campus.longitute = -79.6118819
                 campus.zoom = 18.0
-                campus.address = "110 Carrier Dr, Etobicoke, ON M9W 5R1"
+                campus.address = "110 Carrier Dr, Etobicoke, ON, M9W 5R1"
                 campus.phone = "(416) 675-3111"
                 campus.url = ""
                 campus.image = UIImage.init(imageLiteralResourceName: "lakeshore_campus_thumbnail")
