@@ -36,7 +36,6 @@
 		714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D76220FC20A005A0001 /* NewsViewController.swift */; };
 		71B23AEE223AE55C0044A3A0 /* CampusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B23AED223AE55C0044A3A0 /* CampusTableViewCell.swift */; };
 		71B23AF0223B26FB0044A3A0 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B23AEF223B26FB0044A3A0 /* AboutUsViewController.swift */; };
-		71B23AF2223B2D110044A3A0 /* AboutUsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B23AF1223B2D110044A3A0 /* AboutUsCollectionViewCell.swift */; };
 		71CE9E9422221252002DA0FA /* HumberRadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */; };
 		71CE9E96222212CE002DA0FA /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E95222212CE002DA0FA /* Track.swift */; };
 		71CE9E98222213B0002DA0FA /* HumberRadioStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */; };
@@ -82,7 +81,6 @@
 		714A7D76220FC20A005A0001 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		71B23AED223AE55C0044A3A0 /* CampusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusTableViewCell.swift; sourceTree = "<group>"; };
 		71B23AEF223B26FB0044A3A0 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
-		71B23AF1223B2D110044A3A0 /* AboutUsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsCollectionViewCell.swift; sourceTree = "<group>"; };
 		71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumberRadioPlayer.swift; sourceTree = "<group>"; };
 		71CE9E95222212CE002DA0FA /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		71CE9E97222213B0002DA0FA /* HumberRadioStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumberRadioStation.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 			children = (
 				7118A8DA2236EC26002140A5 /* SongTableViewCell.swift */,
 				71B23AED223AE55C0044A3A0 /* CampusTableViewCell.swift */,
-				71B23AF1223B2D110044A3A0 /* AboutUsCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -408,7 +405,6 @@
 				7118A8DE223724D9002140A5 /* ImageDownload.swift in Sources */,
 				71B23AF0223B26FB0044A3A0 /* AboutUsViewController.swift in Sources */,
 				71B23AEE223AE55C0044A3A0 /* CampusTableViewCell.swift in Sources */,
-				71B23AF2223B2D110044A3A0 /* AboutUsCollectionViewCell.swift in Sources */,
 				71CE9E9F22224E50002DA0FA /* XMLParserHelper.swift in Sources */,
 				71F1F8CA22403A3200986B62 /* WebMapsViewController.swift in Sources */,
 				711984EA222DFB6500CFF621 /* Campus.swift in Sources */,

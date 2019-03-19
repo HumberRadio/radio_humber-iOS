@@ -34,33 +34,4 @@ class AboutUsViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 }
-extension AboutUsViewController:UICollectionViewDelegate
-{
-    
-}
-extension AboutUsViewController:UICollectionViewDataSource
-{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return 1
-    }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AboutUsCell", for: indexPath) as! AboutUsCollectionViewCell
-    collectionView.register(MDCBaseCell.self, forCellWithReuseIdentifier: "AboutUsCell")
-        guard let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "AboutUsCell", for: indexPath) as? MDCBaseCell else
-        {
-            fatalError()
-        }
-        
-//        guard let cell1 = collectionView.cellForItem(at: indexPath) as? MDCBaseCell else {
-//            fatalError()
-//        }
-
-      
-        return cell2
-//        guard let cell = collectionView.cellForItem(at: indexPath) as? MDCBaseCell else { fatalError() }
-        
-    }
-    
-    
-}
