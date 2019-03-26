@@ -32,6 +32,10 @@ target 'HumberMedia' do
   pod 'GooglePlaces'
   pod 'SDWebImage'
   
+  pod 'FoldingCell'
+  
+  pod'SwiftHTTP'
+  
 
 
 

@@ -2,6 +2,7 @@ PODS:
   - anim (1.2.8)
   - CircleMenu (4.0.1)
   - FaveButton (3.2.0)
+  - FoldingCell (4.0.3)
   - FRadioPlayer (0.1.15)
   - Google-Mobile-Ads-SDK (7.40.0)
   - GoogleMaps (3.0.3):
@@ -77,12 +78,14 @@ PODS:
   - SDWebImage (4.4.5):
     - SDWebImage/Core (= 4.4.5)
   - SDWebImage/Core (4.4.5)
+  - SwiftHTTP (3.0.1)
   - XLPagerTabStrip (8.1.1)
 
 DEPENDENCIES:
   - anim
   - CircleMenu
   - FaveButton
+  - FoldingCell
   - FRadioPlayer
   - Google-Mobile-Ads-SDK
   - GoogleMaps
@@ -96,6 +99,7 @@ DEPENDENCIES:
   - "MaterialComponents/Tabs+ColorThemer"
   - RZTransitions
   - SDWebImage
+  - SwiftHTTP
   - XLPagerTabStrip (~> 8.1)
 
 SPEC REPOS:
@@ -103,6 +107,7 @@ SPEC REPOS:
     - anim
     - CircleMenu
     - FaveButton
+    - FoldingCell
     - FRadioPlayer
     - Google-Mobile-Ads-SDK
     - GoogleMaps
@@ -112,12 +117,14 @@ SPEC REPOS:
     - MDFTextAccessibility
     - RZTransitions
     - SDWebImage
+    - SwiftHTTP
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   anim: a07cd14b3279a69781bc3da9a42739b6e2c77344
   CircleMenu: d846569acbe805b75cef5793056707224240db64
   FaveButton: c818ab3d04d22a7615e93f08c7b35932acb3f735
+  FoldingCell: 617197a8ec9feff741419361e756eea71d60559f
   FRadioPlayer: 0ad8b63756c3597af3c4a2672334c5dc22e026e4
   Google-Mobile-Ads-SDK: 9d1c38a83febea769470aa514a9c7954e2d1483d
   GoogleMaps: fd5c9fa58871781b9fb94d4936f19c69fe60ce32
@@ -127,8 +134,9 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   RZTransitions: 0e0013fda6989ee84dc5e44dca79fd539e1a975a
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SwiftHTTP: e94f1aa8cde58637dcc0100f6349de31a3337fde
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: b323a3a793d4ad2403e7599808d70879dd853112
+PODFILE CHECKSUM: b4ce7de336a72cd6d1787906481603905eb5297b
 
 COCOAPODS: 1.5.3

@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Helpers/Helper.swift"
-            timestampString = "574705999.5403529"
+            timestampString = "575297141.35157"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "image(for:completionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -122,11 +122,11 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "574714039.243233"
+                  timestampString = "575297141.678031"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "131"
-                  endingLineNumber = "131"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
                   offsetFromSymbolStart = "49">
                </Location>
                <Location
@@ -137,11 +137,11 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "574714039.246215"
+                  timestampString = "575297141.681006"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "133"
-                  endingLineNumber = "133"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
                   offsetFromSymbolStart = "65">
                </Location>
             </Locations>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Helpers/Helper.swift"
-            timestampString = "574705999.5404561"
+            timestampString = "575297141.351685"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "image(for:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Helpers/Helper.swift"
-            timestampString = "574705999.5405281"
+            timestampString = "575297141.351781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "image(for:completionHandler:)"
             landmarkType = "7">
             <Locations>
@@ -186,11 +186,11 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "574714039.2591749"
+                  timestampString = "575297141.695714"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
                   offsetFromSymbolStart = "1331">
                </Location>
                <Location
@@ -201,11 +201,11 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "574714039.262975"
+                  timestampString = "575297141.699612"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "139"
-                  endingLineNumber = "139"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
                   offsetFromSymbolStart = "22">
                </Location>
             </Locations>
@@ -218,12 +218,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Helpers/Helper.swift"
-            timestampString = "574705999.5405951"
+            timestampString = "575297141.351868"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "image(for:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HumberMedia/ViewControllers/BusTableViewController.swift"
+            timestampString = "575297141.351958"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "setup()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

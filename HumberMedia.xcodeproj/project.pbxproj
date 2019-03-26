@@ -34,6 +34,9 @@
 		714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D63220E73DF005A0001 /* NavigationViewController.swift */; };
 		714A7D66220E765B005A0001 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D65220E765B005A0001 /* TVViewController.swift */; };
 		714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D76220FC20A005A0001 /* NewsViewController.swift */; };
+		717C7A68224998E000F4FAD6 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C7A67224998E000F4FAD6 /* Prediction.swift */; };
+		717C7A6A22499F7800F4FAD6 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C7A6922499F7800F4FAD6 /* Direction.swift */; };
+		717C7A6C224A559400F4FAD6 /* BusParcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C7A6B224A559400F4FAD6 /* BusParcer.swift */; };
 		71B23AEE223AE55C0044A3A0 /* CampusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B23AED223AE55C0044A3A0 /* CampusTableViewCell.swift */; };
 		71B23AF0223B26FB0044A3A0 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B23AEF223B26FB0044A3A0 /* AboutUsViewController.swift */; };
 		71CE9E9422221252002DA0FA /* HumberRadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */; };
@@ -45,6 +48,11 @@
 		71F1F8CC22404D0500986B62 /* InteractiveMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8CB22404D0500986B62 /* InteractiveMapViewController.swift */; };
 		71F1F8D02240ABA400986B62 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8CF2240ABA400986B62 /* TeamMember.swift */; };
 		71F1F8D32241449A00986B62 /* TeamMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8D22241449A00986B62 /* TeamMemberTableViewCell.swift */; };
+		71F1F8D52241719600986B62 /* TransportationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8D42241719600986B62 /* TransportationViewController.swift */; };
+		71F1F8D7224180B400986B62 /* TransportationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8D6224180B400986B62 /* TransportationTableViewCell.swift */; };
+		71F1F8DA22418B6F00986B62 /* BusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8D822418B6E00986B62 /* BusTableViewController.swift */; };
+		71F1F8DB22418B6F00986B62 /* BusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8D922418B6F00986B62 /* BusCell.swift */; };
+		71F1F8DD224193C600986B62 /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F1F8DC224193C600986B62 /* Bus.swift */; };
 		7B4EA67FC54100C295A918E1 /* Pods_HumberMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DC12AC5803C8C36BE2B02CC /* Pods_HumberMedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +88,9 @@
 		714A7D63220E73DF005A0001 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		714A7D65220E765B005A0001 /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 		714A7D76220FC20A005A0001 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		717C7A67224998E000F4FAD6 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		717C7A6922499F7800F4FAD6 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		717C7A6B224A559400F4FAD6 /* BusParcer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusParcer.swift; sourceTree = "<group>"; };
 		71B23AED223AE55C0044A3A0 /* CampusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusTableViewCell.swift; sourceTree = "<group>"; };
 		71B23AEF223B26FB0044A3A0 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		71CE9E9322221252002DA0FA /* HumberRadioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumberRadioPlayer.swift; sourceTree = "<group>"; };
@@ -91,6 +102,11 @@
 		71F1F8CB22404D0500986B62 /* InteractiveMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveMapViewController.swift; sourceTree = "<group>"; };
 		71F1F8CF2240ABA400986B62 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
 		71F1F8D22241449A00986B62 /* TeamMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberTableViewCell.swift; sourceTree = "<group>"; };
+		71F1F8D42241719600986B62 /* TransportationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationViewController.swift; sourceTree = "<group>"; };
+		71F1F8D6224180B400986B62 /* TransportationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationTableViewCell.swift; sourceTree = "<group>"; };
+		71F1F8D822418B6E00986B62 /* BusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusTableViewController.swift; sourceTree = "<group>"; };
+		71F1F8D922418B6F00986B62 /* BusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusCell.swift; sourceTree = "<group>"; };
+		71F1F8DC224193C600986B62 /* Bus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		FAFDEE1494170F0ACC007C55 /* Pods-HumberMedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HumberMedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HumberMedia/Pods-HumberMedia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +177,10 @@
 				71CE9E9E22224E50002DA0FA /* XMLParserHelper.swift */,
 				711984E9222DFB6500CFF621 /* Campus.swift */,
 				71F1F8CF2240ABA400986B62 /* TeamMember.swift */,
+				71F1F8DC224193C600986B62 /* Bus.swift */,
+				717C7A67224998E000F4FAD6 /* Prediction.swift */,
+				717C7A6922499F7800F4FAD6 /* Direction.swift */,
+				717C7A6B224A559400F4FAD6 /* BusParcer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -171,6 +191,8 @@
 				7118A8DA2236EC26002140A5 /* SongTableViewCell.swift */,
 				71B23AED223AE55C0044A3A0 /* CampusTableViewCell.swift */,
 				71F1F8D22241449A00986B62 /* TeamMemberTableViewCell.swift */,
+				71F1F8D6224180B400986B62 /* TransportationTableViewCell.swift */,
+				71F1F8D922418B6F00986B62 /* BusCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -178,6 +200,7 @@
 		7118A8D32236E0D1002140A5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				71F1F8D822418B6E00986B62 /* BusTableViewController.swift */,
 				710459A721FB99F100677A19 /* RadioViewController.swift */,
 				714A7D63220E73DF005A0001 /* NavigationViewController.swift */,
 				714A7D65220E765B005A0001 /* TVViewController.swift */,
@@ -188,6 +211,7 @@
 				71B23AEF223B26FB0044A3A0 /* AboutUsViewController.swift */,
 				71F1F8C922403A3200986B62 /* WebMapsViewController.swift */,
 				71F1F8CB22404D0500986B62 /* InteractiveMapViewController.swift */,
+				71F1F8D42241719600986B62 /* TransportationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -366,11 +390,13 @@
 				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/FRadioPlayer/FRadioPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
+				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/RZTransitions/RZTransitions.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftHTTP/SwiftHTTP.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/anim/anim.framework",
 			);
@@ -381,11 +407,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FRadioPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RZTransitions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHTTP.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/anim.framework",
 			);
@@ -403,24 +431,32 @@
 			files = (
 				71F1F8CC22404D0500986B62 /* InteractiveMapViewController.swift in Sources */,
 				714A7D66220E765B005A0001 /* TVViewController.swift in Sources */,
+				71F1F8D7224180B400986B62 /* TransportationTableViewCell.swift in Sources */,
+				71F1F8D52241719600986B62 /* TransportationViewController.swift in Sources */,
 				7118A8D52236E3B2002140A5 /* CampusSelectViewController.swift in Sources */,
 				71CE9E96222212CE002DA0FA /* Track.swift in Sources */,
 				7118A8DE223724D9002140A5 /* ImageDownload.swift in Sources */,
+				717C7A6C224A559400F4FAD6 /* BusParcer.swift in Sources */,
 				71B23AF0223B26FB0044A3A0 /* AboutUsViewController.swift in Sources */,
 				71B23AEE223AE55C0044A3A0 /* CampusTableViewCell.swift in Sources */,
 				71CE9E9F22224E50002DA0FA /* XMLParserHelper.swift in Sources */,
 				71F1F8D32241449A00986B62 /* TeamMemberTableViewCell.swift in Sources */,
+				717C7A6A22499F7800F4FAD6 /* Direction.swift in Sources */,
 				71F1F8CA22403A3200986B62 /* WebMapsViewController.swift in Sources */,
 				711984EA222DFB6500CFF621 /* Campus.swift in Sources */,
+				71F1F8DB22418B6F00986B62 /* BusCell.swift in Sources */,
 				714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */,
 				710459AB21FED0C900677A19 /* ShadowUIView.swift in Sources */,
 				7118A8E1223859A8002140A5 /* SelectCampusViewController.swift in Sources */,
 				711984E8222DF42500CFF621 /* CampusNavigationViewController.swift in Sources */,
 				71CE9E9D2222278D002DA0FA /* URLConstants.swift in Sources */,
+				717C7A68224998E000F4FAD6 /* Prediction.swift in Sources */,
 				714A7D4D220CC117005A0001 /* Helper.swift in Sources */,
 				7104599621FB91BC00677A19 /* AppDelegate.swift in Sources */,
+				71F1F8DA22418B6F00986B62 /* BusTableViewController.swift in Sources */,
 				7118A8DB2236EC26002140A5 /* SongTableViewCell.swift in Sources */,
 				7118A8E322387868002140A5 /* UIColors.swift in Sources */,
+				71F1F8DD224193C600986B62 /* Bus.swift in Sources */,
 				71CE9E9422221252002DA0FA /* HumberRadioPlayer.swift in Sources */,
 				710459A821FB99F100677A19 /* RadioViewController.swift in Sources */,
 				714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */,

@@ -13,5 +13,10 @@ struct URLConstants {
 //        static let radioStreamUrl = "https://humber.leanstream.co/CKHCFM" //AAC
         static let radioStreamUrl = "https://humber.leanstream.co/CKHCFM-MP3" //MP3
         static let recentlyPlayed = "https://xml.leanplayer.com/CKHCFM/history.xml"
+        
+        
+        //for ttc
+        static let ttc927South = "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=ttc&stopId=15404"
+        static let ttc927North = "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=ttc&stopId=15406"
     }
 } 

@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Use location</string>
 	<key>UIAppFonts</key>
@@ -61,5 +63,4 @@
 		<true/>
 	</dict>
 </dict>
-
 </plist>

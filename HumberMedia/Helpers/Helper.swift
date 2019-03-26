@@ -10,7 +10,15 @@ import Foundation
 import UIKit
 import AVFoundation
 class Helper {
-
+    public func getTimeFromTimestamp(timestamp:Double) ->String
+    {
+        let date = Date(timeIntervalSince1970: timestamp)
+        //get hout
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh a" // "a" prints "pm" or "am"
+        return formatter.string(from: date) // "12 AM"
+        
+    }
     func showToast( view:UIView) {
         let message = "Data Saved."
         let toastLabel = UILabel(frame: CGRect(x: view.frame.size.width/2 - 75, y: view.frame.size.height-180, width: 150, height: 35))
@@ -145,6 +153,13 @@ class ImageLoader {
         }
     }
     
+   
+    
+}
+extension String {
+    func boolValueFromString() -> Bool {
+        return NSString(string: self).boolValue
+    }
 }
 
 

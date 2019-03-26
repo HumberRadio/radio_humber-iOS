@@ -26,8 +26,8 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
     public func parceCurentlyPlaying () -> Track
     {
         // create the semaphore gie it background value 0 and start it
-      let semaphore = DispatchSemaphore(value: 0)
-       
+        let semaphore = DispatchSemaphore(value: 0)
+        
         
         
         var track = Track(title: "N/A",artist: "N/A")
@@ -51,17 +51,17 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
                 {
                     for (key,value) in songinfo{
                         switch key {
-                            case "artist":
-                                track.artist = value
-                                break;
-                            case "songtitle":
-                                track.title = value
-                                break;
-                            case "albumart":
-                                track.imageUrl = value
-                                break;
-                            default:
-                                break;
+                        case "artist":
+                            track.artist = value
+                            break;
+                        case "songtitle":
+                            track.title = value
+                            break;
+                        case "albumart":
+                            track.imageUrl = value
+                            break;
+                        default:
+                            break;
                         }
                     }
                 }
@@ -87,7 +87,7 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
         
         
         var tracks = [Track]()
-       
+        
         let url = URL(string: URLConstants.Domains.recentlyPlayed)
         
         let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
@@ -124,7 +124,7 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
                             break;
                         }
                     }
-                 
+                    
                 }
                 print(self.results.count )
                 // we signal the semaphore to stop waiting
@@ -173,6 +173,6 @@ class XMLParserHelper:  NSObject, XMLParserDelegate {
         print(parseError)
         // TO DO:
     }
-  
+    
     
 }
