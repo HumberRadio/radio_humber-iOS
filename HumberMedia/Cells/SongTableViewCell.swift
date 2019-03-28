@@ -54,7 +54,8 @@ class SongTableViewCell: UITableViewCell {
                     completed:
                     { (img, err, cacheType, imgURL) in
                         // code
-                        print("heherrreee")
+//                        if err
+                        print("TO DO: is this error ?")
 //                        print("test:" + (err?.localizedDescription)! )
                     }
                     
@@ -66,7 +67,7 @@ class SongTableViewCell: UITableViewCell {
             trackImageView.image = UIImage(named: imageURL as String)
             
         } else {
-            trackImageView.image = UIImage(named: "stationImage")
+            trackImageView.image = UIImage(named: "Radio_Humber_Logo")
         }
         
         trackImageView.applyShadow()

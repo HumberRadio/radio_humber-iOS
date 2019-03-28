@@ -14,6 +14,7 @@ import AVFoundation
 import CircleMenu
 import anim
 import RZTransitions
+import SDWebImage
 
 
 class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate, FRadioPlayerDelegate, CircleMenuDelegate  {
@@ -177,6 +178,45 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         let currentlyPlayingTrack = xmlparser.parceCurentlyPlaying();
         songTitleLabel.text = currentlyPlayingTrack.title
         artistNameLabel.text = currentlyPlayingTrack.artist
+        var imageURL = currentlyPlayingTrack.imageUrl
+        //image update section
+        if imageURL.contains("albumart") {
+            _ = String(imageURL.removeFirst())
+            _ = String(imageURL.removeFirst())
+            imageURL = "https://" + imageURL
+            if let url = URL(string: imageURL) {
+              
+                self.radioImageView.sd_setImage(
+                    with: url,
+                    placeholderImage: UIImage(named: "RadioThumbID"),
+                    options: SDWebImageOptions(rawValue: 0),
+                    completed:
+                    { (img, err, cacheType, imgURL) in
+                        // code
+                        //                        if err
+                        print("TO DO: is this error ?")
+                        //                        print("test:" + (err?.localizedDescription)! )
+                }
+                    
+                )
+                
+            }
+            
+        } else if imageURL != "" {
+            radioImageView.image = UIImage(named: imageURL as String)
+            
+        } else {
+            radioImageView.image = UIImage(named: "Radio_Humber_Logo")
+        }
+        
+        radioImageView.applyShadow()
+        
+        
+        
+        
+        self.radioImageView.image = UIImage.init()
+        
+        self.radioImageView.image = UIImage.init(imageLiteralResourceName: "radio_thumb_image")
     }
     
     private func prepareUI()
@@ -303,6 +343,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         UIButton.animate(withDuration: 0.4,
                          animations: {
                             self.stopbutton.alpha = 0
+                           
         },
                          completion: { _ in
                             UIButton.animate(withDuration: 0.1) {
@@ -314,6 +355,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
 //        player.stop()
         player2?.pause()
         sender.isSelected = false
+        
         
     }
     

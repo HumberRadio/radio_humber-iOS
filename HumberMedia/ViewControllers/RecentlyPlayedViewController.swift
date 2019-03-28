@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CampusSelectViewController: UIViewController {
+class RecentlyPlayedViewController: UIViewController {
     // MARK: - UIComponents
     
     @IBOutlet var tableView: UITableView!
@@ -46,7 +46,7 @@ class CampusSelectViewController: UIViewController {
     // MARK: - TableViewDelegate
     //*****************************************************************
     
-extension CampusSelectViewController: UITableViewDelegate {
+extension RecentlyPlayedViewController: UITableViewDelegate {
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
@@ -59,7 +59,7 @@ extension CampusSelectViewController: UITableViewDelegate {
 // MARK: - TableViewDataSource
 //*****************************************************************
 
-extension CampusSelectViewController: UITableViewDataSource {
+extension RecentlyPlayedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.tracks.count
     }
