@@ -40,7 +40,8 @@ class BusTableViewController: UITableViewController {
     }
 
     private func setup() {
-        cellHeights = Array(repeating: Const.closeCellHeight, count: Const.rowsCount)
+        var ttc927South = BusParcer().parce927South()
+        cellHeights = Array(repeating: Const.closeCellHeight, count: Const.rowsCount )
         tableView.estimatedRowHeight = Const.closeCellHeight
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "button_volume"))
@@ -50,7 +51,7 @@ class BusTableViewController: UITableViewController {
         }
         
 //        var ttc927SouthList = XMLParserHelper().get927South()
-        var ttc927South = BusParcer().parce927South()
+   
         
         print("test")
     }

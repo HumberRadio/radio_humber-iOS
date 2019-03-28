@@ -33,6 +33,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var buttonsView: UIView!
     @IBOutlet weak var infoTextView: UIView!
+    @IBOutlet weak var recentlyPlayedContainerView: UIView!
     
     @IBOutlet weak var radioImageView: UIImageView!
     @IBOutlet weak var blurView: UIView!
@@ -58,7 +59,8 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     @IBOutlet weak var leadingRadioImage: NSLayoutConstraint!
     @IBOutlet weak var topRadioImage: NSLayoutConstraint!
     
-   
+    @IBOutlet weak var heightContainerView: NSLayoutConstraint!
+    
     //properties
     
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
@@ -451,10 +453,15 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     private func animateRadioBarOpen()
     {
-        UIView.animate(withDuration: 3.0, animations:{
+        
+     
+        UIView.animate(withDuration: 1.0, animations:{
            
             // bring whole bottme view to top
             self.bottomViewHeight.constant = self.view.frame.height * 0.70
+            
+            self.heightContainerView.constant = self.view.frame.height * 0.35
+            self.recentlyPlayedContainerView.alpha = 1
             
             //animate buttons
             self.trailingButtonView.constant = self.view.frame.width * 0.32
@@ -479,16 +486,31 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         }, completion: {_ in
             print("done")
             self.isradioOpen = true
+            
+//            NSLayoutConstraint.activate([
+//                recentlyPlayedViewContainer.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
+//                recentlyPlayedViewContainer.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
+//                recentlyPlayedViewContainer.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 10),
+//                recentlyPlayedViewContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -10),
+//                ])
+//              let child_news = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "news")
+//            recentlyPlayedViewContainer.addSubview(UIView)
+//            self.bottomView.addSubview(recentlyPlayedViewContainer)
+            
         })
+        
         
     }
     private func animateRadioBarClose()
     {
         self.isradioOpen = true
-        UIView.animate(withDuration: 3.0, animations:{
+       
+        UIView.animate(withDuration: 1.0, animations:{
             
             // bring whole bottme view to top
             self.bottomViewHeight.constant = 80
+            self.heightContainerView.constant = 0
+            self.recentlyPlayedContainerView.alpha = 0
             
             //animate buttons
             self.trailingButtonView.constant = 0
