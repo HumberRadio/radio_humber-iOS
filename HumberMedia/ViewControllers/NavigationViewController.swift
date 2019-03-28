@@ -167,10 +167,17 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     
     @IBAction func playbuttonClick(_ sender: Any){
-        
-        self.updateSongInfo()
-        
+        if !player.isPlaying {isUpdateAvaliable()}
+        Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(isUpdateAvaliable), userInfo: nil, repeats: true)
     }
+    @objc private func isUpdateAvaliable()
+    {
+        let xmlparser = XMLParserHelper.init();
+        let currentlyPlayingTrack = xmlparser.parceCurentlyPlaying();
+        if (currentlyPlayingTrack.artist == artistNameLabel.text){  print("Up to date")}
+        else{self.updateSongInfo()}
+    }
+    
     
     private func updateSongInfo()
     {

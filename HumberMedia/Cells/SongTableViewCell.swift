@@ -34,8 +34,6 @@ class SongTableViewCell: UITableViewCell {
     func configureSongCell(track: Track) {
         
         // Configure the cell...
-//        stationNameLabel.text = station.name
-//        stationDescLabel.text = station.desc
         trackNameLabel.text = track.title
         trackArtistLabel.text = track.artist
         
