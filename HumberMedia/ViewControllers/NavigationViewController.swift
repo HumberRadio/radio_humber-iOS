@@ -189,11 +189,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         if (currentlyPlayingTrack.artist == artistNameLabel.text){  print("Up to date")}
         else{
             isLiked = false;
-            likebutton.sendActions(for: .touchUpInside)
+            likebutton.setSelected(selected: false, animated: true)
             likebutton.isUserInteractionEnabled = true;
             self.updateSongInfo()
-            
-            
         }
     }
     
