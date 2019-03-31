@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import GoogleMobileAds
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyBm_sU8GO6mrJwlee5P5KsdrchRTGsBQ5k")
         GADMobileAds.sharedInstance()
+        FirebaseApp.configure()
+        
+//        Auth.auth().signInAnonymously() { (authResult, error) in
+//            //do sometyhing
+////            let user = authResult!.user
+////            let isAnonymous = user.isAnonymous  // true
+////            let uid = user.uid
+//        }
         return true
     }
 

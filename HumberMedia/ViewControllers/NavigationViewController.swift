@@ -15,9 +15,15 @@ import CircleMenu
 import anim
 import RZTransitions
 import SDWebImage
-
+import Firebase
+import FirebaseDatabase
 
 class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserDelegate, FRadioPlayerDelegate, CircleMenuDelegate  {
+    
+    
+    //firebase DB
+    var ref: DatabaseReference!
+    
     // UI outlets
     
     //Buttons
@@ -25,6 +31,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     @IBOutlet weak var stopbutton: FaveButton!
     @IBOutlet weak var infobutton: FaveButton!
     @IBOutlet weak var infoMenuButton: CircleMenu!
+    @IBOutlet weak var likebutton: FaveButton!
+    
+    
     //Labels
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
@@ -70,6 +79,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     let player = FRadioPlayer.shared
     var player2: AVPlayer?
     var isblured:Bool = false;
+    var isLiked = false;
     
 
     
@@ -88,8 +98,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     
     override func viewDidLoad() {
-          self.prepareUI()
-        
+        self.prepareUI()
+        ref = Database.database().reference()
+
         super.viewDidLoad()
         //setup ui logic
      
@@ -144,6 +155,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             self.blurView.addSubview(visualEffectView)
             isblured = true
         }
+     
     }
     
 
@@ -175,7 +187,14 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         let xmlparser = XMLParserHelper.init();
         let currentlyPlayingTrack = xmlparser.parceCurentlyPlaying();
         if (currentlyPlayingTrack.artist == artistNameLabel.text){  print("Up to date")}
-        else{self.updateSongInfo()}
+        else{
+            isLiked = false;
+            likebutton.sendActions(for: .touchUpInside)
+            likebutton.isUserInteractionEnabled = true;
+            self.updateSongInfo()
+            
+            
+        }
     }
     
     
@@ -228,6 +247,10 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     private func prepareUI()
     {
+        //disable like until  radio is played
+        likebutton.isUserInteractionEnabled = false;
+        
+        
         //cutsom trasition - butble from center
         RZTransitionsManager.shared().defaultPresentDismissAnimationController = RZCirclePushAnimationController()
         RZTransitionsManager.shared().defaultPushPopAnimationController = RZCirclePushAnimationController()
@@ -586,6 +609,57 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
        
         
         
+    }
+    @IBAction func likeTap(_ sender: Any) {
+        
+        if (shouldLike())
+        {
+            //TO DO: Logic
+            guard let key = ref.child("likes").childByAutoId().key else { return }
+            
+            let now = Date()
+            let formatter = DateFormatter()
+            formatter.timeZone = TimeZone.current
+            formatter.dateFormat = "yyyy-MM-dd HH:mm"
+            let dateString = formatter.string(from: now)
+            
+            
+            
+            let song = ["deviceId": UIDevice.current.identifierForVendor!.uuidString,
+                        "trackName": self.songTitleLabel.text ?? "N/A",
+                        "trackArtist": self.artistNameLabel.text,
+                        "timestamp": dateString]
+            
+            let childUpdates = ["/likes/\(key)": song]
+            ref.updateChildValues(childUpdates)
+            isLiked = true;
+            likebutton.isUserInteractionEnabled = false;
+        }
+        
+ 
+    }
+    
+    private func shouldLike() ->Bool{
+        
+        
+        
+        var result = false
+    
+        if ((self.songTitleLabel.text?.contains("Radio Humber"))!)
+        {
+            result = false
+        }
+        
+        else if (isLiked)
+        {
+            result = false
+        }
+        else
+        {
+            result = true
+        }
+        
+        return result
     }
     
 

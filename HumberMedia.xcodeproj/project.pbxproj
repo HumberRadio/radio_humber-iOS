@@ -34,6 +34,7 @@
 		714A7D64220E73DF005A0001 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D63220E73DF005A0001 /* NavigationViewController.swift */; };
 		714A7D66220E765B005A0001 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D65220E765B005A0001 /* TVViewController.swift */; };
 		714A7D77220FC20A005A0001 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D76220FC20A005A0001 /* NewsViewController.swift */; };
+		714F0682224D436E00B99A27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 714F0681224D436E00B99A27 /* GoogleService-Info.plist */; };
 		717C7A68224998E000F4FAD6 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C7A67224998E000F4FAD6 /* Prediction.swift */; };
 		717C7A6A22499F7800F4FAD6 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C7A6922499F7800F4FAD6 /* Direction.swift */; };
 		717C7A6C224A559400F4FAD6 /* BusParcer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717C7A6B224A559400F4FAD6 /* BusParcer.swift */; };
@@ -88,6 +89,7 @@
 		714A7D63220E73DF005A0001 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		714A7D65220E765B005A0001 /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 		714A7D76220FC20A005A0001 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		714F0681224D436E00B99A27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		717C7A67224998E000F4FAD6 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
 		717C7A6922499F7800F4FAD6 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		717C7A6B224A559400F4FAD6 /* BusParcer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusParcer.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				7104599921FB91BC00677A19 /* Main.storyboard */,
 				7104599C21FB91BD00677A19 /* Assets.xcassets */,
 				7104599E21FB91BD00677A19 /* LaunchScreen.storyboard */,
+				714F0681224D436E00B99A27 /* GoogleService-Info.plist */,
 				710459A121FB91BD00677A19 /* Info.plist */,
 			);
 			path = HumberMedia;
@@ -326,6 +329,7 @@
 				714A7D5F220E0DA3005A0001 /* OpenSans-Light.ttf in Resources */,
 				714A7D61220E0DA3005A0001 /* OpenSans-Regular.ttf in Resources */,
 				714A7D5C220E0DA3005A0001 /* OpenSans-Italic.ttf in Resources */,
+				714F0682224D436E00B99A27 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +395,8 @@
 				"${BUILT_PRODUCTS_DIR}/FRadioPlayer/FRadioPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
 				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
 				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
@@ -399,6 +405,8 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftHTTP/SwiftHTTP.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/anim/anim.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -408,6 +416,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FRadioPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
@@ -416,6 +426,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHTTP.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/anim.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

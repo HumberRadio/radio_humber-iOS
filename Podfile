@@ -31,7 +31,12 @@ target 'HumberMedia' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'SDWebImage'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
   
+  pod 'Firebase/Auth'
+
+
   pod 'FoldingCell'
   
   pod'SwiftHTTP'

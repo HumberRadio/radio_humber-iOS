@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Helpers/Helper.swift"
-            timestampString = "575301661.0841171"
+            timestampString = "575687870.706026"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
@@ -122,7 +122,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "575487805.608845"
+                  timestampString = "575687871.175259"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "139"
@@ -137,7 +137,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "575487805.6113369"
+                  timestampString = "575687871.177753"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "141"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Helpers/Helper.swift"
-            timestampString = "575301661.084247"
+            timestampString = "575687870.706109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Helpers/Helper.swift"
-            timestampString = "575301661.084347"
+            timestampString = "575687870.706165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "147"
@@ -186,7 +186,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "575487805.623255"
+                  timestampString = "575687871.189925"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -201,7 +201,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "575487805.626833"
+                  timestampString = "575687871.192655"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Helpers/Helper.swift"
-            timestampString = "575301661.084437"
+            timestampString = "575687870.706215"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Cells/SongTableViewCell.swift"
-            timestampString = "575487805.290488"
+            timestampString = "575489242.251008"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -298,12 +298,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HumberMedia/Cells/SongTableViewCell.swift"
-            timestampString = "575487805.290563"
+            timestampString = "575489242.251087"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
             endingLineNumber = "68"
             landmarkName = "configureSongCell(track:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HumberMedia/ViewControllers/NavigationViewController.swift"
+            timestampString = "575687870.706373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "642"
+            endingLineNumber = "642"
+            landmarkName = "shouldLike()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HumberMedia.NavigationViewController.(shouldLike in _B8D97432EB36C5D58D12AD9542645687)() -&gt; Swift.Bool"
+                  moduleName = "HumberMedia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/ViewControllers/NavigationViewController.swift"
+                  timestampString = "575687871.2501841"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "642"
+                  endingLineNumber = "642"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HumberMedia.NavigationViewController.(shouldLike in _B8D97432EB36C5D58D12AD9542645687)() -&gt; Swift.Bool"
+                  moduleName = "HumberMedia"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/ViewControllers/NavigationViewController.swift"
+                  timestampString = "575687871.252859"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "642"
+                  endingLineNumber = "642"
+                  offsetFromSymbolStart = "736">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HumberMedia/ViewControllers/NavigationViewController.swift"
+            timestampString = "575687870.70696"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "609"
+            endingLineNumber = "609"
+            landmarkName = "likeTap(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HumberMedia/ViewControllers/NavigationViewController.swift"
+            timestampString = "575687870.70734"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "612"
+            endingLineNumber = "612"
+            landmarkName = "likeTap(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

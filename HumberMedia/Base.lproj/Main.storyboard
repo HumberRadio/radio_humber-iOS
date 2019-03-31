@@ -268,6 +268,9 @@
                                                         <color key="value" red="0.9983388782" green="0.73345971109999997" blue="0.73329490419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="likeTap:" destination="T3V-oG-sMF" eventType="touchUpInside" id="xwA-DR-SLj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -477,6 +480,7 @@
                         <outlet property="infobutton" destination="BXc-gO-PDY" id="tS2-0x-Pb8"/>
                         <outlet property="leadingInfoViuew" destination="6Wx-zL-34U" id="oWg-I4-ZDD"/>
                         <outlet property="leadingRadioImage" destination="e0b-eu-x2n" id="JSD-z5-LuK"/>
+                        <outlet property="likebutton" destination="vlO-ab-BlN" id="4qz-46-dxV"/>
                         <outlet property="playbutton" destination="v90-TW-GI5" id="R8Q-lD-jGJ"/>
                         <outlet property="radioImageView" destination="noi-Mp-CVS" id="LhE-R1-xDb"/>
                         <outlet property="recentlyPlayedContainerView" destination="7Dz-Y2-6LY" id="QL3-2Y-5jb"/>
