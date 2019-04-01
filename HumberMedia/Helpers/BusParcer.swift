@@ -198,7 +198,7 @@ class BusParcer:  NSObject, XMLParserDelegate {
         switch elementName {
         case "direction":
             direction = Direction()
-            direction.directionName = attributeDict["title"]!
+            direction.setDirection(directionName: attributeDict["title"]!) 
             
             break;
         case "prediction":

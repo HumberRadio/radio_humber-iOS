@@ -40,28 +40,28 @@ class BusTableViewController: UITableViewController {
     }
 
     private func setup() {
-        var ttc927South = BusParcer().parce927South()
-        if ttc927South.count > 1 {ttc927South.remove(at: 0) }
+        let ttc927South = BusParcer().parce927South()
+        if ttc927South.count > 1 { }
         else {print("error parcing ttc responce")}
         
-        var ttc927North = BusParcer().parce927North()
-        if ttc927North.count > 1 {ttc927North.remove(at: 0) }
+        let ttc927North = BusParcer().parce927North()
+        if ttc927North.count > 1 {}
         else {print("error parcing ttc responce")}
         
-        var ttc96East = BusParcer().parce96East()
-        if ttc96East.count > 1 {ttc96East.remove(at: 0) }
+        let ttc96East = BusParcer().parce96East()
+        if ttc96East.count > 1 {}
         else {print("error parcing ttc responce")}
         
-        var ttc96West = BusParcer().parce96West()
-        if ttc96West.count > 1 {ttc96West.remove(at: 0) }
+        let ttc96West = BusParcer().parce96West()
+        if ttc96West.count > 1 {}
         else {print("error parcing ttc responce")}
         
-        var ttc36East = BusParcer().parce36East()
-        if ttc36East.count > 1 {ttc36East.remove(at: 0) }
+        let ttc36East = BusParcer().parce36East()
+        if ttc36East.count > 1 {}
         else {print("error parcing ttc responce")}
         
-        var ttc36West = BusParcer().parce36West()
-        if ttc36West.count > 1 {ttc36West.remove(at: 0) }
+        let ttc36West = BusParcer().parce36West()
+        if ttc36West.count > 1 {}
         else {print("error parcing ttc responce")}
         
         
