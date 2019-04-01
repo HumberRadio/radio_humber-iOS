@@ -56,6 +56,13 @@ class BusParcer:  NSObject, XMLParserDelegate {
         task.resume()
         //when we signal we get semaphore to stop waiting and proceed to next line
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        var topPredictions = getTopPredictions(directions: directionsResult)
+//        directionsResult = getTopPredictions(directions: directionsResult)
+        
+        
+        
+        
+        
         return directionsResult;
     }
     
@@ -249,7 +256,19 @@ class BusParcer:  NSObject, XMLParserDelegate {
         print(parseError)
         // TO DO:
     }
-    
+    private func getTopPredictions(directions:[Direction])->[Prediciton]
+    {
+        var topPredictions:[Prediciton] = [Prediciton]()
+        var allPredictions:[Prediciton] = [Prediciton]()
+        for direction in directions {
+            for preditcion in direction.predictions
+            {
+                allPredictions.append(preditcion)
+            }
+        }
+        topPredictions = allPredictions.sorted(by:  { $0.seconds < $1.seconds })
+        return topPredictions
+    }
     
 }
 
