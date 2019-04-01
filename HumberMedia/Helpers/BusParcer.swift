@@ -16,10 +16,10 @@ class BusParcer:  NSObject, XMLParserDelegate {
     var brunch = String()
     var minutes = String()
     
-    var directions:[Direction] = [Direction()]
-    var predictions:[Prediciton] = [Prediciton()]
+    lazy var directions:[Direction] = []
+    lazy var predictions:[Prediciton] = []
     var direction:Direction = Direction()
-    var prediction:Prediciton = Prediciton()
+    lazy var prediction:Prediciton = Prediciton()
     
     
     //    // a constants that identify what element names we're looking for in the XML
@@ -37,115 +37,154 @@ class BusParcer:  NSObject, XMLParserDelegate {
     {
         // create the semaphore get it background value 0 and start it
         let semaphore = DispatchSemaphore(value: 0)
-        
-        
         var directionsResult = [Direction]()
-        
         let url = URL(string: URLConstants.Domains.ttc927South)
-        
         let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
-            
             guard let data = data, error == nil else {
-                
                 print(error ?? "Unknown error")
                 return
-                
             }
-            
             let parser = XMLParser(data: data)
             parser.delegate = self
             if parser.parse() {
-                // parce completed sucessfuly
-                //                self.results.count
-                //                var track = Track(title: "N/A",artist: "N/A")
-                //                for songinfo in self.results
-                //                {
-                //                    for (key,value) in songinfo{
-                //                        switch key {
-                //                        case "artist":
-                ////                            track.resetTrack()
-                ////                            track.artist = value
-                //                            break;
-                //                        case "songtitle":
-                ////                            track.title = value
-                //                            break;
-                //                        case "albumart":
-                ////                            track.imageUrl = value
-                ////                            tracks.append(track)
-                //                            break;
-                //                        default:
-                //                            break;
-                //                        }
-                //                    }
-                //
-                //                }
                 directionsResult = self.directions
                 print(self.results.count )
                 // we signal the semaphore to stop waiting
                 semaphore.signal()
             }
-            
-            //            print( NSString(data: data, encoding: String.Encoding.utf8.rawValue))
         }
-        
         task.resume()
-        
         //when we signal we get semaphore to stop waiting and proceed to next line
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
         return directionsResult;
     }
-    public func get927South() ->[Direction]
+    
+    public func parce927North() -> [Direction]
     {
         // create the semaphore get it background value 0 and start it
         let semaphore = DispatchSemaphore(value: 0)
-        var busesList = [Bus]()
-        let url = URL(string: URLConstants.Domains.ttc927South)
-        
-        HTTP.GET(URLConstants.Domains.ttc927South) { response in
-            if let err = response.error {
-                print("error: \(err.localizedDescription)")
-                return //also notify app of failure as needed
+        var directionsResult = [Direction]()
+        let url = URL(string: URLConstants.Domains.ttc927North)
+        let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error ?? "Unknown error")
+                return
             }
-            print("opt finished: \(response.description)")
-            
-            guard let data = response.description.data(using: .utf8) else{return}
-            let parser = XMLParser.init(data: data)
-            let parcer1 = XMLParser.init(contentsOf: url!)
-            parcer1!.delegate = self
-            if parcer1!.parse() {
-                //                var bus = Bus()
-                //                for busInfo in self.results{
-                for direction in self.results
-                {
-                    for (key,value) in direction{
-                        switch key {
-                        case "direction":
-                            print(value)
-                            //                                track.artist = value
-                            break;
-                        case "prediction":
-                            print(value)
-                            //                                track.title = value
-                            break;
-                        case "predictions":
-                            print(value)
-                            //                                track.imageUrl = value
-                            break;
-                        default:
-                            break;
-                        }
-                    }
-                }
-            
+            let parser = XMLParser(data: data)
+            parser.delegate = self
+            if parser.parse() {
+                directionsResult = self.directions
+                print(self.results.count )
+                // we signal the semaphore to stop waiting
+                semaphore.signal()
             }
-            
-            
         }
-        
-   
-        return directions
+        task.resume()
+        //when we signal we get semaphore to stop waiting and proceed to next line
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        return directionsResult;
     }
     
+    public func parce96East() -> [Direction]
+    {
+        // create the semaphore get it background value 0 and start it
+        let semaphore = DispatchSemaphore(value: 0)
+        var directionsResult = [Direction]()
+        let url = URL(string: URLConstants.Domains.ttc96East)
+        let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error ?? "Unknown error")
+                return
+            }
+            let parser = XMLParser(data: data)
+            parser.delegate = self
+            if parser.parse() {
+                directionsResult = self.directions
+                print(self.results.count )
+                // we signal the semaphore to stop waiting
+                semaphore.signal()
+            }
+        }
+        task.resume()
+        //when we signal we get semaphore to stop waiting and proceed to next line
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        return directionsResult;
+    }
+    public func parce96West() -> [Direction]
+    {
+        // create the semaphore get it background value 0 and start it
+        let semaphore = DispatchSemaphore(value: 0)
+        var directionsResult = [Direction]()
+        let url = URL(string: URLConstants.Domains.ttc96West)
+        let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error ?? "Unknown error")
+                return
+            }
+            let parser = XMLParser(data: data)
+            parser.delegate = self
+            if parser.parse() {
+                directionsResult = self.directions
+                print(self.results.count )
+                // we signal the semaphore to stop waiting
+                semaphore.signal()
+            }
+        }
+        task.resume()
+        //when we signal we get semaphore to stop waiting and proceed to next line
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        return directionsResult;
+    }
+    public func parce36East() -> [Direction]
+    {
+        // create the semaphore get it background value 0 and start it
+        let semaphore = DispatchSemaphore(value: 0)
+        var directionsResult = [Direction]()
+        let url = URL(string: URLConstants.Domains.ttc36East)
+        let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error ?? "Unknown error")
+                return
+            }
+            let parser = XMLParser(data: data)
+            parser.delegate = self
+            if parser.parse() {
+                directionsResult = self.directions
+                print(self.results.count )
+                // we signal the semaphore to stop waiting
+                semaphore.signal()
+            }
+        }
+        task.resume()
+        //when we signal we get semaphore to stop waiting and proceed to next line
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        return directionsResult;
+    }
+    public func parce36West() -> [Direction]
+    {
+        // create the semaphore get it background value 0 and start it
+        let semaphore = DispatchSemaphore(value: 0)
+        var directionsResult = [Direction]()
+        let url = URL(string: URLConstants.Domains.ttc36West)
+        let task = URLSession.shared.dataTask(with: url! as URL) { data, response, error in
+            guard let data = data, error == nil else {
+                print(error ?? "Unknown error")
+                return
+            }
+            let parser = XMLParser(data: data)
+            parser.delegate = self
+            if parser.parse() {
+                directionsResult = self.directions
+                print(self.results.count )
+                // we signal the semaphore to stop waiting
+                semaphore.signal()
+            }
+        }
+        task.resume()
+        //when we signal we get semaphore to stop waiting and proceed to next line
+        _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+        return directionsResult;
+    }
     //*****************************************************************
     // XMLParcerDelegate: functions to parce the returned results in result array for dictionalries.
     //*****************************************************************
@@ -154,15 +193,8 @@ class BusParcer:  NSObject, XMLParserDelegate {
     func parserDidStartDocument(_ parser: XMLParser) {
         results = []
     }
-    // get the current value per node
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-        //        if dictionaryKeys.contains(elementName) {
-        //            currentValue = ""
-        //        }
-        //        if dictionaryKeysTrasport.contains(elementName)
-        //        {
-        //            currentValue = ""
-        //        }
+      
         switch elementName {
         case "direction":
             direction = Direction()
@@ -171,7 +203,6 @@ class BusParcer:  NSObject, XMLParserDelegate {
             break;
         case "prediction":
             prediction = Prediciton()
-            
             prediction.setTime(time: attributeDict["epochTime"]!)
             prediction.affectedByLayover =  (attributeDict["affectedByLayover"] ?? "false").boolValueFromString()
             prediction.isDeparture = (attributeDict["isDeparture"]?.boolValueFromString())!
@@ -180,10 +211,7 @@ class BusParcer:  NSObject, XMLParserDelegate {
             prediction.minutes = attributeDict["minutes"]!
             prediction.tripTag = attributeDict["tripTag"]!
             prediction.vehicle = attributeDict["vehicle"]!
-            
             direction.predictions.append(prediction)
-            
-            
             break;
         default:
             break;
@@ -199,18 +227,6 @@ class BusParcer:  NSObject, XMLParserDelegate {
    
         }
     }
-    
-    //    func parser(parse, element, namespace, name, attributes) {
-    //        // check for your element and get attributes.
-    //        // ..
-    //    }
-    
-    // found characters in fact contains the real value of the nod
-    
-    //    func parser(_ parser: XMLParser, foundCharacters string: String) {
-    //        currentValue? += string
-    //    }
-    // end element is the func hit last where we need to append results to result array.
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
 
         switch elementName {

@@ -11,10 +11,10 @@ import Foundation
 
 class Direction {
     var directionName:String
-    var predictions:[Prediciton];
+    var predictions:[Prediciton] = []
     init() {
-        self.directionName = "N/A";
-        self.predictions = [Prediciton()]
+        self.directionName = "N/A"
+//        self.predictions = [Prediciton]
         
     }
     init(directionName:String) {

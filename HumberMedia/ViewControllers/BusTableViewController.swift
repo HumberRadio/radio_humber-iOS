@@ -41,10 +41,39 @@ class BusTableViewController: UITableViewController {
 
     private func setup() {
         var ttc927South = BusParcer().parce927South()
+        if ttc927South.count > 1 {ttc927South.remove(at: 0) }
+        else {print("error parcing ttc responce")}
+        
+        var ttc927North = BusParcer().parce927North()
+        if ttc927North.count > 1 {ttc927North.remove(at: 0) }
+        else {print("error parcing ttc responce")}
+        
+        var ttc96East = BusParcer().parce96East()
+        if ttc96East.count > 1 {ttc96East.remove(at: 0) }
+        else {print("error parcing ttc responce")}
+        
+        var ttc96West = BusParcer().parce96West()
+        if ttc96West.count > 1 {ttc96West.remove(at: 0) }
+        else {print("error parcing ttc responce")}
+        
+        var ttc36East = BusParcer().parce36East()
+        if ttc36East.count > 1 {ttc36East.remove(at: 0) }
+        else {print("error parcing ttc responce")}
+        
+        var ttc36West = BusParcer().parce36West()
+        if ttc36West.count > 1 {ttc36West.remove(at: 0) }
+        else {print("error parcing ttc responce")}
+        
+        
+        
+        
+        
+        
         cellHeights = Array(repeating: Const.closeCellHeight, count: Const.rowsCount )
         tableView.estimatedRowHeight = Const.closeCellHeight
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "button_volume"))
+        
+     //   tableView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "button_volume"))
         if #available(iOS 10.0, *) {
             tableView.refreshControl = UIRefreshControl()
             tableView.refreshControl?.addTarget(self, action: #selector(refreshHandler), for: .valueChanged)

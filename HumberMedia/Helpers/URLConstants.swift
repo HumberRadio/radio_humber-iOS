@@ -18,5 +18,10 @@ struct URLConstants {
         //for ttc
         static let ttc927South = "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=ttc&stopId=15404"
         static let ttc927North = "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=ttc&stopId=15406"
+        static let ttc96East = "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=ttc&stopId=15405"
+        static let ttc96West = "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=ttc&stopId=15403"
+        static let ttc36East = "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=ttc&stopId=11049"
+        static let ttc36West = "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=ttc&stopId=7861"
+    
     }
 } 
