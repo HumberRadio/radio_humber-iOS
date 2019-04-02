@@ -33,8 +33,11 @@ target 'HumberMedia' do
   pod 'SDWebImage'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
-  
   pod 'Firebase/Auth'
+  
+  
+  pod 'SwiftGifOrigin', '~> 1.7.0'
+
 
 
   pod 'FoldingCell'

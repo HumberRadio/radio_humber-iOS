@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T3V-oG-sMF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZPf-ZM-TzL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1481,6 +1481,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQQ-nl-a3l">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ndq-94-sHT">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="497"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYc-FC-jYW">
+                                        <rect key="frame" x="0.0" y="150" width="375" height="397"/>
+                                        <connections>
+                                            <action selector="tryAgain:" destination="ZPf-ZM-TzL" eventType="touchUpInside" id="h47-0w-XpL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94123727083206177" green="0.95689457654953003" blue="0.96902996301651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="nYc-FC-jYW" secondAttribute="bottom" constant="100" id="1vT-2o-YFB"/>
+                                    <constraint firstItem="nYc-FC-jYW" firstAttribute="leading" secondItem="bQQ-nl-a3l" secondAttribute="leading" id="4u3-rM-1ea"/>
+                                    <constraint firstItem="nYc-FC-jYW" firstAttribute="top" secondItem="bQQ-nl-a3l" secondAttribute="top" constant="150" id="BDp-IR-ZJB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ndq-94-sHT" secondAttribute="bottom" constant="50" id="BcE-j2-zFJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ndq-94-sHT" secondAttribute="trailing" id="Hlk-lG-iy7"/>
+                                    <constraint firstAttribute="trailing" secondItem="nYc-FC-jYW" secondAttribute="trailing" id="PnI-zy-0VC"/>
+                                    <constraint firstItem="Ndq-94-sHT" firstAttribute="leading" secondItem="bQQ-nl-a3l" secondAttribute="leading" id="agE-uB-5no"/>
+                                    <constraint firstItem="Ndq-94-sHT" firstAttribute="top" secondItem="bQQ-nl-a3l" secondAttribute="top" constant="100" id="hnW-Ej-PPm"/>
+                                </constraints>
+                            </view>
                             <navigationBar contentMode="scaleToFill" backIndicatorImage="button_compass.png" translatesAutoresizingMaskIntoConstraints="NO" id="smG-F0-FWF">
                                 <rect key="frame" x="0.0" y="20" width="375" height="70"/>
                                 <constraints>
@@ -1493,15 +1518,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bQQ-nl-a3l" firstAttribute="leading" secondItem="Eub-lG-4SV" secondAttribute="leading" id="H0C-Yg-Q9L"/>
                             <constraint firstItem="smG-F0-FWF" firstAttribute="trailing" secondItem="Eub-lG-4SV" secondAttribute="trailing" id="JZ0-o0-WGG"/>
+                            <constraint firstItem="bQQ-nl-a3l" firstAttribute="top" secondItem="smG-F0-FWF" secondAttribute="top" id="W7b-RO-1Or"/>
                             <constraint firstItem="smG-F0-FWF" firstAttribute="leading" secondItem="Eub-lG-4SV" secondAttribute="leading" id="bY3-3a-YoZ"/>
                             <constraint firstItem="smG-F0-FWF" firstAttribute="top" secondItem="Eub-lG-4SV" secondAttribute="top" id="f3c-7L-MV4"/>
+                            <constraint firstItem="Eub-lG-4SV" firstAttribute="trailing" secondItem="bQQ-nl-a3l" secondAttribute="trailing" id="uMe-mz-qfA"/>
+                            <constraint firstItem="Eub-lG-4SV" firstAttribute="bottom" secondItem="bQQ-nl-a3l" secondAttribute="bottom" id="w76-NL-jSQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Eub-lG-4SV"/>
                     </view>
                     <connections>
-                        <outlet property="topNavigationBar" destination="smG-F0-FWF" id="tbK-Ta-eVC"/>
-                        <outlet property="topNavigationItem" destination="xjO-N0-u4G" id="Rs8-9V-DN4"/>
+                        <outlet property="imageView" destination="Ndq-94-sHT" id="HrB-B5-Hvw"/>
+                        <outlet property="topNavigationBar" destination="smG-F0-FWF" id="A26-oQ-DOR"/>
+                        <outlet property="topNavigationItem" destination="xjO-N0-u4G" id="PrP-A6-5D1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQa-Bi-8z9" userLabel="First Responder" sceneMemberID="firstResponder"/>

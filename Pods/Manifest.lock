@@ -145,6 +145,7 @@ PODS:
   - SDWebImage (4.4.5):
     - SDWebImage/Core (= 4.4.5)
   - SDWebImage/Core (4.4.5)
+  - SwiftGifOrigin (1.7.0)
   - SwiftHTTP (3.0.1)
   - XLPagerTabStrip (8.1.1)
 
@@ -169,6 +170,7 @@ DEPENDENCIES:
   - "MaterialComponents/Tabs+ColorThemer"
   - RZTransitions
   - SDWebImage
+  - SwiftGifOrigin (~> 1.7.0)
   - SwiftHTTP
   - XLPagerTabStrip (~> 8.1)
 
@@ -199,6 +201,7 @@ SPEC REPOS:
     - nanopb
     - RZTransitions
     - SDWebImage
+    - SwiftGifOrigin
     - SwiftHTTP
     - XLPagerTabStrip
 
@@ -228,9 +231,10 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   RZTransitions: 0e0013fda6989ee84dc5e44dca79fd539e1a975a
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftHTTP: e94f1aa8cde58637dcc0100f6349de31a3337fde
   XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
 
-PODFILE CHECKSUM: 3d410f6f1b324679eed2d58854ff0f46b082c76f
+PODFILE CHECKSUM: d2957e907eb28baf3b9e169eda7970aad0f1997e
 
 COCOAPODS: 1.5.3

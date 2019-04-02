@@ -21,6 +21,7 @@
 		711984E8222DF42500CFF621 /* CampusNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711984E7222DF42500CFF621 /* CampusNavigationViewController.swift */; };
 		711984EA222DFB6500CFF621 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711984E9222DFB6500CFF621 /* Campus.swift */; };
 		711AD3922252EE2A005F6548 /* NoConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711AD3912252EE2A005F6548 /* NoConnectionViewController.swift */; };
+		711AD3942252F5B0005F6548 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711AD3932252F5B0005F6548 /* Reachability.swift */; };
 		714A7D4D220CC117005A0001 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D4C220CC117005A0001 /* Helper.swift */; };
 		714A7D59220E0DA3005A0001 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D4F220E0DA1005A0001 /* OpenSans-LightItalic.ttf */; };
 		714A7D5A220E0DA3005A0001 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D50220E0DA1005A0001 /* OpenSans-SemiBoldItalic.ttf */; };
@@ -77,6 +78,7 @@
 		711984E7222DF42500CFF621 /* CampusNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusNavigationViewController.swift; sourceTree = "<group>"; };
 		711984E9222DFB6500CFF621 /* Campus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
 		711AD3912252EE2A005F6548 /* NoConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionViewController.swift; sourceTree = "<group>"; };
+		711AD3932252F5B0005F6548 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		714A7D4C220CC117005A0001 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		714A7D4F220E0DA1005A0001 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		714A7D50220E0DA1005A0001 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				717C7A67224998E000F4FAD6 /* Prediction.swift */,
 				717C7A6922499F7800F4FAD6 /* Direction.swift */,
 				717C7A6B224A559400F4FAD6 /* BusParcer.swift */,
+				711AD3932252F5B0005F6548 /* Reachability.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/RZTransitions/RZTransitions.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftHTTP/SwiftHTTP.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 				"${BUILT_PRODUCTS_DIR}/anim/anim.framework",
@@ -426,6 +430,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RZTransitions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHTTP.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/anim.framework",
@@ -472,6 +477,7 @@
 				71F1F8DA22418B6F00986B62 /* BusTableViewController.swift in Sources */,
 				7118A8DB2236EC26002140A5 /* SongTableViewCell.swift in Sources */,
 				7118A8E322387868002140A5 /* UIColors.swift in Sources */,
+				711AD3942252F5B0005F6548 /* Reachability.swift in Sources */,
 				71F1F8DD224193C600986B62 /* Bus.swift in Sources */,
 				71CE9E9422221252002DA0FA /* HumberRadioPlayer.swift in Sources */,
 				710459A821FB99F100677A19 /* RadioViewController.swift in Sources */,
