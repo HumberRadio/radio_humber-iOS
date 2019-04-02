@@ -20,6 +20,7 @@
 		7118A8E322387868002140A5 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7118A8E222387868002140A5 /* UIColors.swift */; };
 		711984E8222DF42500CFF621 /* CampusNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711984E7222DF42500CFF621 /* CampusNavigationViewController.swift */; };
 		711984EA222DFB6500CFF621 /* Campus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711984E9222DFB6500CFF621 /* Campus.swift */; };
+		711AD3922252EE2A005F6548 /* NoConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711AD3912252EE2A005F6548 /* NoConnectionViewController.swift */; };
 		714A7D4D220CC117005A0001 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714A7D4C220CC117005A0001 /* Helper.swift */; };
 		714A7D59220E0DA3005A0001 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D4F220E0DA1005A0001 /* OpenSans-LightItalic.ttf */; };
 		714A7D5A220E0DA3005A0001 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 714A7D50220E0DA1005A0001 /* OpenSans-SemiBoldItalic.ttf */; };
@@ -75,6 +76,7 @@
 		7118A8E222387868002140A5 /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		711984E7222DF42500CFF621 /* CampusNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusNavigationViewController.swift; sourceTree = "<group>"; };
 		711984E9222DFB6500CFF621 /* Campus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus.swift; sourceTree = "<group>"; };
+		711AD3912252EE2A005F6548 /* NoConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionViewController.swift; sourceTree = "<group>"; };
 		714A7D4C220CC117005A0001 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		714A7D4F220E0DA1005A0001 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		714A7D50220E0DA1005A0001 /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				71F1F8C922403A3200986B62 /* WebMapsViewController.swift */,
 				71F1F8CB22404D0500986B62 /* InteractiveMapViewController.swift */,
 				71F1F8D42241719600986B62 /* TransportationViewController.swift */,
+				711AD3912252EE2A005F6548 /* NoConnectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711AD3922252EE2A005F6548 /* NoConnectionViewController.swift in Sources */,
 				71F1F8CC22404D0500986B62 /* InteractiveMapViewController.swift in Sources */,
 				714A7D66220E765B005A0001 /* TVViewController.swift in Sources */,
 				71F1F8D7224180B400986B62 /* TransportationTableViewCell.swift in Sources */,

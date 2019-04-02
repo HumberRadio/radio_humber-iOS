@@ -122,7 +122,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "575859643.954101"
+                  timestampString = "575861540.185042"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "139"
@@ -137,7 +137,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "575859643.956529"
+                  timestampString = "575861540.187806"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "141"
@@ -186,7 +186,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "575859643.970901"
+                  timestampString = "575861540.204091"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -201,7 +201,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/Helpers/Helper.swift"
-                  timestampString = "575859643.973231"
+                  timestampString = "575861540.206856"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -282,7 +282,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/ViewControllers/NavigationViewController.swift"
-                  timestampString = "575859643.9967901"
+                  timestampString = "575861540.228577"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "646"
@@ -297,7 +297,7 @@
                   moduleName = "HumberMedia"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/aleksandarjanakievski/Desktop/capstone/radiohumber_ios/HumberMedia/ViewControllers/NavigationViewController.swift"
-                  timestampString = "575859643.999929"
+                  timestampString = "575861540.231498"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "646"
@@ -320,22 +320,6 @@
             startingLineNumber = "613"
             endingLineNumber = "613"
             landmarkName = "likeTap(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HumberMedia/ViewControllers/BusTableViewController.swift"
-            timestampString = "575859643.54995"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "setup()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -433,54 +417,6 @@
             endingLineNumber = "112"
             landmarkName = "checkForPermissionAudio()"
             landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HumberMedia/ViewControllers/BusTableViewController.swift"
-            timestampString = "575859643.550814"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "tableView(_:willDisplay:forRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HumberMedia/ViewControllers/BusTableViewController.swift"
-            timestampString = "575859643.5510989"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "tableView(_:willDisplay:forRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HumberMedia/ViewControllers/BusTableViewController.swift"
-            timestampString = "575859643.551352"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "tableView(_:willDisplay:forRowAt:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

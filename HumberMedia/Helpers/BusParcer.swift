@@ -56,13 +56,6 @@ class BusParcer:  NSObject, XMLParserDelegate {
         task.resume()
         //when we signal we get semaphore to stop waiting and proceed to next line
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
-        
-//        directionsResult = getTopPredictions(directions: directionsResult)
-        
-        
-        
-        
-        
         return directionsResult;
     }
     public func getTop3Busses(forDirection:[Direction], busDirection:String) -> Direction

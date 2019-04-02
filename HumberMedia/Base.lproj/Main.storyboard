@@ -597,7 +597,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6O-Hk-r5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-868" y="-1582.7586206896553"/>
+            <point key="canvasLocation" x="-810" y="-1889"/>
         </scene>
         <!--About Us View Controller-->
         <scene sceneID="Vq8-F1-tZ6">
@@ -1472,6 +1472,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DwX-WB-svt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--No Connection View Controller-->
+        <scene sceneID="Pap-bX-nNA">
+            <objects>
+                <viewController storyboardIdentifier="NoInternetID" id="ZPf-ZM-TzL" customClass="NoConnectionViewController" customModule="HumberMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fBl-Xe-4zb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" backIndicatorImage="button_compass.png" translatesAutoresizingMaskIntoConstraints="NO" id="smG-F0-FWF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ZUm-Hk-FqV"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="NO INTERNET CONNECTION" id="xjO-N0-u4G"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="smG-F0-FWF" firstAttribute="trailing" secondItem="Eub-lG-4SV" secondAttribute="trailing" id="JZ0-o0-WGG"/>
+                            <constraint firstItem="smG-F0-FWF" firstAttribute="leading" secondItem="Eub-lG-4SV" secondAttribute="leading" id="bY3-3a-YoZ"/>
+                            <constraint firstItem="smG-F0-FWF" firstAttribute="top" secondItem="Eub-lG-4SV" secondAttribute="top" id="f3c-7L-MV4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eub-lG-4SV"/>
+                    </view>
+                    <connections>
+                        <outlet property="topNavigationBar" destination="smG-F0-FWF" id="tbK-Ta-eVC"/>
+                        <outlet property="topNavigationItem" destination="xjO-N0-u4G" id="Rs8-9V-DN4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQa-Bi-8z9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1623" y="-2573"/>
         </scene>
     </scenes>
     <resources>
