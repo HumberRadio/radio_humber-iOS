@@ -89,8 +89,8 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     let items: [(icon: String, color: UIColor)] = [
         ("icon_home", UIColor.humberPurple),
         ("teamInfobutton", UIColor.humberLightBlue),
-//        ("notifications-btn", UIColor.humberNavy),
-        ("schedule_icon", UIColor.humberNavy),
+        ("notifications-btn", UIColor.humberNavy),
+//        ("schedule_icon", UIColor.humberNavy),
         ("settings-btn", UIColor.humberLightGreen),
         ("nearby-btn", UIColor.humberMagenta)]
 
@@ -467,18 +467,6 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         switch atIndex {
         case 0:
             print("this is Home")
-            break;
-        case 1:
-            print("this is People")
-            self.transitioningDelegate = RZTransitionsManager.shared()
-            let aboutUsViewController:AboutUsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AboutUsID") as! AboutUsViewController
-            let nextViewController = aboutUsViewController
-            nextViewController.transitioningDelegate = RZTransitionsManager.shared()
-            self.present(nextViewController, animated:true)
-            
-            break;
-        case 2:
-            print("this is bus")
             if Reachability.isConnectedToNetwork(){
                 print("Internet Connection Available!")
                 self.transitioningDelegate = RZTransitionsManager.shared()
@@ -494,6 +482,19 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
                 nextViewController.transitioningDelegate = RZTransitionsManager.shared()
                 self.present(nextViewController, animated:true)
             }
+            break;
+        case 1:
+            print("this is People")
+            self.transitioningDelegate = RZTransitionsManager.shared()
+            let aboutUsViewController:AboutUsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AboutUsID") as! AboutUsViewController
+            let nextViewController = aboutUsViewController
+            nextViewController.transitioningDelegate = RZTransitionsManager.shared()
+            self.present(nextViewController, animated:true)
+            
+            break;
+        case 2:
+            print("this is bus")
+          
             
             break;
         case 3:
