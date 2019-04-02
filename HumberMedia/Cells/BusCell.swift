@@ -15,14 +15,14 @@ class BusCell: FoldingCell {
     @IBOutlet var openNumberLabel: UILabel!
     
     //
-
-    var routeNumber: Int = 0 {
-        didSet {
-            // do all setting per cell here
-            closeNumberLabel.text = String(routeNumber)
-            openNumberLabel.text = String(routeNumber)
-        }
-    }
+    var routeNumber:String = ""
+//    var routeNumber: Int = 0 {
+//        didSet {
+//            // do all setting per cell here
+//            closeNumberLabel.text = String(routeNumber)
+//            openNumberLabel.text = String(routeNumber)
+//        }
+//    }
 
     override func awakeFromNib() {
         foregroundView.layer.cornerRadius = 10

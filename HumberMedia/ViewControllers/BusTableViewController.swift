@@ -26,6 +26,13 @@ import UIKit
 
 class BusTableViewController: UITableViewController {
 
+    var ttc927SouthBusses:Direction = Direction()
+    var ttc927NorthBusses:Direction = Direction()
+    var ttc96EastBusses:Direction = Direction()
+    var ttc96WestBusses:Direction = Direction()
+    var ttc36EastBusses:Direction = Direction()
+    var ttc36WestBusses:Direction = Direction()
+    
     enum Const {
         static let closeCellHeight: CGFloat = 179
         static let openCellHeight: CGFloat = 488
@@ -41,28 +48,29 @@ class BusTableViewController: UITableViewController {
 
     private func setup() {
         let ttc927South = BusParcer().parce927South()
-        if ttc927South.count > 1 { }
-        else {print("error parcing ttc responce")}
+        
+        if ttc927South.count > 1 {self.ttc927SouthBusses = BusParcer().getTop3Busses(forDirection: ttc927South, busDirection: "South 927")}
+        else {print("error parcing ttc responce South 927")}
         
         let ttc927North = BusParcer().parce927North()
-        if ttc927North.count > 1 {}
-        else {print("error parcing ttc responce")}
+        if ttc927North.count > 1 {self.ttc927NorthBusses = BusParcer().getTop3Busses(forDirection: ttc927North, busDirection: "North 927")}
+        else {print("error parcing ttc responce North 927")}
         
         let ttc96East = BusParcer().parce96East()
-        if ttc96East.count > 1 {}
-        else {print("error parcing ttc responce")}
+        if ttc96East.count > 1 {self.ttc96EastBusses = BusParcer().getTop3Busses(forDirection: ttc96East, busDirection: "East 96")}
+        else {print("error parcing ttc responce East 96")}
         
         let ttc96West = BusParcer().parce96West()
-        if ttc96West.count > 1 {}
-        else {print("error parcing ttc responce")}
+        if ttc96West.count > 1 {self.ttc96WestBusses = BusParcer().getTop3Busses(forDirection: ttc96West, busDirection: "West 96")}
+        else {print("error parcing ttc responce West 96")}
         
         let ttc36East = BusParcer().parce36East()
-        if ttc36East.count > 1 {}
-        else {print("error parcing ttc responce")}
+        if ttc36East.count > 1 {self.ttc36EastBusses = BusParcer().getTop3Busses(forDirection: ttc36East, busDirection: "East 36")}
+        else {print("error parcing ttc responce East 36")}
         
         let ttc36West = BusParcer().parce36West()
-        if ttc36West.count > 1 {}
-        else {print("error parcing ttc responce")}
+        if ttc36West.count > 1 {self.ttc36WestBusses = BusParcer().getTop3Busses(forDirection: ttc36West, busDirection: "West 36")}
+        else {print("error parcing ttc responce West 36")}
         
         
         
@@ -119,10 +127,23 @@ extension BusTableViewController {
 
 
         // get data
-        
+//        self.ttc927SouthBusses
         
         // set data
-        cell.routeNumber = indexPath.row
+        switch indexPath.row {
+        case 0:
+            cell.closeNumberLabel.text = self.ttc927SouthBusses.direction
+            break;
+        case 1:
+            cell.closeNumberLabel.text = self.ttc36EastBusses.direction
+            break;
+        case 2:
+            cell.closeNumberLabel.text = self.ttc96EastBusses.directionName
+            break;
+        default:
+            break;
+        }
+//        cell.routeNumber = self.ttc927SouthBusses.directionName
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

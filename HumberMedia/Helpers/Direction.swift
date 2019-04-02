@@ -24,9 +24,9 @@ class Direction {
         self.direction = directionName.components(separatedBy: " ").first ?? "South"
         self.predictions = [Prediciton()]
     }
-    init(directionName:String, direction:String, predictions:[Prediciton]) {
+    init(directionName:String, predictions:[Prediciton]) {
         self.directionName = directionName
-        self.direction = direction
+        self.direction = directionName.components(separatedBy: " ").first ?? "South"
         self.predictions = predictions
     }
     func setDirection(directionName:String)

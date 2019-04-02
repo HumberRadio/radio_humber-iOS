@@ -56,7 +56,7 @@ class BusParcer:  NSObject, XMLParserDelegate {
         task.resume()
         //when we signal we get semaphore to stop waiting and proceed to next line
         _ = semaphore.wait(timeout: DispatchTime.distantFuture)
-        var topPredictions = getTopPredictions(directions: directionsResult)
+        
 //        directionsResult = getTopPredictions(directions: directionsResult)
         
         
@@ -64,6 +64,13 @@ class BusParcer:  NSObject, XMLParserDelegate {
         
         
         return directionsResult;
+    }
+    public func getTop3Busses(forDirection:[Direction], busDirection:String) -> Direction
+    {
+        var topPredictions = getTopPredictions(directions: forDirection)
+        let directionResult:Direction = Direction.init(directionName: busDirection, predictions: topPredictions)
+        return directionResult
+        
     }
     
     public func parce927North() -> [Direction]
@@ -260,14 +267,35 @@ class BusParcer:  NSObject, XMLParserDelegate {
     {
         var topPredictions:[Prediciton] = [Prediciton]()
         var allPredictions:[Prediciton] = [Prediciton]()
+        var predictionResult:[Prediciton] = [Prediciton]()
         for direction in directions {
             for preditcion in direction.predictions
             {
                 allPredictions.append(preditcion)
             }
         }
-        topPredictions = allPredictions.sorted(by:  { $0.seconds < $1.seconds })
-        return topPredictions
+        // love siwft one liners :)
+        topPredictions = allPredictions.sorted(by: {Int($0.seconds)  ?? 0 < Int($1.seconds) ?? 0 })
+        for index in 0..<3
+        {
+            let isIndexValid = allPredictions.indices.contains(index)
+            var testTop:Prediciton = Prediciton()
+            if isIndexValid { testTop = allPredictions[index]}
+            predictionResult.append(testTop)
+        }
+        /*
+         for index in 0..<3
+         {
+         let isIndexValid = allObjects.indices.contains(index)
+         var yourObject:Class = Class()
+         if isIndexValid { yourObject = allObjects[index]}
+         resultArray.append(yourObject)
+         }
+         !!!! Code Published on stackOverflow
+         https://stackoverflow.com/a/55465002/1078845
+ */
+        
+        return predictionResult
     }
     
 }
