@@ -1028,32 +1028,32 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South - 927 Highway 27 Express towards Kipling Station." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="bEz-te-j7c" userLabel="busLineTop">
-                                                    <rect key="frame" x="150" y="33" width="400" height="16.5"/>
+                                                    <rect key="frame" x="185" y="33" width="365" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="North - 927 Highway 27 Express towards Steeles." textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="3we-JY-jl5" userLabel="busLineBot">
-                                                    <rect key="frame" x="150" y="70.5" width="400" height="16.5"/>
+                                                    <rect key="frame" x="185" y="70.5" width="365" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yj-H6-t66" userLabel="timeTop">
-                                                    <rect key="frame" x="90" y="30.5" width="40" height="22"/>
+                                                    <rect key="frame" x="90" y="30.5" width="75" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="FU7-D5-LKl"/>
+                                                        <constraint firstAttribute="width" constant="75" id="FU7-D5-LKl"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.26274509800000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1a-j1-gqC" userLabel="timeBot">
-                                                    <rect key="frame" x="90" y="66.5" width="40" height="25"/>
+                                                    <rect key="frame" x="90" y="68" width="75" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="VIP-vu-dJp"/>
+                                                        <constraint firstAttribute="width" constant="75" id="VIP-vu-dJp"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.26274509800000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1432,7 +1432,7 @@
                                                                 <constraint firstAttribute="width" constant="120" id="lps-Im-McE"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_train" translatesAutoresizingMaskIntoConstraints="NO" id="i2k-Bp-hAT">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_train" translatesAutoresizingMaskIntoConstraints="NO" id="i2k-Bp-hAT">
                                                             <rect key="frame" x="140" y="5" width="400" height="110"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="110" id="0S1-32-gIi"/>
@@ -1495,7 +1495,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="bottomTimeLabel" destination="0qd-br-VQk" id="vTK-fj-K8v"/>
+                                    <outlet property="bottomTimeLabel" destination="v1a-j1-gqC" id="8f6-1d-2DL"/>
                                     <outlet property="closeNumberLabel" destination="Hs6-eL-4nF" id="uB8-2Q-Dcv"/>
                                     <outlet property="containerView" destination="2h6-LK-Rp1" id="1TM-Vi-SpC"/>
                                     <outlet property="containerViewTop" destination="ull-UQ-OBV" id="7qz-Y1-Q2b"/>

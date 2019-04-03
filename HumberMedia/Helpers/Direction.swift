@@ -27,8 +27,8 @@ class Direction {
         self.predictions = [Prediciton()]
         self.number = "N/A"
     }
-    init(directionName:String, predictions:[Prediciton]) {
-        self.directionName = directionName
+    init(directionName:String, predictions:[Prediciton] , fullDirectionName:String) {
+        self.directionName = fullDirectionName
         self.direction = directionName.components(separatedBy: " ").first ?? "South"
         self.number = directionName.components(separatedBy: " ").last ?? "N/A"
         self.predictions = predictions

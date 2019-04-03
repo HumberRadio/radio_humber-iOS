@@ -135,13 +135,131 @@ extension BusTableViewController {
         // set data
         switch indexPath.row {
         case 0:
-            cell.closeNumberLabel.text = self.ttc927SouthBusses.number
+            if(!self.ttc927SouthBusses.predictions.isEmpty && !self.ttc927NorthBusses.predictions.isEmpty )
+            {
+                cell.closeNumberLabel.text = self.ttc927SouthBusses.number
+                cell.fullDirectionNameTopLabel.text = self.ttc927SouthBusses.directionName
+                cell.fullDirectionNameBottomLabel.text = self.ttc927NorthBusses.directionName
+                cell.topTimeLable.text = self.ttc927SouthBusses.predictions[0].minutes + " min"
+                cell.bottomTimeLabel.text = self.ttc927NorthBusses.predictions[0].minutes + " min"
+                
+                cell.openNumberLabel.text = self.ttc927SouthBusses.number
+                
+                cell.leftBusLabel1.text = self.ttc927SouthBusses.predictions[0].branch
+                cell.leftBusLabel2.text = self.ttc927SouthBusses.predictions[1].branch
+                cell.leftBusLabel3.text = self.ttc927SouthBusses.predictions[2].branch
+                
+                let (timeText1,timeColor1) = getPredictionTime(prediction: self.ttc927SouthBusses.predictions[0])
+                cell.leftTimeLabel1.text = timeText1
+                cell.leftTimeLabel1.textColor = timeColor1
+                let (timeText2,timeColor2) = getPredictionTime(prediction: self.ttc927SouthBusses.predictions[1])
+                cell.leftTimeLabel2.text = timeText2
+                cell.leftTimeLabel2.textColor = timeColor2
+                let (timeText3,timeColor3) = getPredictionTime(prediction: self.ttc927SouthBusses.predictions[2])
+                cell.leftTimeLabel3.text = timeText3
+                cell.leftTimeLabel3.textColor = timeColor3
+                
+                cell.rightBusLabel1.text = self.ttc927NorthBusses.predictions[0].branch
+                cell.rightBusLabel2.text = self.ttc927NorthBusses.predictions[1].branch
+                cell.rightBusLabel3.text = self.ttc927NorthBusses.predictions[2].branch
+                
+                let (rtimeText1,rtimeColor1) = getPredictionTime(prediction: self.ttc927NorthBusses.predictions[0])
+                cell.rightTimeLabel1.text = rtimeText1
+                cell.rightTimeLabel1.textColor = rtimeColor1
+                let (rtimeText2,rtimeColor2) = getPredictionTime(prediction: self.ttc927NorthBusses.predictions[1])
+                cell.rightTimeLabel2.text = rtimeText2
+                cell.rightTimeLabel2.textColor = rtimeColor2
+                let (rtimeText3,rtimeColor3) = getPredictionTime(prediction: self.ttc927NorthBusses.predictions[2])
+                cell.rightTimeLabel3.text = rtimeText3
+                cell.rightTimeLabel3.textColor = rtimeColor3
+                
+                
+            
+            }
+            
             break;
         case 1:
-            cell.closeNumberLabel.text = self.ttc36EastBusses.number
+            if(!self.ttc36EastBusses.predictions.isEmpty && !self.ttc36WestBusses.predictions.isEmpty )
+            {
+                cell.closeNumberLabel.text = self.ttc36EastBusses.number
+                cell.fullDirectionNameTopLabel.text = self.ttc36EastBusses.directionName
+                cell.fullDirectionNameBottomLabel.text = self.ttc36WestBusses.directionName
+                cell.topTimeLable.text = self.ttc36EastBusses.predictions[0].minutes + " min"
+                cell.bottomTimeLabel.text = self.ttc36WestBusses.predictions[0].minutes + " min"
+                
+                cell.openNumberLabel.text = self.ttc36EastBusses.number
+                
+                cell.leftBusLabel1.text = self.ttc36EastBusses.predictions[0].branch
+                cell.leftBusLabel2.text = self.ttc36EastBusses.predictions[1].branch
+                cell.leftBusLabel3.text = self.ttc36EastBusses.predictions[2].branch
+                
+                let (timeText1,timeColor1) = getPredictionTime(prediction: self.ttc36EastBusses.predictions[0])
+                cell.leftTimeLabel1.text = timeText1
+                cell.leftTimeLabel1.textColor = timeColor1
+                let (timeText2,timeColor2) = getPredictionTime(prediction: self.ttc36EastBusses.predictions[1])
+                cell.leftTimeLabel2.text = timeText2
+                cell.leftTimeLabel2.textColor = timeColor2
+                let (timeText3,timeColor3) = getPredictionTime(prediction: self.ttc36EastBusses.predictions[2])
+                cell.leftTimeLabel3.text = timeText3
+                cell.leftTimeLabel3.textColor = timeColor3
+                
+                cell.rightBusLabel1.text = self.ttc36WestBusses.predictions[0].branch
+                cell.rightBusLabel2.text = self.ttc36WestBusses.predictions[1].branch
+                cell.rightBusLabel3.text = self.ttc36WestBusses.predictions[2].branch
+                
+                let (rtimeText1,rtimeColor1) = getPredictionTime(prediction: self.ttc36WestBusses.predictions[0])
+                cell.rightTimeLabel1.text = rtimeText1
+                cell.rightTimeLabel1.textColor = rtimeColor1
+                let (rtimeText2,rtimeColor2) = getPredictionTime(prediction: self.ttc36WestBusses.predictions[1])
+                cell.rightTimeLabel2.text = rtimeText2
+                cell.rightTimeLabel2.textColor = rtimeColor2
+                let (rtimeText3,rtimeColor3) = getPredictionTime(prediction: self.ttc36WestBusses.predictions[2])
+                cell.rightTimeLabel3.text = rtimeText3
+                cell.rightTimeLabel3.textColor = rtimeColor3
+                
+            }
             break;
         case 2:
-            cell.closeNumberLabel.text = self.ttc96EastBusses.number
+            if(!self.ttc96EastBusses.predictions.isEmpty && !self.ttc96WestBusses.predictions.isEmpty )
+            {
+                cell.closeNumberLabel.text = self.ttc96EastBusses.number
+                cell.fullDirectionNameTopLabel.text = self.ttc96EastBusses.directionName
+                cell.fullDirectionNameBottomLabel.text = self.ttc96WestBusses.directionName
+                cell.topTimeLable.text = self.ttc96EastBusses.predictions[0].minutes + " min"
+                cell.bottomTimeLabel.text = self.ttc96WestBusses.predictions[0].minutes + " min"
+                
+                cell.openNumberLabel.text = self.ttc96EastBusses.number
+                
+                
+                cell.leftBusLabel1.text = self.ttc96EastBusses.predictions[0].branch
+                cell.leftBusLabel2.text = self.ttc96EastBusses.predictions[1].branch
+                cell.leftBusLabel3.text = self.ttc96EastBusses.predictions[2].branch
+                
+                let (timeText1,timeColor1) = getPredictionTime(prediction: self.ttc96EastBusses.predictions[0])
+                cell.leftTimeLabel1.text = timeText1
+                cell.leftTimeLabel1.textColor = timeColor1
+                let (timeText2,timeColor2) = getPredictionTime(prediction: self.ttc96EastBusses.predictions[1])
+                cell.leftTimeLabel2.text = timeText2
+                cell.leftTimeLabel2.textColor = timeColor2
+                let (timeText3,timeColor3) = getPredictionTime(prediction: self.ttc96EastBusses.predictions[2])
+                cell.leftTimeLabel3.text = timeText3
+                cell.leftTimeLabel3.textColor = timeColor3
+                
+                cell.rightBusLabel1.text = self.ttc96WestBusses.predictions[0].branch
+                cell.rightBusLabel2.text = self.ttc96WestBusses.predictions[1].branch
+                cell.rightBusLabel3.text = self.ttc96WestBusses.predictions[2].branch
+                
+                let (rtimeText1,rtimeColor1) = getPredictionTime(prediction: self.ttc96WestBusses.predictions[0])
+                cell.rightTimeLabel1.text = rtimeText1
+                cell.rightTimeLabel1.textColor = rtimeColor1
+                let (rtimeText2,rtimeColor2) = getPredictionTime(prediction: self.ttc96WestBusses.predictions[1])
+                cell.rightTimeLabel2.text = rtimeText2
+                cell.rightTimeLabel2.textColor = rtimeColor2
+                let (rtimeText3,rtimeColor3) = getPredictionTime(prediction: self.ttc96WestBusses.predictions[2])
+                cell.rightTimeLabel3.text = rtimeText3
+                cell.rightTimeLabel3.textColor = rtimeColor3
+                
+            }
             break;
         default:
             break;
@@ -185,5 +303,30 @@ extension BusTableViewController {
             tableView.beginUpdates()
             tableView.endUpdates()
         }, completion: nil)
+    }
+    func getPredictionTime(prediction:Prediciton) -> (String, UIColor){
+        var result:String = ""
+        var color:UIColor = UIColor.green
+        if prediction.minutes == "N/A"{
+            result = "Not Avaliable: " + prediction.minutes
+            color = UIColor.gray
+        }
+        else {
+            if prediction.isDeparture {
+                result = "Departured: " + prediction.minutes
+                color = UIColor.gray
+            }
+            else if prediction.affectedByLayover{
+                result = "Late: " + prediction.minutes
+                color = UIColor.red
+            }
+            else
+            {
+                result = "On Time: " + prediction.minutes
+                color = UIColor.green
+            }
+            
+        }
+        return (result,color)
     }
 }

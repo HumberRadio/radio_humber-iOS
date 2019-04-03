@@ -60,8 +60,8 @@ class BusParcer:  NSObject, XMLParserDelegate {
     }
     public func getTop3Busses(forDirection:[Direction], busDirection:String) -> Direction
     {
-        var topPredictions = getTopPredictions(directions: forDirection)
-        let directionResult:Direction = Direction.init(directionName: busDirection, predictions: topPredictions)
+        let topPredictions = getTopPredictions(directions: forDirection)
+        let directionResult:Direction = Direction.init(directionName: busDirection, predictions: topPredictions, fullDirectionName: forDirection[0].directionName)
         return directionResult
         
     }

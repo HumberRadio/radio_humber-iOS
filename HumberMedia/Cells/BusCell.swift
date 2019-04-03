@@ -18,7 +18,8 @@ class BusCell: FoldingCell {
     @IBOutlet weak var fullDirectionNameRightLabel: UILabel!
     @IBOutlet weak var fullDirectionNameBottomLabel: UILabel!
     @IBOutlet weak var topTimeLable: UILabel!
-    @IBOutlet weak var bottomTimeLabel: NSLayoutConstraint!
+ 
+    @IBOutlet weak var bottomTimeLabel: UILabel!
     @IBOutlet weak var directionLeftLabel: UILabel!
     @IBOutlet weak var directionRightLabel: UILabel!
     @IBOutlet weak var leftBusLabel1: UILabel!

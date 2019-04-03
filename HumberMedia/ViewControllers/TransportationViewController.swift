@@ -88,19 +88,7 @@ class TransportationViewController: UIViewController {
                 cell.selectionStyle = .none
                 return cell
 //
-//            } else {
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "TeamMemberCell", for: indexPath) as! TeamMemberTableViewCell
-//
-//                // alternate background color
-//                cell.backgroundColor = (indexPath.row % 2 == 0) ? UIColor.clear : UIColor.black.withAlphaComponent(0.1)
-//
-//                let teamMember = self.teamMemberList[indexPath.row]
-//                //bond ui view with data
-//                cell.configureTeamMemberCell(teamMember: teamMember)
-//
-//                return cell
-//            }
-            
+
         }
       
         
