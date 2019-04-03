@@ -18,6 +18,7 @@ class RadioViewController: UIViewController, WKNavigationDelegate, IndicatorInfo
          return IndicatorInfo(title: "RADIO");
     }
     @IBOutlet weak var weatherView: UIView!
+//    @IBOutlet weak var loadingImageView: UIImageView!
     
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var twitterWebView: WKWebView!
@@ -65,15 +66,20 @@ class RadioViewController: UIViewController, WKNavigationDelegate, IndicatorInfo
 //        tabBar.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
 //        tabBar.sizeToFit()
 //        view.addSubview(tabBar)
+//        loadingImageView.image = UIImage.gif(asset: "loading")
+//        loadingImageView.isHidden = false
+        
         //embade web view twitter
         twitterWebView.navigationDelegate = self;
         twitterWebView.loadHTMLString(webContentTwitter, baseURL: nil);
+//        twitterWebView.isHidden = true
 //
 //        instagramWebView.navigationDelegate = self;
 //        instagramWebView.loadHTMLString(webContentInstagram, baseURL: nil);
         
         weatherWebView.navigationDelegate = self;
         weatherWebView.loadHTMLString(webContentWeather, baseURL: nil);
+//        weatherWebView.isHidden = true
         
         
         //bottom view shadow
@@ -139,7 +145,7 @@ class RadioViewController: UIViewController, WKNavigationDelegate, IndicatorInfo
                 decisionHandler(.allow)
             }
         } else {
-            print("not a user click")
+            print("user click")
             decisionHandler(.allow)
         }
     }
@@ -152,6 +158,13 @@ class RadioViewController: UIViewController, WKNavigationDelegate, IndicatorInfo
         // Pass the selected object to the new view controller.
     }
     */
-
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+         print("Finished loading frame")
+//        loadingImageView.isHidden = true
+//        twitterWebView.isHidden = false
+//        weatherWebView.isHidden = false
+        
+    }
+    
 }
 
