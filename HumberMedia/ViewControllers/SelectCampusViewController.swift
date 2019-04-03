@@ -29,9 +29,9 @@ class SelectCampusViewController: UIViewController {
         let backUIBar = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(backTapped))
 //        let playUIBar = UIBarButtonItem(title: "Play", style: .plain, target: self, action: #selector(playTapped))
          topNavigationItem.leftBarButtonItem = backUIBar
-        var campustest = Campus(campusName: "test", longitute: -79.612143, latitute: 43.7344449 )
+        var campus = Campus(campusName: "default", longitute: -79.612143, latitute: 43.7344449 )
 //        campusList = campustest.loadDummyData() depreciated method
-        campusList = campustest.loadDummyDataEnabler()
+        campusList = campus.loadDummyDataEnabler()
         // Do any additional setup after loading the view.
     }
     @objc func backTapped()
@@ -60,22 +60,32 @@ class SelectCampusViewController: UIViewController {
 extension SelectCampusViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0
-        {
+         if !Reachability.isConnectedToNetwork(){
+            print("Internet Connection not Available!")
             self.transitioningDelegate = RZTransitionsManager.shared()
-            let mapsViewController:InteractiveMapViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "interactiveMapID") as! InteractiveMapViewController
-//            mapsViewController.campus = campusList[indexPath.row]
-            let nextViewController = mapsViewController
+            let noConnectionViewController:NoConnectionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoInternetID") as! NoConnectionViewController
+            let nextViewController = noConnectionViewController
             nextViewController.transitioningDelegate = RZTransitionsManager.shared()
             self.present(nextViewController, animated:true)
         }
-        else {
-        self.transitioningDelegate = RZTransitionsManager.shared()
-        let mapsViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
-        mapsViewController.campus = campusList[indexPath.row]
-        let nextViewController = mapsViewController
-        nextViewController.transitioningDelegate = RZTransitionsManager.shared()
-        self.present(nextViewController, animated:true)
+         else{
+            if indexPath.row == 0
+            {
+                self.transitioningDelegate = RZTransitionsManager.shared()
+                let mapsViewController:InteractiveMapViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "interactiveMapID") as! InteractiveMapViewController
+//            mapsViewController.campus = campusList[indexPath.row]
+                let nextViewController = mapsViewController
+                nextViewController.transitioningDelegate = RZTransitionsManager.shared()
+                self.present(nextViewController, animated:true)
+            }
+            else {
+                self.transitioningDelegate = RZTransitionsManager.shared()
+                let mapsViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
+                mapsViewController.campus = campusList[indexPath.row]
+                let nextViewController = mapsViewController
+                nextViewController.transitioningDelegate = RZTransitionsManager.shared()
+                self.present(nextViewController, animated:true)
+            }
         }
     }
 }

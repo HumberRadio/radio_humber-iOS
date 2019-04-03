@@ -505,17 +505,17 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             
             break;
         case 2:
-            print("this is bus")
+            print("this is alarm")
           
             
             break;
         case 3:
             print("this is settings")
-            self.transitioningDelegate = RZTransitionsManager.shared()
-            let mapsViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
-            let nextViewController = mapsViewController
-            nextViewController.transitioningDelegate = RZTransitionsManager.shared()
-            self.present(nextViewController, animated:true)
+//            self.transitioningDelegate = RZTransitionsManager.shared()
+//            let mapsViewController:CampusNavigationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CampusNavigationID") as! CampusNavigationViewController
+//            let nextViewController = mapsViewController
+//            nextViewController.transitioningDelegate = RZTransitionsManager.shared()
+//            self.present(nextViewController, animated:true)
             break;
         case 4:
             print("this is Maps ")
@@ -525,7 +525,6 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             nextViewController.transitioningDelegate = RZTransitionsManager.shared()
             self.present(nextViewController, animated:true)
             break;
-        
         default:
             print("this is default")
             break;
