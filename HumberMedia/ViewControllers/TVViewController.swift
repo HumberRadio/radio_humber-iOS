@@ -10,6 +10,7 @@ import UIKit
 import XLPagerTabStrip
 
 class TVViewController: UIViewController, IndicatorInfoProvider  {
+    @IBOutlet weak var imageView: UIImageView!
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
 
         return IndicatorInfo(title: "TV");
@@ -18,7 +19,7 @@ class TVViewController: UIViewController, IndicatorInfoProvider  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageView.image = UIImage.gif(asset: "construction")
         // Do any additional setup after loading the view.
     }
     

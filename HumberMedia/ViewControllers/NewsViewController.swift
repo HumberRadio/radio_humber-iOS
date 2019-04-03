@@ -10,13 +10,14 @@ import UIKit
 import XLPagerTabStrip
 
 class NewsViewController: UIViewController, IndicatorInfoProvider {
+    @IBOutlet weak var imageView: UIImageView!
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         
         return IndicatorInfo(title: "NEWS");
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imageView.image = UIImage.gif(asset: "construction2")
         // Do any additional setup after loading the view.
     }
     
