@@ -246,18 +246,20 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     private func prepareUI()
     {
+        
         //disable like until  radio is played
         likebutton.isUserInteractionEnabled = false;
-        
-        
         //cutsom trasition - butble from center
         RZTransitionsManager.shared().defaultPresentDismissAnimationController = RZCirclePushAnimationController()
         RZTransitionsManager.shared().defaultPushPopAnimationController = RZCirclePushAnimationController()
-    
+      
         //button style
         settings.style.buttonBarBackgroundColor = UIColor.clear;
-        settings.style.buttonBarItemBackgroundColor  = UIColor.clear;
-        settings.style.selectedBarBackgroundColor = UIColor.black
+        settings.style.buttonBarItemBackgroundColor  = UIColor.black;
+        settings.style.selectedBarBackgroundColor = UIColor.indicatorColor
+        
+        settings.style.selectedBarVerticalAlignment = .bottom
+        
         // buttonBar minimumInteritemSpacing value, note that button bar extends from UICollectionView
         settings.style.buttonBarMinimumInteritemSpacing = 5
         // buttonBar minimumLineSpacing value
@@ -267,15 +269,16 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         // buttonBar flow layout right content inset value
         settings.style.buttonBarRightContentInset = 2
         // selected bar view is created programmatically so it's important to set up the following 2 properties properly
-        settings.style.selectedBarHeight = 5
+        settings.style.selectedBarHeight = 3.5
         // each buttonBar item is a UICollectionView cell of type ButtonBarViewCell
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 18)
         // helps to determine the cell width, it represent the space before and after the title label
         settings.style.buttonBarItemLeftRightMargin = 8
         //        settings.style.buttonBarItemTitleColor = .white
-        settings.style.buttonBarItemTitleColor = UIColor.red;
+        settings.style.buttonBarItemTitleColor = UIColor.white;
         // in case the barView items do not fill the screen width this property stretch the cells to fill the screen
         settings.style.buttonBarItemsShouldFillAvailiableWidth = true
+//        self.headerView.tintColor = UIColor.white
         changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             //            oldCell?.label.textColor = .black
@@ -288,20 +291,28 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
                 self?.headerImageView.image = UIImage(named: "logo_radio_humber")
                 break;
             case "TV":
-                self?.headerView.backgroundColor = UIColor.humberPurple;
-                oldCell?.label.textColor = .black
-                newCell?.label.textColor = .black
-                self?.headerImageView.image = UIImage(named: "logo_humber_hawks")
+                self?.headerView.backgroundColor = .black;
+                oldCell?.label.textColor = .white
+                newCell?.label.textColor = .white
+                self?.headerImageView.image = UIImage(named: "logo_radio_humber")
+//                self?.headerView.backgroundColor = UIColor.humberPurple;
+//                oldCell?.label.textColor = .black
+//                newCell?.label.textColor = .black
+//                self?.headerImageView.image = UIImage(named: "logo_humber_hawks")
                 //                self?.settings.style.buttonBarItemTitleColor = .black
                 //                self?.settings.style.buttonBarBackgroundColor = .white;
                 //                self?.settings.style.buttonBarItemBackgroundColor  = .gray
                 //                self?.settings.style.selectedBarBackgroundColor = UIColor.white
                 break;
             case "NEWS":
-                self?.headerView.backgroundColor = .white;
-                oldCell?.label.textColor = .black
-                newCell?.label.textColor = .black
-                self?.headerImageView.image = UIImage(named: "logo_etc")
+                self?.headerView.backgroundColor = .black;
+                oldCell?.label.textColor = .white
+                newCell?.label.textColor = .white
+                self?.headerImageView.image = UIImage(named: "logo_radio_humber")
+//                self?.headerView.backgroundColor = .white;
+//                oldCell?.label.textColor = .black
+//                newCell?.label.textColor = .black
+//                self?.headerImageView.image = UIImage(named: "logo_etc")
                 //                self?.settings.style.buttonBarItemTitleColor = .black
                 //                self?.settings.style.buttonBarBackgroundColor = .blue;
                 //                self?.settings.style.buttonBarItemBackgroundColor  = .gray

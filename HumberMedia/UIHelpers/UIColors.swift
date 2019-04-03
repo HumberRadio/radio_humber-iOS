@@ -11,6 +11,10 @@ extension UIColor {
     static var humberLightBlue: UIColor {
         return color(0, green: 161, blue: 223, alpha: 1.0)
     }
+    static var indicatorColor: UIColor
+    {
+        return color(243, green: 243, blue: 241, alpha: 0.3)
+    }
     static var humberLightGreen: UIColor {
         return color(179, green: 211, blue: 53, alpha: 1.0)
     }
