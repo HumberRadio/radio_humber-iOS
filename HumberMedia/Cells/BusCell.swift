@@ -13,6 +13,14 @@ class BusCell: FoldingCell {
 
     @IBOutlet var closeNumberLabel: UILabel!
     @IBOutlet var openNumberLabel: UILabel!
+    @IBOutlet weak var fullDirectionNameTopLabel: UILabel!
+    @IBOutlet weak var fullDirectionNameLeftLabel: UILabel!
+    @IBOutlet weak var fullDirectionNameRightLabel: UILabel!
+    @IBOutlet weak var fullDirectionNameBottomLabel: UILabel!
+    @IBOutlet weak var topTimeLable: UILabel!
+    @IBOutlet weak var bottomTimeLabel: NSLayoutConstraint!
+    @IBOutlet weak var directionLeftLabel: UILabel!
+    @IBOutlet weak var directionRightLabel: UILabel!
     
     //
     var routeNumber:String = ""
