@@ -1082,7 +1082,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2h6-LK-Rp1" userLabel="Container">
-                                            <rect key="frame" x="20" y="120" width="560" height="360"/>
+                                            <rect key="frame" x="20" y="120" width="560" height="430"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE8-X8-qN5" userLabel="FirstContainerView">
                                                     <rect key="frame" x="0.0" y="0.0" width="560" height="100"/>
@@ -1416,44 +1416,39 @@
                                                     </constraints>
                                                 </view>
                                                 <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUt-BZ-xPy" userLabel="BottomContainerView" customClass="RotatedView" customModule="FoldingCell">
-                                                    <rect key="frame" x="0.0" y="310" width="560" height="50"/>
+                                                    <rect key="frame" x="0.0" y="310" width="560" height="120"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mb1-8h-jEs" userLabel="line">
-                                                            <rect key="frame" x="0.0" y="0.0" width="560" height="10"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ttc_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hx5-ft-TS2">
+                                                            <rect key="frame" x="10" y="0.0" width="120" height="50"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="10" id="r0J-Kh-8l5"/>
+                                                                <constraint firstAttribute="width" constant="120" id="tWQ-yf-PQp"/>
+                                                                <constraint firstAttribute="height" constant="50" id="wRB-c3-fUh"/>
                                                             </constraints>
-                                                        </view>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga2-k7-fuy">
-                                                            <rect key="frame" x="22" y="-8" width="516" height="41"/>
-                                                            <color key="backgroundColor" red="0.99607843139999996" green="0.74509803919999995" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="we_humber_logo" translatesAutoresizingMaskIntoConstraints="NO" id="qhy-7Q-j7W">
+                                                            <rect key="frame" x="10" y="70" width="120" height="50"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="41" id="odw-mu-a63"/>
+                                                                <constraint firstAttribute="height" constant="50" id="3X0-hB-DpY"/>
+                                                                <constraint firstAttribute="width" constant="120" id="lps-Im-McE"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="18"/>
-                                                            <state key="normal" title="REQUEST">
-                                                                <color key="titleColor" red="0.27058823529999998" green="0.2156862745" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="10"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                            <connections>
-                                                                <action selector="buttonHandler:" destination="GU3-kn-g2J" eventType="touchUpInside" id="3YA-f6-tAa"/>
-                                                            </connections>
-                                                        </button>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_train" translatesAutoresizingMaskIntoConstraints="NO" id="i2k-Bp-hAT">
+                                                            <rect key="frame" x="140" y="5" width="400" height="110"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="110" id="0S1-32-gIi"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="ga2-k7-fuy" firstAttribute="leading" secondItem="iUt-BZ-xPy" secondAttribute="leading" constant="22" id="9HT-DT-xDO"/>
-                                                        <constraint firstItem="mb1-8h-jEs" firstAttribute="top" secondItem="iUt-BZ-xPy" secondAttribute="top" id="flu-e3-5su"/>
-                                                        <constraint firstAttribute="height" constant="50" id="gqs-Rg-DYQ"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ga2-k7-fuy" secondAttribute="trailing" constant="22" id="hgS-i5-8er"/>
-                                                        <constraint firstAttribute="trailing" secondItem="mb1-8h-jEs" secondAttribute="trailing" id="idD-br-b5h"/>
-                                                        <constraint firstItem="ga2-k7-fuy" firstAttribute="centerY" secondItem="iUt-BZ-xPy" secondAttribute="centerY" constant="-12.5" id="nz2-cI-E5f"/>
-                                                        <constraint firstItem="mb1-8h-jEs" firstAttribute="leading" secondItem="iUt-BZ-xPy" secondAttribute="leading" id="uvk-x4-6gd"/>
+                                                        <constraint firstItem="hx5-ft-TS2" firstAttribute="top" secondItem="iUt-BZ-xPy" secondAttribute="top" id="Ll3-PT-RyA"/>
+                                                        <constraint firstItem="i2k-Bp-hAT" firstAttribute="leading" secondItem="hx5-ft-TS2" secondAttribute="trailing" constant="10" id="QXJ-cq-O8X"/>
+                                                        <constraint firstAttribute="trailing" secondItem="i2k-Bp-hAT" secondAttribute="trailing" constant="20" id="YMg-2e-1zY"/>
+                                                        <constraint firstItem="i2k-Bp-hAT" firstAttribute="centerY" secondItem="iUt-BZ-xPy" secondAttribute="centerY" id="ekp-hC-mbt"/>
+                                                        <constraint firstAttribute="height" constant="120" id="gqs-Rg-DYQ"/>
+                                                        <constraint firstItem="hx5-ft-TS2" firstAttribute="leading" secondItem="iUt-BZ-xPy" secondAttribute="leading" constant="10" id="nws-Ba-2pN"/>
+                                                        <constraint firstItem="qhy-7Q-j7W" firstAttribute="leading" secondItem="iUt-BZ-xPy" secondAttribute="leading" constant="10" id="uXx-fE-a5W"/>
+                                                        <constraint firstAttribute="bottom" secondItem="qhy-7Q-j7W" secondAttribute="bottom" id="z4J-2Z-hT9"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1465,7 +1460,7 @@
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="FE8-X8-qN5" firstAttribute="top" secondItem="2h6-LK-Rp1" secondAttribute="top" id="2xO-oA-E26"/>
-                                                <constraint firstAttribute="height" constant="360" id="5iQ-gE-xO6"/>
+                                                <constraint firstAttribute="height" constant="430" id="5iQ-gE-xO6"/>
                                                 <constraint firstAttribute="trailing" secondItem="iUt-BZ-xPy" secondAttribute="trailing" id="DFu-dB-JtW"/>
                                                 <constraint firstItem="L6o-6f-u4l" firstAttribute="top" secondItem="2h6-LK-Rp1" secondAttribute="top" constant="240" identifier="yPosition" id="DsB-pa-QBd"/>
                                                 <constraint firstAttribute="trailing" secondItem="FE8-X8-qN5" secondAttribute="trailing" id="KOx-U6-p7q"/>
@@ -1512,7 +1507,19 @@
                                     <outlet property="fullDirectionNameLeftLabel" destination="SGd-Wm-UMZ" id="gJc-D8-XV7"/>
                                     <outlet property="fullDirectionNameRightLabel" destination="6as-Qt-kW7" id="YOz-oe-vjT"/>
                                     <outlet property="fullDirectionNameTopLabel" destination="bEz-te-j7c" id="LtR-9L-Rse"/>
+                                    <outlet property="leftBusLabel1" destination="DUe-GL-vKr" id="hg0-Jx-yZc"/>
+                                    <outlet property="leftBusLabel2" destination="Gmu-pP-2rA" id="Y33-uA-a7L"/>
+                                    <outlet property="leftBusLabel3" destination="rAF-qN-ffm" id="p4U-HK-WAV"/>
+                                    <outlet property="leftTimeLabel1" destination="d6R-Nj-kIa" id="b0M-Ef-I7N"/>
+                                    <outlet property="leftTimeLabel2" destination="Sle-Rm-tdi" id="Nx5-cc-Joi"/>
+                                    <outlet property="leftTimeLabel3" destination="1fy-D5-nkX" id="ISz-b2-9j7"/>
                                     <outlet property="openNumberLabel" destination="Jhi-nO-06y" id="Fgc-yi-YEJ"/>
+                                    <outlet property="rightBusLabel1" destination="13x-Hs-cBh" id="f1j-4w-gb3"/>
+                                    <outlet property="rightBusLabel2" destination="xo3-OQ-h5U" id="00u-qe-6oF"/>
+                                    <outlet property="rightBusLabel3" destination="Htd-DL-aBd" id="IFG-Q6-5aW"/>
+                                    <outlet property="rightTimeLabel1" destination="rzN-X6-Jvs" id="fEz-Pd-0NK"/>
+                                    <outlet property="rightTimeLabel2" destination="N1I-so-Qo9" id="2rW-Vr-zit"/>
+                                    <outlet property="rightTimeLabel3" destination="t4k-Ma-XsM" id="nK0-Rz-trx"/>
                                     <outlet property="topTimeLable" destination="8yj-H6-t66" id="RIg-Pa-vgF"/>
                                 </connections>
                             </tableViewCell>
@@ -1597,6 +1604,7 @@
     </scenes>
     <resources>
         <image name="Radio_Humber_Logo" width="220" height="220"/>
+        <image name="banner_train" width="520" height="293"/>
         <image name="button_radio_volume" width="114" height="114"/>
         <image name="dots" width="16" height="16"/>
         <image name="fav_button" width="334.39999389648438" height="295.20001220703125"/>
@@ -1608,5 +1616,7 @@
         <image name="purple_background" width="220.08000183105469" height="199.91999816894531"/>
         <image name="stationImage" width="120" height="75"/>
         <image name="stopbutton" width="4.320000171661377" height="4.320000171661377"/>
+        <image name="ttc_logo" width="184.32000732421875" height="72"/>
+        <image name="we_humber_logo" width="132.47999572753906" height="62.279998779296875"/>
     </resources>
 </document>

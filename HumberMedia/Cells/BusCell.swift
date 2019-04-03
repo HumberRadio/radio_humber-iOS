@@ -21,6 +21,18 @@ class BusCell: FoldingCell {
     @IBOutlet weak var bottomTimeLabel: NSLayoutConstraint!
     @IBOutlet weak var directionLeftLabel: UILabel!
     @IBOutlet weak var directionRightLabel: UILabel!
+    @IBOutlet weak var leftBusLabel1: UILabel!
+    @IBOutlet weak var leftBusLabel2: UILabel!
+    @IBOutlet weak var leftBusLabel3: UILabel!
+    @IBOutlet weak var rightBusLabel1: UILabel!
+    @IBOutlet weak var rightBusLabel2: UILabel!
+    @IBOutlet weak var rightBusLabel3: UILabel!
+    @IBOutlet weak var leftTimeLabel2: UILabel!
+    @IBOutlet weak var leftTimeLabel3: UILabel!
+    @IBOutlet weak var leftTimeLabel1: UILabel!
+    @IBOutlet weak var rightTimeLabel1: UILabel!
+    @IBOutlet weak var rightTimeLabel2: UILabel!
+    @IBOutlet weak var rightTimeLabel3: UILabel!
     
     //
     var routeNumber:String = ""
@@ -48,7 +60,4 @@ class BusCell: FoldingCell {
 
 extension BusCell {
 
-    @IBAction func buttonHandler(_: AnyObject) {
-        print("tap")
-    }
 }
