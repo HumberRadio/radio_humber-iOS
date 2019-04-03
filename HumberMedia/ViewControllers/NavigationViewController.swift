@@ -79,6 +79,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     let player = FRadioPlayer.shared
     var player2: AVPlayer?
     var isblured:Bool = false;
+    var isbluredBottom:Bool = false;
     var isLiked = false;
     
 
@@ -238,9 +239,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         
         
         
-        self.radioImageView.image = UIImage.init()
+//        self.radioImageView.image = UIImage.init()
         
-        self.radioImageView.image = UIImage.init(imageLiteralResourceName: "radio_thumb_image")
+//        self.radioImageView.image = UIImage.init(imageLiteralResourceName: "Radio_Humber_Logo")
     }
     
     private func prepareUI()
@@ -538,7 +539,16 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         
      
         UIView.animate(withDuration: 1.0, animations:{
-           
+           self.bottomView.backgroundColor = UIColor(white: 1, alpha: 1.0)
+            if !self.isbluredBottom
+            {    //blur efect on UI view
+                let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+                visualEffectView.frame = self.bottomView.bounds
+                self.bottomView.addSubview(visualEffectView)
+                self.isbluredBottom = true
+                
+            }
+            
             // bring whole bottme view to top
             self.bottomViewHeight.constant = self.view.frame.height * 0.70
             
