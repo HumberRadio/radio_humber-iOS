@@ -71,6 +71,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     @IBOutlet weak var heightContainerView: NSLayoutConstraint!
     
+    @IBOutlet weak var blurredBackground: UIImageView!
     //properties
     
     let purpleInspireColor = UIColor(red:0.13, green:0.03, blue:0.25, alpha:1.0)
@@ -546,19 +547,17 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     
     private func animateRadioBarOpen()
     {
-        
+        if infobutton.isSelected {
+            infobutton.sendActions(for: .touchUpInside)
+        }
      
         UIView.animate(withDuration: 1.0, animations:{
-           self.bottomView.backgroundColor = UIColor(white: 1, alpha: 1.0)
-            if !self.isbluredBottom
-            {    //blur efect on UI view
-                let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
-                visualEffectView.frame = self.bottomView.bounds
-                self.bottomView.addSubview(visualEffectView)
-                self.isbluredBottom = true
-                
-            }
-            
+          
+            self.blurredBackground.alpha = 1
+            self.blurredBackground.isHidden = false
+            self.isbluredBottom = true
+            self.infobutton.isUserInteractionEnabled = false
+   
             // bring whole bottme view to top
             self.bottomViewHeight.constant = self.view.frame.height * 0.70
             
@@ -573,12 +572,17 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             self.leadingInfoViuew.constant = self.view.frame.width * 0.15
             self.trailingInfoView.constant = self.view.frame.width * 0.15
             self.topInfoTextView.constant = 15
+            self.songTitleLabel.textColor = UIColor.white
+            self.artistNameLabel.textColor = UIColor.white
+            self.songTitleLabel.textAlignment = .center
             
             //animate imageview
             self.widthRadioImage.constant = self.view.frame.width * 0.36
             self.heightRadioImage.constant = self.widthRadioImage.constant
             self.topRadioImage.constant = 80
             self.leadingRadioImage.constant = self.view.frame.width * 0.32
+            
+            
             
             self.view.layoutIfNeeded()
             
@@ -605,10 +609,16 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     }
     private func animateRadioBarClose()
     {
-        self.isradioOpen = true
+        
+       
        
         UIView.animate(withDuration: 1.0, animations:{
             
+            self.blurredBackground.alpha = 0
+            self.blurredBackground.isHidden = true
+            
+            self.isbluredBottom = false
+            self.infobutton.isUserInteractionEnabled = true
             // bring whole bottme view to top
             self.bottomViewHeight.constant = 80
             self.heightContainerView.constant = 0
@@ -622,6 +632,9 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             self.leadingInfoViuew.constant = 70
             self.trailingInfoView.constant = 145
             self.topInfoTextView.constant = 15
+            self.songTitleLabel.textColor = UIColor.black
+            self.artistNameLabel.textColor = UIColor.black
+            self.songTitleLabel.textAlignment = .left
             
             //animate imageview
             self.widthRadioImage.constant = 50
