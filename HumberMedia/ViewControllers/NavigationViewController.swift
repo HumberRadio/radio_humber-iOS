@@ -136,7 +136,14 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
 //        toglePlayButton(isPlaying: player.isPlaying)
         
        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(tapDetectedImage))
+        swipeUp.direction = .up
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(tapDetectedImage))
+        swipeDown.direction = .down
         
+        bottomView.addGestureRecognizer(swipeDown)
+        bottomView.addGestureRecognizer(swipeUp)
+//        self.view.addGestureRecognizer(swipeUp)
         
         
         
@@ -236,13 +243,6 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
         }
         
         radioImageView.applyShadow()
-        
-        
-        
-        
-//        self.radioImageView.image = UIImage.init()
-        
-//        self.radioImageView.image = UIImage.init(imageLiteralResourceName: "Radio_Humber_Logo")
     }
     
     private func prepareUI()
@@ -582,26 +582,11 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             self.topRadioImage.constant = 80
             self.leadingRadioImage.constant = self.view.frame.width * 0.32
             
-            
-            
+            //dont forget to reftresh layout :)
             self.view.layoutIfNeeded()
-            
-            
-            
-            
         }, completion: {_ in
             print("done")
             self.isradioOpen = true
-            
-//            NSLayoutConstraint.activate([
-//                recentlyPlayedViewContainer.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 10),
-//                recentlyPlayedViewContainer.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -10),
-//                recentlyPlayedViewContainer.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 10),
-//                recentlyPlayedViewContainer.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -10),
-//                ])
-//              let child_news = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "news")
-//            recentlyPlayedViewContainer.addSubview(UIView)
-//            self.bottomView.addSubview(recentlyPlayedViewContainer)
             
         })
         
@@ -609,9 +594,6 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     }
     private func animateRadioBarClose()
     {
-        
-       
-       
         UIView.animate(withDuration: 1.0, animations:{
             
             self.blurredBackground.alpha = 0
@@ -683,9 +665,6 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
     }
     
     private func shouldLike() ->Bool{
-        
-        
-        
         var result = false
     
         if ((self.songTitleLabel.text?.contains("Radio Humber"))!)
