@@ -10,6 +10,7 @@ import UIKit
 import MaterialComponents.MDCBaseCell
 import RZTransitions
 
+
 class AboutUsViewController: UIViewController {
 
     @IBOutlet weak var topNavigationBar: UINavigationBar!
@@ -53,13 +54,39 @@ class AboutUsViewController: UIViewController {
 extension AboutUsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0
-        {
-          
+        
+       
+        var memberUrl = URL.init(string: URLConstants.Domains.alexURL)
+        
+        switch indexPath.row {
+        case 0:
+            memberUrl = URL.init(string: URLConstants.Domains.alexURL)
+            break;
+        case 1:
+            memberUrl = URL.init(string: URLConstants.Domains.deanURL)
+            break;
+        case 2:
+            memberUrl = URL.init(string: URLConstants.Domains.kayleeURL)
+            break;
+        case 3:
+            memberUrl = URL.init(string: URLConstants.Domains.noahURL)
+            break;
+        case 4:
+            memberUrl = URL.init(string: URLConstants.Domains.febaURL)
+            break;
+        case 5:
+            memberUrl = URL.init(string: URLConstants.Domains.jaspreetURL)
+            break;
+        case 6:
+            memberUrl = URL.init(string: URLConstants.Domains.tajURL)
+            break;
+        default:
+            memberUrl = URL.init(string: URLConstants.Domains.alexURL)
+            break;
         }
-        else {
-          
-        }
+        
+        UIApplication.shared.open(memberUrl!, options: [:], completionHandler: nil)
+        
     }
 }
 
@@ -74,15 +101,17 @@ extension AboutUsViewController: UITableViewDataSource {
     
     
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if teamMemberList.isEmpty {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "NothingFound", for: indexPath)
-            cell.backgroundColor = .clear
-            cell.selectionStyle = .none
-            return cell
-            
-        } else {
+//        if teamMemberList.isEmpty {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "NothingFound", for: indexPath)
+//            cell.backgroundColor = .clear
+//            cell.selectionStyle = .none
+//            return cell
+//
+//        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TeamMemberCell", for: indexPath) as! TeamMemberTableViewCell
             
             // alternate background color
@@ -93,7 +122,7 @@ extension AboutUsViewController: UITableViewDataSource {
             cell.configureTeamMemberCell(teamMember: teamMember)
             
             return cell
-        }
+//        }
     }
     
     

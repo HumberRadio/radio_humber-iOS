@@ -41,25 +41,32 @@ class TeamMember {
             switch name
             {
             case "Alex":
-                teamMember = TeamMember.init(name: "Aleksandar Janakievski", role: "iOS developer", profilePic: UIImage.init(imageLiteralResourceName: "Bart_Simpsons"))
+//                teamMember = TeamMember.init(name: "Aleksandar Janakievski", role: "iOS developer", profilePic: UIImage.init(imageLiteralResourceName: "Bart_Simpsons"))
+                teamMember = TeamMember.init(name: "Aleksandar Janakievski", role: "iOS developer", profilePic: UIImage.init(imageLiteralResourceName: "alex"))
                 break;
             case "Dean":
-                teamMember = TeamMember.init(name: "Dean", role: "Project sponsor", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+//                teamMember = TeamMember.init(name: "Dean Sinclair", role: "Project sponsor", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+                teamMember = TeamMember.init(name: "Dean Sinclair", role: "Project sponsor", profilePic: UIImage.init(imageLiteralResourceName: "dean"))
                 break;
             case "Kayle":
-               teamMember = TeamMember.init(name: "Kayle", role: "Project sponsor", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+//               teamMember = TeamMember.init(name: "Kylee Winn", role: "Project sponsor", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+               teamMember = TeamMember.init(name: "Kylee Winn", role: "Project sponsor", profilePic: UIImage.init(imageLiteralResourceName: "kylee"))
                 break;
             case "Noah":
-                teamMember = TeamMember.init(name: "Noah", role: "Project sponsor", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+//                teamMember = TeamMember.init(name: "Noah", role: "Project sponsor", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+                  teamMember = TeamMember.init(name: "Noah", role: "Project sponsor", profilePic: UIImage.init(imageLiteralResourceName: "noah"))
                 break;
             case "Feba":
-                teamMember = TeamMember.init(name: "Feba", role: "Android developer", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+//                teamMember = TeamMember.init(name: "Feba Mary Raj", role: "Android developer", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+                 teamMember = TeamMember.init(name: "Feba Mary Raj", role: "Android developer", profilePic: UIImage.init(imageLiteralResourceName: "feba"))
                 break;
             case "Jaspreet":
-                teamMember = TeamMember.init(name: "Jaspreet", role: "Project management", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+//                teamMember = TeamMember.init(name: "Jaspreet Kaur Rainu", role: "Project manager", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+                  teamMember = TeamMember.init(name: "Jaspreet Kaur Rainu", role: "Project manager", profilePic: UIImage.init(imageLiteralResourceName: "jaspreet"))
                 break;
             case "Taj":
-                teamMember = TeamMember.init(name: "Taj", role: "Android developer", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+//                teamMember = TeamMember.init(name: "Tajwane Campbell ", role: "Android developer", profilePic: UIImage.init(imageLiteralResourceName: simpsonsList[Int.random(in: 0 ... namesList.count)]))
+                teamMember = TeamMember.init(name: "Tajwane Campbell ", role: "Android developer", profilePic: UIImage.init(imageLiteralResourceName: "taj"))
                 break;
                 
             default:

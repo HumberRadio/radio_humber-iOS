@@ -97,7 +97,7 @@ class Helper {
 
     func areHeadphonesPluggedIn()->Bool
     {
-        var availableOutputs = AVAudioSession.sharedInstance().currentRoute.outputs
+        let availableOutputs = AVAudioSession.sharedInstance().currentRoute.outputs
         for portDescription in availableOutputs
         {
             if portDescription.portType == AVAudioSession.Port.headphones
