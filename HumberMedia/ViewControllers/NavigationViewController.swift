@@ -559,7 +559,7 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             self.infobutton.isUserInteractionEnabled = false
    
             // bring whole bottme view to top
-            self.bottomViewHeight.constant = self.view.frame.height * 0.70
+            self.bottomViewHeight.constant = self.view.frame.height
             
             self.heightContainerView.constant = self.view.frame.height * 0.35
             self.recentlyPlayedContainerView.alpha = 1
@@ -577,17 +577,59 @@ class NavigationViewController: ButtonBarPagerTabStripViewController, XMLParserD
             self.songTitleLabel.textAlignment = .center
             
             //animate imageview
-            self.widthRadioImage.constant = self.view.frame.width * 0.36
+            self.widthRadioImage.constant = self.view.frame.width * 0.42
             self.heightRadioImage.constant = self.widthRadioImage.constant
-            self.topRadioImage.constant = 80
-            self.leadingRadioImage.constant = self.view.frame.width * 0.32
+            self.topRadioImage.constant = 90
+            self.leadingRadioImage.constant = self.view.frame.width * 0.34
             
             //dont forget to reftresh layout :)
             self.view.layoutIfNeeded()
         }, completion: {_ in
             print("done")
             self.isradioOpen = true
-            
+            UIView.AnimationTransition.init(rawValue: 3)
+            UIView.animate(withDuration: 0.5, delay: 0.2, options: UIView.AnimationOptions.curveEaseIn , animations:{
+                self.blurredBackground.alpha = 1
+                self.blurredBackground.isHidden = false
+                self.isbluredBottom = true
+                self.infobutton.isUserInteractionEnabled = false
+                
+                // bring whole bottme view to top
+                self.bottomViewHeight.constant = self.view.frame.height * 0.65
+                
+                self.heightContainerView.constant = self.view.frame.height * 0.32
+                self.recentlyPlayedContainerView.alpha = 1
+                
+                //animate buttons
+                self.trailingButtonView.constant = self.view.frame.width * 0.30
+                self.topButtonsView.constant = (self.view.frame.width * 0.36) + 65
+                
+                //animate info text
+                self.leadingInfoViuew.constant = self.view.frame.width * 0.15
+                self.trailingInfoView.constant = self.view.frame.width * 0.15
+                self.topInfoTextView.constant = 15
+                self.songTitleLabel.textColor = UIColor.white
+                self.artistNameLabel.textColor = UIColor.white
+                self.songTitleLabel.textAlignment = .center
+                
+                //animate imageview
+                self.widthRadioImage.constant = self.view.frame.width * 0.36
+                self.heightRadioImage.constant = self.widthRadioImage.constant
+                self.topRadioImage.constant = 80
+                self.leadingRadioImage.constant = self.view.frame.width * 0.32
+                
+                
+                
+                //dont forget to reftresh layout :)
+                self.view.layoutIfNeeded()
+                
+                
+            },completion: {_ in
+                print("done")
+                self.isradioOpen = true
+                
+            })
+          
         })
         
         

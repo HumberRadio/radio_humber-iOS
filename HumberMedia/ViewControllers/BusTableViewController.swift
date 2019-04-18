@@ -143,6 +143,11 @@ extension BusTableViewController {
                 cell.topTimeLable.text = self.ttc927SouthBusses.predictions[0].minutes + " min"
                 cell.bottomTimeLabel.text = self.ttc927NorthBusses.predictions[0].minutes + " min"
                 
+                cell.directionLeftLabel.text = self.ttc927SouthBusses.direction
+                cell.directionRightLabel.text = self.ttc927NorthBusses.direction
+                cell.fullDirectionNameLeftLabel.text = self.ttc927SouthBusses.directionName
+                cell.fullDirectionNameRightLabel.text = self.ttc927NorthBusses.directionName
+                
                 cell.openNumberLabel.text = self.ttc927SouthBusses.number
                 
                 cell.leftBusLabel1.text = self.ttc927SouthBusses.predictions[0].branch
@@ -187,6 +192,11 @@ extension BusTableViewController {
                 cell.topTimeLable.text = self.ttc36EastBusses.predictions[0].minutes + " min"
                 cell.bottomTimeLabel.text = self.ttc36WestBusses.predictions[0].minutes + " min"
                 
+                cell.directionLeftLabel.text = self.ttc36EastBusses.direction
+                cell.directionRightLabel.text = self.ttc36WestBusses.direction
+                cell.fullDirectionNameLeftLabel.text = self.ttc36EastBusses.directionName
+                cell.fullDirectionNameRightLabel.text = self.ttc36WestBusses.directionName
+                
                 cell.openNumberLabel.text = self.ttc36EastBusses.number
                 
                 cell.leftBusLabel1.text = self.ttc36EastBusses.predictions[0].branch
@@ -227,6 +237,11 @@ extension BusTableViewController {
                 cell.fullDirectionNameBottomLabel.text = self.ttc96WestBusses.directionName
                 cell.topTimeLable.text = self.ttc96EastBusses.predictions[0].minutes + " min"
                 cell.bottomTimeLabel.text = self.ttc96WestBusses.predictions[0].minutes + " min"
+                
+                cell.directionLeftLabel.text = self.ttc96EastBusses.direction
+                cell.directionRightLabel.text = self.ttc96WestBusses.direction
+                cell.fullDirectionNameLeftLabel.text = self.ttc96EastBusses.directionName
+                cell.fullDirectionNameRightLabel.text = self.ttc96WestBusses.directionName
                 
                 cell.openNumberLabel.text = self.ttc96EastBusses.number
                 
